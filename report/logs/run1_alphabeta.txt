@@ -1,0 +1,508 @@
+
+=== New game: 6x7, Alpha-Beta, K=3, deterministic ===
+Heuristic h(board) = 0
+h after your disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+You aimed at column 2, landed in column 2
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . X . . . .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 0
+h after a computer disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+Computer aimed at column 0, landed in column 0
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+O . X . . . .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 0
+h after your disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+You aimed at column 1, landed in column 1
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+O X X . . . .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 0
+h after a computer disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+Computer aimed at column 0, landed in column 0
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+O . . . . . .
+O X X . . . .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 0
+h after your disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+You aimed at column 3, landed in column 3
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+O . . . . . .
+O X X X . . .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 0
+h after a computer disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+Computer aimed at column 0, landed in column 0
+. . . . . . .
+. . . . . . .
+. . . . . . .
+O . . . . . .
+O . . . . . .
+O X X X . . .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 0
+h after your disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:-1  c5:0  c6:0
+You aimed at column 5, landed in column 5
+. . . . . . .
+. . . . . . .
+. . . . . . .
+O . . . . . .
+O . . . . . .
+O X X X . X .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 0
+h after a computer disc in each column -> c0:1  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+Computer aimed at column 0, landed in column 0
+. . . . . . .
+. . . . . . .
+O . . . . . .
+O . . . . . .
+O . . . . . .
+O X X X . X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after your disc in each column -> c0:1  c1:1  c2:1  c3:1  c4:-1  c5:1  c6:1
+You aimed at column 0, landed in column 0
+. . . . . . .
+X . . . . . .
+O . . . . . .
+O . . . . . .
+O . . . . . .
+O X X X . X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after a computer disc in each column -> c0:1  c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+Computer aimed at column 4, landed in column 4
+. . . . . . .
+X . . . . . .
+O . . . . . .
+O . . . . . .
+O . . . . . .
+O X X X O X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after your disc in each column -> c0:1  c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+You aimed at column 0, landed in column 0
+X . . . . . .
+X . . . . . .
+O . . . . . .
+O . . . . . .
+O . . . . . .
+O X X X O X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after a computer disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+Computer aimed at column 1, landed in column 1
+X . . . . . .
+X . . . . . .
+O . . . . . .
+O . . . . . .
+O O . . . . .
+O X X X O X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after your disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+You aimed at column 5, landed in column 5
+X . . . . . .
+X . . . . . .
+O . . . . . .
+O . . . . . .
+O O . . . X .
+O X X X O X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after a computer disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+Computer aimed at column 1, landed in column 1
+X . . . . . .
+X . . . . . .
+O . . . . . .
+O O . . . . .
+O O . . . X .
+O X X X O X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after your disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+You aimed at column 1, landed in column 1
+X . . . . . .
+X . . . . . .
+O X . . . . .
+O O . . . . .
+O O . . . X .
+O X X X O X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after a computer disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+Computer aimed at column 1, landed in column 1
+X . . . . . .
+X O . . . . .
+O X . . . . .
+O O . . . . .
+O O . . . X .
+O X X X O X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after your disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+You aimed at column 3, landed in column 3
+X . . . . . .
+X O . . . . .
+O X . . . . .
+O O . . . . .
+O O . X . X .
+O X X X O X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after a computer disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+Computer aimed at column 1, landed in column 1
+X O . . . . .
+X O . . . . .
+O X . . . . .
+O O . . . . .
+O O . X . X .
+O X X X O X .
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after your disc in each column -> c2:1  c3:1  c4:1  c5:1  c6:1
+You aimed at column 6, landed in column 6
+X O . . . . .
+X O . . . . .
+O X . . . . .
+O O . . . . .
+O O . X . X .
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after a computer disc in each column -> c2:1  c3:1  c4:1  c5:1  c6:1
+Computer aimed at column 3, landed in column 3
+X O . . . . .
+X O . . . . .
+O X . . . . .
+O O . O . . .
+O O . X . X .
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after your disc in each column -> c2:1  c3:1  c4:1  c5:1  c6:1
+You aimed at column 2, landed in column 2
+X O . . . . .
+X O . . . . .
+O X . . . . .
+O O . O . . .
+O O X X . X .
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 1
+h after a computer disc in each column -> c2:2  c3:1  c4:1  c5:1  c6:1
+Computer aimed at column 2, landed in column 2
+X O . . . . .
+X O . . . . .
+O X . . . . .
+O O O O . . .
+O O X X . X .
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 2
+h after your disc in each column -> c2:2  c3:2  c4:1  c5:2  c6:2
+You aimed at column 6, landed in column 6
+X O . . . . .
+X O . . . . .
+O X . . . . .
+O O O O . . .
+O O X X . X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 2
+h after a computer disc in each column -> c2:2  c3:3  c4:2  c5:2  c6:2
+Computer aimed at column 4, landed in column 4
+X O . . . . .
+X O . . . . .
+O X . . . . .
+O O O O . . .
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 2
+h after your disc in each column -> c2:2  c3:2  c4:2  c5:2  c6:2
+You aimed at column 3, landed in column 3
+X O . . . . .
+X O . . . . .
+O X . X . . .
+O O O O . . .
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 2
+h after a computer disc in each column -> c2:3  c3:2  c4:3  c5:2  c6:2
+Computer aimed at column 4, landed in column 4
+X O . . . . .
+X O . . . . .
+O X . X . . .
+O O O O O . .
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 3 Computer
+
+Heuristic h(board) = 3
+h after your disc in each column -> c2:3  c3:3  c4:3  c5:3  c6:3
+You aimed at column 2, landed in column 2
+X O . . . . .
+X O . . . . .
+O X X X . . .
+O O O O O . .
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 3 Computer
+
+Heuristic h(board) = 3
+h after a computer disc in each column -> c2:3  c3:3  c4:4  c5:4  c6:3
+Computer aimed at column 4, landed in column 4
+X O . . . . .
+X O . . . . .
+O X X X O . .
+O O O O O . .
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 4 Computer
+
+Heuristic h(board) = 4
+h after your disc in each column -> c2:4  c3:4  c4:4  c5:4  c6:4
+You aimed at column 2, landed in column 2
+X O . . . . .
+X O X . . . .
+O X X X O . .
+O O O O O . .
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 4 Computer
+
+Heuristic h(board) = 4
+h after a computer disc in each column -> c2:4  c3:4  c4:5  c5:5  c6:4
+Computer aimed at column 4, landed in column 4
+X O . . . . .
+X O X . O . .
+O X X X O . .
+O O O O O . .
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 5 Computer
+
+Heuristic h(board) = 5
+h after your disc in each column -> c2:5  c3:5  c4:5  c5:5  c6:5
+You aimed at column 5, landed in column 5
+X O . . . . .
+X O X . O . .
+O X X X O . .
+O O O O O X .
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 5 Computer
+
+Heuristic h(board) = 5
+h after a computer disc in each column -> c2:5  c3:5  c4:6  c5:5  c6:5
+Computer aimed at column 2, landed in column 2
+X O O . . . .
+X O X . O . .
+O X X X O . .
+O O O O O X .
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 5 Computer
+
+Heuristic h(board) = 5
+h after your disc in each column -> c3:5  c4:5  c5:4  c6:5
+You aimed at column 6, landed in column 6
+X O O . . . .
+X O X . O . .
+O X X X O . .
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 5 Computer
+
+Heuristic h(board) = 5
+h after a computer disc in each column -> c3:5  c4:6  c5:5  c6:5
+Computer aimed at column 3, landed in column 3
+X O O . . . .
+X O X O O . .
+O X X X O . .
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 5 Computer
+
+Heuristic h(board) = 5
+h after your disc in each column -> c3:5  c4:5  c5:4  c6:4
+You aimed at column 3, landed in column 3
+X O O X . . .
+X O X O O . .
+O X X X O . .
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 5 Computer
+
+Heuristic h(board) = 5
+h after a computer disc in each column -> c4:6  c5:5  c6:5
+Computer aimed at column 4, landed in column 4
+X O O X O . .
+X O X O O . .
+O X X X O . .
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 0 : 6 Computer
+
+Heuristic h(board) = 6
+h after your disc in each column -> c5:5  c6:5
+You aimed at column 5, landed in column 5
+X O O X O . .
+X O X O O . .
+O X X X O X .
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 1 : 6 Computer
+
+Heuristic h(board) = 5
+h after a computer disc in each column -> c5:5  c6:5
+Computer aimed at column 5, landed in column 5
+X O O X O . .
+X O X O O O .
+O X X X O X .
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 1 : 6 Computer
+
+Heuristic h(board) = 5
+h after your disc in each column -> c5:5  c6:4
+You aimed at column 5, landed in column 5
+X O O X O X .
+X O X O O O .
+O X X X O X .
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 1 : 6 Computer
+
+Heuristic h(board) = 5
+h after a computer disc in each column -> c6:5
+Computer aimed at column 6, landed in column 6
+X O O X O X .
+X O X O O O .
+O X X X O X O
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 1 : 6 Computer
+
+Heuristic h(board) = 5
+h after your disc in each column -> c6:5
+You aimed at column 6, landed in column 6
+X O O X O X .
+X O X O O O X
+O X X X O X O
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 1 : 6 Computer
+
+Heuristic h(board) = 5
+h after a computer disc in each column -> c6:6
+Computer aimed at column 6, landed in column 6
+X O O X O X O
+X O X O O O X
+O X X X O X O
+O O O O O X X
+O O X X O X X
+O X X X O X X
+0 1 2 3 4 5 6
+Score  You 1 : 7 Computer
+
+GAME OVER - Computer wins
+Heuristic h(board) = 6

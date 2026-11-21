@@ -1,0 +1,11 @@
+49 openings x 2 colours x 2 = 196 games per match, 6x7 board, stochastic
+
+K = 3
+        v2-expecti-weights vs random                           K=3  W/D/L 195/ 0/1   score  99.5%  margin +6.45  Elo  +916 [+726, +2400]  (165.6s)
+        v2-expecti-weights vs greedy (take point / block)      K=3  W/D/L 141/23/32  score  77.8%  margin +1.80  Elo  +218 [+168, +277]  (150.1s)
+        v2-expecti-weights vs big-constants (typical student)  K=3  W/D/L 149/16/31  score  80.1%  margin +2.38  Elo  +242 [+190, +306]  (269.8s)
+        v2-expecti-weights vs galli (classic)                  K=3  W/D/L 121/21/54  score  67.1%  margin +1.12  Elo  +124 [+77, +175]  (366.1s)
+        v2-expecti-weights vs v1                               K=3  W/D/L  87/36/73  score  53.6%  margin +0.42  Elo   +25 [-19, +70]  (284.3s)
+        v2-expecti-weights vs v2                               K=3  W/D/L  80/35/81  score  49.7%  margin -0.20  Elo    -2 [-46, +43]  (294.4s)
+
+Saved results/stochastic_k3/heuristic_matches_stochastic.md

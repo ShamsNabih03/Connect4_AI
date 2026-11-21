@@ -37,6 +37,8 @@ class Board:
         self.grid = [[EMPTY] * cols for _ in range(rows)]
         self.heights = [0] * cols          # discs currently in each column
         self.move_count = 0                # total discs on the board
+        self.first_player = HUMAN          # who moved first (heuristic parity)
+
 
     # ------------------------------------------------------------------
     # Gravity and valid moves
@@ -200,6 +202,8 @@ class Board:
         b.grid = [row[:] for row in self.grid]
         b.heights = self.heights[:]
         b.move_count = self.move_count
+        b.first_player = self.first_player
+
         return b
 
     def __str__(self):

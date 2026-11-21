@@ -1,0 +1,98 @@
+Position (X = human, O = computer, computer to move):
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . O O X . .
+. X X X O . .
+0 1 2 3 4 5 6
+
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 190   nodes expanded: 104   time: 0.005 s   chosen column: 2
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 2 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=0.44  (a=0.44, b=+inf)
++-- col 0 -> [MIN] value=0.23  (a=-inf, b=0.23)
+|   +-- col 0 -> [MAX] value=0.88  (a=0.88, b=+inf)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 1 -> [MAX] value=0.71  (a=0.71, b=0.88)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 2 -> [MAX] value=0.23  (a=0.23, b=0.71)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 3 -> [MAX] value=0.68  (a=0.68, b=0.23)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 4 -> [MAX] value=0.78  (a=0.78, b=0.23)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 5 -> [MAX] value=0.28  (a=0.28, b=0.23)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   `-- col 6 -> [MAX] value=0.35  (a=0.35, b=0.23)
+|       `-- ... 7 more nodes below (depth limit)
++-- col 1 -> [MIN] value=0.13  (a=0.23, b=0.13)
+|   +-- col 0 -> [MAX] value=0.13  (a=0.23, b=+inf)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 2 -> [MIN] value=0.44  (a=0.23, b=0.44)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=0.44  (a=0.44, b=+inf)  <== expected
+|   |   +-- col 0 -> [LEAF] h=0.06
+|   |   +-- col 1 -> [LEAF] h=0.13
+|   |   +-- col 2 -> [LEAF] h=0.26
+|   |   +-- col 3 -> [LEAF] h=0.44  <== expected
+|   |   +-- col 4 -> [LEAF] h=0.28
+|   |   +-- col 5 -> [LEAF] h=-0.06
+|   |   `-- col 6 -> [LEAF] h=-0.06
+|   +-- col 1 -> [MAX] value=0.71  (a=0.71, b=0.44)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 2 -> [MAX] value=0.62  (a=0.62, b=0.44)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 3 -> [MAX] value=0.68  (a=0.68, b=0.44)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 4 -> [MAX] value=0.78  (a=0.78, b=0.44)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 5 -> [MAX] value=0.94  (a=0.94, b=0.44)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   `-- col 6 -> [MAX] value=1  (a=1, b=0.44)
+|       `-- ... 7 more nodes below (depth limit)
++-- col 3 -> [MIN] value=0.44  (a=0.44, b=0.44)
+|   +-- col 0 -> [MAX] value=0.44  (a=0.44, b=+inf)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=0.28  (a=0.44, b=0.28)
+|   +-- col 0 -> [MAX] value=0.28  (a=0.44, b=+inf)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=-0.06  (a=0.44, b=-0.06)
+|   +-- col 0 -> [MAX] value=-0.06  (a=0.44, b=+inf)
+|   |   `-- ... 7 more nodes below (depth limit)
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=-0.06  (a=0.44, b=-0.06)
+    +-- col 0 -> [MAX] value=-0.06  (a=0.44, b=+inf)
+    |   `-- ... 7 more nodes below (depth limit)
+    +-- col 1 -> (pruned)
+    +-- col 2 -> (pruned)
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================

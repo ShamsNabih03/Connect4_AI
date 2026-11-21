@@ -1,0 +1,7 @@
+agent_a,agent_b,k,mode,games,wins,draws,losses,score_pct,avg_margin,elo,elo_lo,elo_hi,seconds
+v2-expecti-weights,random,3,stochastic,196,195,0,1,99.5,6.45,916,726,2400,165.6
+v2-expecti-weights,greedy (take point / block),3,stochastic,196,141,23,32,77.8,1.8,218,168,277,150.1
+v2-expecti-weights,big-constants (typical student),3,stochastic,196,149,16,31,80.1,2.38,242,190,306,269.8
+v2-expecti-weights,galli (classic),3,stochastic,196,121,21,54,67.1,1.12,124,77,175,366.1
+v2-expecti-weights,v1,3,stochastic,196,87,36,73,53.6,0.42,25,-19,70,284.3
+v2-expecti-weights,v2,3,stochastic,196,80,35,81,49.7,-0.2,-2,-46,43,294.4

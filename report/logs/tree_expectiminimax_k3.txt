@@ -1,0 +1,365 @@
+Position (X = human, O = computer, computer to move):
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . O O X . .
+. X X X O . .
+0 1 2 3 4 5 6
+
+========================================================================
+MINIMAX TREE - Expectiminimax, K=3
+nodes in tree: 9,907   nodes expanded: 9,907   time: 0.439 s   chosen column: 2
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 2 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=0.26
++-- aim 0 -> [CHANCE] E=0.23
+|   +-- lands 0 (p=0.6) -> [MIN] value=0.29
+|   |   +-- aim 0 -> [CHANCE] E=0.49
+|   |   |   `-- ... 54 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.41
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.29
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.37
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.51
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.64
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.69
+|   |       `-- ... 54 more nodes below (depth limit)
+|   `-- lands 1 (p=0.4) -> [MIN] value=0.13
+|       +-- aim 0 -> [CHANCE] E=0.13
+|       |   `-- ... 54 more nodes below (depth limit)
+|       +-- aim 1 -> [CHANCE] E=0.24
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 2 -> [CHANCE] E=0.15
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 3 -> [CHANCE] E=0.18
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 4 -> [CHANCE] E=0.30
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 5 -> [CHANCE] E=0.43
+|       |   `-- ... 81 more nodes below (depth limit)
+|       `-- aim 6 -> [CHANCE] E=0.48
+|           `-- ... 54 more nodes below (depth limit)
++-- aim 1 -> [CHANCE] E=0.20
+|   +-- lands 1 (p=0.6) -> [MIN] value=0.13
+|   |   +-- aim 0 -> [CHANCE] E=0.13
+|   |   |   `-- ... 54 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.24
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.15
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.18
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.30
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.43
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.48
+|   |       `-- ... 54 more nodes below (depth limit)
+|   +-- lands 0 (p=0.2) -> [MIN] value=0.29
+|   |   +-- aim 0 -> [CHANCE] E=0.49
+|   |   |   `-- ... 54 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.41
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.29
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.37
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.51
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.64
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.69
+|   |       `-- ... 54 more nodes below (depth limit)
+|   `-- lands 2 (p=0.2) -> [MIN] value=0.33
+|       +-- aim 0 -> [CHANCE] E=0.33
+|       |   `-- ... 54 more nodes below (depth limit)
+|       +-- aim 1 -> [CHANCE] E=0.40
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 2 -> [CHANCE] E=0.43
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 3 -> [CHANCE] E=0.48
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 4 -> [CHANCE] E=0.59
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 5 -> [CHANCE] E=0.71
+|       |   `-- ... 81 more nodes below (depth limit)
+|       `-- aim 6 -> [CHANCE] E=0.77
+|           `-- ... 54 more nodes below (depth limit)
++-- aim 2 -> [CHANCE] E=0.26  <== BEST MOVE
+|   +-- lands 2 (p=0.6) -> [MIN] value=0.33  <== expected
+|   |   +-- aim 0 -> [CHANCE] E=0.33  <== expected
+|   |   |   +-- lands 0 (p=0.6) -> [MAX] value=0.25  <== expected
+|   |   |   |   +-- aim 0 -> [CHANCE] E=0.09
+|   |   |   |   |   `-- ... 2 more nodes below (depth limit)
+|   |   |   |   +-- aim 1 -> [CHANCE] E=0.14
+|   |   |   |   |   `-- ... 3 more nodes below (depth limit)
+|   |   |   |   +-- aim 2 -> [CHANCE] E=0.24
+|   |   |   |   |   `-- ... 3 more nodes below (depth limit)
+|   |   |   |   +-- aim 3 -> [CHANCE] E=0.25  <== expected
+|   |   |   |   |   +-- lands 3 (p=0.6) -> [LEAF] h=0.29  <== expected
+|   |   |   |   |   +-- lands 2 (p=0.2) -> [LEAF] h=0.26
+|   |   |   |   |   `-- lands 4 (p=0.2) -> [LEAF] h=0.13
+|   |   |   |   +-- aim 4 -> [CHANCE] E=0.09
+|   |   |   |   |   `-- ... 3 more nodes below (depth limit)
+|   |   |   |   +-- aim 5 -> [CHANCE] E=-0.14
+|   |   |   |   |   `-- ... 3 more nodes below (depth limit)
+|   |   |   |   `-- aim 6 -> [CHANCE] E=-0.21
+|   |   |   |       `-- ... 2 more nodes below (depth limit)
+|   |   |   `-- lands 1 (p=0.4) -> [MAX] value=0.44
+|   |   |       `-- ... 26 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.40
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.43
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.48
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.59
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.71
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.77
+|   |       `-- ... 54 more nodes below (depth limit)
+|   +-- lands 1 (p=0.2) -> [MIN] value=0.13  <== expected
+|   |   +-- aim 0 -> [CHANCE] E=0.13  <== expected
+|   |   |   +-- lands 0 (p=0.6) -> [MAX] value=-0.05  <== expected
+|   |   |   |   +-- aim 0 -> [CHANCE] E=-0.08
+|   |   |   |   |   `-- ... 2 more nodes below (depth limit)
+|   |   |   |   +-- aim 1 -> [CHANCE] E=-0.18
+|   |   |   |   |   `-- ... 3 more nodes below (depth limit)
+|   |   |   |   +-- aim 2 -> [CHANCE] E=-0.05  <== expected
+|   |   |   |   |   +-- lands 2 (p=0.6) -> [LEAF] h=0.13  <== expected
+|   |   |   |   |   +-- lands 1 (p=0.2) -> [LEAF] h=-0.39
+|   |   |   |   |   `-- lands 3 (p=0.2) -> [LEAF] h=-0.22
+|   |   |   |   +-- aim 3 -> [CHANCE] E=-0.17
+|   |   |   |   |   `-- ... 3 more nodes below (depth limit)
+|   |   |   |   +-- aim 4 -> [CHANCE] E=-0.35
+|   |   |   |   |   `-- ... 3 more nodes below (depth limit)
+|   |   |   |   +-- aim 5 -> [CHANCE] E=-0.50
+|   |   |   |   |   `-- ... 3 more nodes below (depth limit)
+|   |   |   |   `-- aim 6 -> [CHANCE] E=-0.54
+|   |   |   |       `-- ... 2 more nodes below (depth limit)
+|   |   |   `-- lands 1 (p=0.4) -> [MAX] value=0.40
+|   |   |       `-- ... 26 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.24
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.15
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.18
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.30
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.43
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.48
+|   |       `-- ... 54 more nodes below (depth limit)
+|   `-- lands 3 (p=0.2) -> [MIN] value=0.18  <== expected
+|       +-- aim 0 -> [CHANCE] E=0.21
+|       |   `-- ... 54 more nodes below (depth limit)
+|       +-- aim 1 -> [CHANCE] E=0.25
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 2 -> [CHANCE] E=0.19
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 3 -> [CHANCE] E=0.18  <== expected
+|       |   +-- lands 3 (p=0.6) -> [MAX] value=0.17  <== expected
+|       |   |   +-- aim 0 -> [CHANCE] E=0.10
+|       |   |   |   `-- ... 2 more nodes below (depth limit)
+|       |   |   +-- aim 1 -> [CHANCE] E=0.10
+|       |   |   |   `-- ... 3 more nodes below (depth limit)
+|       |   |   +-- aim 2 -> [CHANCE] E=0.17  <== expected
+|       |   |   |   +-- lands 2 (p=0.6) -> [LEAF] h=0.39  <== expected
+|       |   |   |   +-- lands 1 (p=0.2) -> [LEAF] h=-0.02
+|       |   |   |   `-- lands 3 (p=0.2) -> [LEAF] h=-0.28
+|       |   |   +-- aim 3 -> [CHANCE] E=-0.10
+|       |   |   |   `-- ... 3 more nodes below (depth limit)
+|       |   |   +-- aim 4 -> [CHANCE] E=-0.16
+|       |   |   |   `-- ... 3 more nodes below (depth limit)
+|       |   |   +-- aim 5 -> [CHANCE] E=-0.35
+|       |   |   |   `-- ... 3 more nodes below (depth limit)
+|       |   |   `-- aim 6 -> [CHANCE] E=-0.42
+|       |   |       `-- ... 2 more nodes below (depth limit)
+|       |   +-- lands 2 (p=0.2) -> [MAX] value=0.15
+|       |   |   `-- ... 26 more nodes below (depth limit)
+|       |   `-- lands 4 (p=0.2) -> [MAX] value=0.24
+|       |       `-- ... 26 more nodes below (depth limit)
+|       +-- aim 4 -> [CHANCE] E=0.29
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 5 -> [CHANCE] E=0.50
+|       |   `-- ... 81 more nodes below (depth limit)
+|       `-- aim 6 -> [CHANCE] E=0.56
+|           `-- ... 54 more nodes below (depth limit)
++-- aim 3 -> [CHANCE] E=0.18
+|   +-- lands 3 (p=0.6) -> [MIN] value=0.18
+|   |   +-- aim 0 -> [CHANCE] E=0.21
+|   |   |   `-- ... 54 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.25
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.19
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.18
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.29
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.50
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.56
+|   |       `-- ... 54 more nodes below (depth limit)
+|   +-- lands 2 (p=0.2) -> [MIN] value=0.33
+|   |   +-- aim 0 -> [CHANCE] E=0.33
+|   |   |   `-- ... 54 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.40
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.43
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.48
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.59
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.71
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.77
+|   |       `-- ... 54 more nodes below (depth limit)
+|   `-- lands 4 (p=0.2) -> [MIN] value=0.05
+|       +-- aim 0 -> [CHANCE] E=0.06
+|       |   `-- ... 54 more nodes below (depth limit)
+|       +-- aim 1 -> [CHANCE] E=0.11
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 2 -> [CHANCE] E=0.06
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 3 -> [CHANCE] E=0.05
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 4 -> [CHANCE] E=0.22
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 5 -> [CHANCE] E=0.35
+|       |   `-- ... 81 more nodes below (depth limit)
+|       `-- aim 6 -> [CHANCE] E=0.39
+|           `-- ... 54 more nodes below (depth limit)
++-- aim 4 -> [CHANCE] E=0.01
+|   +-- lands 4 (p=0.6) -> [MIN] value=0.05
+|   |   +-- aim 0 -> [CHANCE] E=0.06
+|   |   |   `-- ... 54 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.11
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.06
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.05
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.22
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.35
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.39
+|   |       `-- ... 54 more nodes below (depth limit)
+|   +-- lands 3 (p=0.2) -> [MIN] value=0.18
+|   |   +-- aim 0 -> [CHANCE] E=0.21
+|   |   |   `-- ... 54 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.25
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.19
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.18
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.29
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.50
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.56
+|   |       `-- ... 54 more nodes below (depth limit)
+|   `-- lands 5 (p=0.2) -> [MIN] value=-0.27
+|       +-- aim 0 -> [CHANCE] E=-0.27
+|       |   `-- ... 54 more nodes below (depth limit)
+|       +-- aim 1 -> [CHANCE] E=-0.20
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 2 -> [CHANCE] E=-0.17
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 3 -> [CHANCE] E=-0.15
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 4 -> [CHANCE] E=-0.10
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 5 -> [CHANCE] E=0.01
+|       |   `-- ... 81 more nodes below (depth limit)
+|       `-- aim 6 -> [CHANCE] E=0.07
+|           `-- ... 54 more nodes below (depth limit)
++-- aim 5 -> [CHANCE] E=-0.21
+|   +-- lands 5 (p=0.6) -> [MIN] value=-0.27
+|   |   +-- aim 0 -> [CHANCE] E=-0.27
+|   |   |   `-- ... 54 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=-0.20
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=-0.17
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=-0.15
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=-0.10
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.01
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.07
+|   |       `-- ... 54 more nodes below (depth limit)
+|   +-- lands 4 (p=0.2) -> [MIN] value=0.05
+|   |   +-- aim 0 -> [CHANCE] E=0.06
+|   |   |   `-- ... 54 more nodes below (depth limit)
+|   |   +-- aim 1 -> [CHANCE] E=0.11
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 2 -> [CHANCE] E=0.06
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 3 -> [CHANCE] E=0.05
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 4 -> [CHANCE] E=0.22
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   +-- aim 5 -> [CHANCE] E=0.35
+|   |   |   `-- ... 81 more nodes below (depth limit)
+|   |   `-- aim 6 -> [CHANCE] E=0.39
+|   |       `-- ... 54 more nodes below (depth limit)
+|   `-- lands 6 (p=0.2) -> [MIN] value=-0.27
+|       +-- aim 0 -> [CHANCE] E=-0.27
+|       |   `-- ... 54 more nodes below (depth limit)
+|       +-- aim 1 -> [CHANCE] E=-0.20
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 2 -> [CHANCE] E=-0.18
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 3 -> [CHANCE] E=-0.20
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 4 -> [CHANCE] E=-0.12
+|       |   `-- ... 81 more nodes below (depth limit)
+|       +-- aim 5 -> [CHANCE] E=0.01
+|       |   `-- ... 81 more nodes below (depth limit)
+|       `-- aim 6 -> [CHANCE] E=0.05
+|           `-- ... 54 more nodes below (depth limit)
+`-- aim 6 -> [CHANCE] E=-0.27
+    +-- lands 6 (p=0.6) -> [MIN] value=-0.27
+    |   +-- aim 0 -> [CHANCE] E=-0.27
+    |   |   `-- ... 54 more nodes below (depth limit)
+    |   +-- aim 1 -> [CHANCE] E=-0.20
+    |   |   `-- ... 81 more nodes below (depth limit)
+    |   +-- aim 2 -> [CHANCE] E=-0.18
+    |   |   `-- ... 81 more nodes below (depth limit)
+    |   +-- aim 3 -> [CHANCE] E=-0.20
+    |   |   `-- ... 81 more nodes below (depth limit)
+    |   +-- aim 4 -> [CHANCE] E=-0.12
+    |   |   `-- ... 81 more nodes below (depth limit)
+    |   +-- aim 5 -> [CHANCE] E=0.01
+    |   |   `-- ... 81 more nodes below (depth limit)
+    |   `-- aim 6 -> [CHANCE] E=0.05
+    |       `-- ... 54 more nodes below (depth limit)
+    `-- lands 5 (p=0.4) -> [MIN] value=-0.27
+        +-- aim 0 -> [CHANCE] E=-0.27
+        |   `-- ... 54 more nodes below (depth limit)
+        +-- aim 1 -> [CHANCE] E=-0.20
+        |   `-- ... 81 more nodes below (depth limit)
+        +-- aim 2 -> [CHANCE] E=-0.17
+        |   `-- ... 81 more nodes below (depth limit)
+        +-- aim 3 -> [CHANCE] E=-0.15
+        |   `-- ... 81 more nodes below (depth limit)
+        +-- aim 4 -> [CHANCE] E=-0.10
+        |   `-- ... 81 more nodes below (depth limit)
+        +-- aim 5 -> [CHANCE] E=0.01
+        |   `-- ... 81 more nodes below (depth limit)
+        `-- aim 6 -> [CHANCE] E=0.07
+            `-- ... 54 more nodes below (depth limit)
+========================================================================

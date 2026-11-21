@@ -27,7 +27,14 @@ Design notes
 import sys
 import threading
 import time
-
+# Windows display scaling (125% / 150%) would enlarge the window past the
+# screen; draw at real pixels instead so the whole window fits.
+if sys.platform == "win32":
+    try:
+        import ctypes
+        ctypes.windll.shcore.SetProcessDpiAwareness(1)
+    except Exception:
+        pass
 import pygame
 
 import ai_interface
@@ -156,6 +163,7 @@ class GameScreen:
         self.app = app
         self.s = settings
         self.board = Board(settings.rows, settings.cols)
+        self.board.first_player = settings.first    # needed by the heuristic
         self.stochastic = settings.algorithm == "expectiminimax"
 
         # Size the cells so any allowed board fits on a typical laptop screen

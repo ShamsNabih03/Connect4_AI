@@ -1,0 +1,25 @@
+Position (X = human, O = computer, computer to move):
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . O O X . .
+. X X X O . .
+0 1 2 3 4 5 6
+
+Heuristic v2 (Minimax / Alpha-Beta weights), computer's point of view:
+  banked fours         +0.000
+  1-2 disc windows     +0.120
+  playable threats     -0.200
+  floating threats     +0.000
+  centre               -0.002
+  total                -0.082
+
+Heuristic v2 (Expectiminimax weights), computer's point of view:
+  banked fours         +0.000
+  1-2 disc windows     +0.120
+  playable threats     -0.350
+  floating threats     +0.000
+  centre               -0.002
+  total                -0.232
+

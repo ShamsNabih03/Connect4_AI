@@ -1,0 +1,21 @@
+agent_a,agent_b,k,mode,games,wins,draws,losses,score_pct,avg_margin,elo,elo_lo,elo_hi,seconds
+v2,random,4,deterministic,98,98,0,0,100.0,8.67,2400,2400,2400,23.2
+v2,greedy (take point / block),4,deterministic,98,98,0,0,100.0,3.55,2400,2400,2400,18.8
+v2,score-diff (placeholder),4,deterministic,98,56,30,12,72.4,1.09,168,111,235,21.0
+v2,galli (classic),4,deterministic,98,57,31,10,74.0,0.84,182,125,248,45.3
+v2,big-constants (typical student),4,deterministic,98,61,23,14,74.0,1.48,182,121,255,29.2
+v2,v1,4,deterministic,98,44,44,10,67.3,0.82,126,76,181,33.7
+v2,v2-no-parity,4,deterministic,98,57,38,3,77.6,0.95,215,164,276,40.2
+v2,v2-no-side-to-move,4,deterministic,98,34,49,15,59.7,0.2,68,20,119,35.1
+v2,v2-no-multiplicity,4,deterministic,98,38,39,21,58.7,0.43,61,8,117,44.9
+v2,v2+stacks (rejected),4,deterministic,98,36,48,14,61.2,0.43,79,31,131,40.3
+v2,random,5,deterministic,98,98,0,0,100.0,8.28,2400,2400,2400,70.4
+v2,greedy (take point / block),5,deterministic,98,93,4,1,96.9,3.29,600,483,1018,57.6
+v2,score-diff (placeholder),5,deterministic,98,54,29,15,69.9,0.76,146,89,212,51.6
+v2,galli (classic),5,deterministic,98,68,27,3,83.2,1.79,277,218,354,145.2
+v2,big-constants (typical student),5,deterministic,98,81,15,2,90.3,2.12,388,314,502,90.5
+v2,v1,5,deterministic,98,60,24,14,73.5,1.13,177,117,249,95.9
+v2,v2-no-parity,5,deterministic,98,62,28,8,77.6,1.46,215,157,287,115.9
+v2,v2-no-side-to-move,5,deterministic,98,53,24,21,66.3,0.87,118,58,185,114.6
+v2,v2-no-multiplicity,5,deterministic,98,46,31,21,62.8,0.61,91,34,152,110.1
+v2,v2+stacks (rejected),5,deterministic,98,54,27,17,68.9,0.62,138,80,205,119.4

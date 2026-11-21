@@ -1,0 +1,27 @@
+49 openings x 2 colours x 1 = 98 games per match, 6x7 board, deterministic
+
+K = 4
+                        v2 vs random                           K=4  W/D/L  98/ 0/0   score 100.0%  margin +8.67  Elo +2400 [+2400, +2400]  (10.7s)
+                        v2 vs greedy (take point / block)      K=4  W/D/L  98/ 0/0   score 100.0%  margin +3.55  Elo +2400 [+2400, +2400]  (9.0s)
+                        v2 vs score-diff (placeholder)         K=4  W/D/L  56/30/12  score  72.4%  margin +1.09  Elo  +168 [+111, +235]  (9.2s)
+                        v2 vs galli (classic)                  K=4  W/D/L  57/31/10  score  74.0%  margin +0.84  Elo  +182 [+125, +248]  (20.2s)
+                        v2 vs big-constants (typical student)  K=4  W/D/L  61/23/14  score  74.0%  margin +1.48  Elo  +182 [+121, +255]  (15.4s)
+                        v2 vs v1                               K=4  W/D/L  44/44/10  score  67.3%  margin +0.82  Elo  +126 [+76, +181]  (17.7s)
+                        v2 vs v2-no-parity                     K=4  W/D/L  57/38/3   score  77.6%  margin +0.95  Elo  +215 [+164, +276]  (19.9s)
+                        v2 vs v2-no-side-to-move               K=4  W/D/L  34/49/15  score  59.7%  margin +0.20  Elo   +68 [+20, +119]  (18.3s)
+                        v2 vs v2-no-multiplicity               K=4  W/D/L  38/39/21  score  58.7%  margin +0.43  Elo   +61 [+8, +117]  (20.2s)
+                        v2 vs v2+stacks (rejected)             K=4  W/D/L  36/48/14  score  61.2%  margin +0.43  Elo   +79 [+31, +131]  (20.3s)
+
+K = 5
+                        v2 vs random                           K=5  W/D/L  98/ 0/0   score 100.0%  margin +8.28  Elo +2400 [+2400, +2400]  (34.0s)
+                        v2 vs greedy (take point / block)      K=5  W/D/L  93/ 4/1   score  96.9%  margin +3.29  Elo  +600 [+483, +1018]  (26.2s)
+                        v2 vs score-diff (placeholder)         K=5  W/D/L  54/29/15  score  69.9%  margin +0.76  Elo  +146 [+89, +212]  (25.1s)
+                        v2 vs galli (classic)                  K=5  W/D/L  68/27/3   score  83.2%  margin +1.79  Elo  +277 [+218, +354]  (63.5s)
+                        v2 vs big-constants (typical student)  K=5  W/D/L  81/15/2   score  90.3%  margin +2.12  Elo  +388 [+314, +502]  (47.5s)
+                        v2 vs v1                               K=5  W/D/L  60/24/14  score  73.5%  margin +1.13  Elo  +177 [+117, +249]  (53.9s)
+                        v2 vs v2-no-parity                     K=5  W/D/L  62/28/8   score  77.6%  margin +1.46  Elo  +215 [+157, +287]  (54.3s)
+                        v2 vs v2-no-side-to-move               K=5  W/D/L  53/24/21  score  66.3%  margin +0.87  Elo  +118 [+58, +185]  (59.3s)
+                        v2 vs v2-no-multiplicity               K=5  W/D/L  46/31/21  score  62.8%  margin +0.61  Elo   +91 [+34, +152]  (54.1s)
+                        v2 vs v2+stacks (rejected)             K=5  W/D/L  54/27/17  score  68.9%  margin +0.62  Elo  +138 [+80, +205]  (56.7s)
+
+Saved results/heuristic_matches.md

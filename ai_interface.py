@@ -51,24 +51,31 @@ stand-in heuristic and caps the depth at 3. To plug in the real agent:
 """
 
 import math
+import time
 
 from board import AI, HUMAN, opponent
+from heuristic import evaluate_v2, V2_MINIMAX, V2_EXPECTI      # Person B
+from tree_printer import print_tree                            # Person B
 from tree import TreeNode, MAX, MIN, CHANCE, LEAF, principal_path
 
 ALGORITHMS = ("minimax", "alphabeta", "expectiminimax")
 PLACEHOLDER_MAX_DEPTH = 3
 QUIET = False          # True -> agent must not print trees (experiments)
+PRINT_DEPTH = 3        # tree levels printed in full (best line always full)
 
 
 def evaluate(board):
-    """Heuristic value of `board` for the computer (placeholder)."""
-    return _evaluate(board)
+    """Heuristic value of `board` for the computer (Person B's heuristic v2)."""
+    return evaluate_v2(board, V2_MINIMAX)
 
 
 def get_move(board, algorithm, k):
     if algorithm not in ALGORITHMS:
         raise ValueError(f"Unknown algorithm: {algorithm}")
     depth = min(k, PLACEHOLDER_MAX_DEPTH)
+    global _weights
+    _weights = V2_EXPECTI if algorithm == "expectiminimax" else V2_MINIMAX
+    start = time.perf_counter()
     counter = [0]
     root = TreeNode(MAX)
     if algorithm == "expectiminimax":
@@ -78,13 +85,21 @@ def get_move(board, algorithm, k):
     else:
         _minimax(board, depth, AI, root, counter)
     best = principal_path(root)[1]
+    if not QUIET:
+        names = {"minimax": "Minimax", "alphabeta": "Alpha-Beta",
+                 "expectiminimax": "Expectiminimax"}
+        print_tree(root, PRINT_DEPTH, title=f"{names[algorithm]}, K={depth}",
+                   stats={"nodes": counter[0], "column": best.column(),
+                          "time": time.perf_counter() - start})
     return best.column(), {"nodes": counter[0], "value": root.value, "tree": root}
 
 
+_weights = V2_MINIMAX
+
+
 def _evaluate(board):
-    """Stand-in heuristic: computer's fours minus human's fours."""
-    human, computer = board.scores()
-    return computer - human
+    """Leaf value: Person B's heuristic with the weights for the algorithm."""
+    return evaluate_v2(board, _weights)
 
 
 def _minimax(board, depth, player, node, counter, alpha=None, beta=None):

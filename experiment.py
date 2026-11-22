@@ -28,8 +28,8 @@ Outputs (in --out, default "results/"):
     board_size_nodes.png    nodes expanded vs board size (log scale)
     board_size_time.png     time per move vs board size (log scale)
 
-Run it again after the real agent is plugged into ai_interface.py - the
-placeholder agent caps the depth at 3, so K > 3 shows nothing new with it.
+Expectiminimax grows about 20x per extra level, so K > 3 is slow for it;
+the --max-seconds option skips larger K once a configuration is too slow.
 """
 
 import argparse
@@ -170,10 +170,6 @@ def main():
     a = p.parse_args()
 
     sizes = [parse_size(s) for s in a.sizes]
-    cap = getattr(ai_interface, "PLACEHOLDER_MAX_DEPTH", None)
-    if cap is not None and max(a.k) > cap:
-        print(f"NOTE: the placeholder agent caps depth at {cap}; "
-              "plug in the real agent for meaningful K > 3 results.\n")
 
     results = run(sizes, a.k, a.algorithms, a.positions, a.opening,
                   a.max_seconds, a.seed)

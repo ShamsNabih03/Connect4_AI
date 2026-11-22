@@ -1,5 +1,5 @@
 """
-heuristic_experiments.py - proves which heuristic is better (Person B).
+heuristic_experiments.py - proves which heuristic is better.
 
 The agent always picks the move with the best heuristic-backed value, so the
 only fair way to compare heuristics is to make them PLAY each other with

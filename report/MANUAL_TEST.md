@@ -1,8 +1,9 @@
 # Manual GUI test: screenshots and console output
 
 Played on Windows (Python 3.14, pygame-ce 2.5.8), 6x7 board, K = 4, human first.
-The agent was still the placeholder search (depth capped at 3, so the trees say K=3).
-Re-take these after Person C's agent is plugged in if the report needs K > 3.
+NOTE: these games were played while the search depth was still capped at 3, so the
+GUI says K = 4 but the searches (and the trees in logs/) are K = 3. They are kept
+for reference only and are not used in report/Connect4_Report.pdf.
 
 | #   | Screenshot (images/)         | Console output (logs/)                                  | What it shows                                                                                                                                                                                                                         |
 | --- | ---------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

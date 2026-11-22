@@ -1,5 +1,5 @@
 """
-report/make_tree_samples.py - console tree printouts for the report (Person B).
+report/make_tree_samples.py - console tree printouts for the report.
 
 Assignment 3.1 asks for "sample runs and their corresponding minimax trees".
 This script plays a few fixed opening moves, asks the agent for its move with

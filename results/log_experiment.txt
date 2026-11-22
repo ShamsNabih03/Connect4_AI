@@ -1,0 +1,72 @@
+   6x7  Minimax         K=1   time    0.0032 s   nodes            8
+   6x7  Minimax         K=2   time    0.0108 s   nodes           57
+   6x7  Minimax         K=3   time    0.0641 s   nodes          400
+   6x7  Minimax         K=4   time    0.7100 s   nodes        2,800
+   6x7  Minimax         K=5   time    3.0493 s   nodes       19,586
+   6x7  Minimax         K=6   time   10.6135 s   nodes      136,823
+   6x7  Alpha-Beta      K=1   time    0.0007 s   nodes            8
+   6x7  Alpha-Beta      K=2   time    0.0035 s   nodes           43
+   6x7  Alpha-Beta      K=3   time    0.0243 s   nodes          257
+   6x7  Alpha-Beta      K=4   time    0.0970 s   nodes        1,033
+   6x7  Alpha-Beta      K=5   time    0.4857 s   nodes        6,046
+   6x7  Alpha-Beta      K=6   time    1.9960 s   nodes       20,039
+   6x7  Expectiminimax  K=1   time    0.0027 s   nodes           27
+   6x7  Expectiminimax  K=2   time    0.0455 s   nodes          521
+   6x7  Expectiminimax  K=3   time    1.1400 s   nodes        9,907
+   6x7  Expectiminimax  K=4   time   19.4728 s   nodes      188,176
+        (over 15.0s - skipping larger K)
+   7x8  Minimax         K=1   time    0.0017 s   nodes            9
+   7x8  Minimax         K=2   time    0.0101 s   nodes           73
+   7x8  Minimax         K=3   time    0.0960 s   nodes          585
+   7x8  Minimax         K=4   time    0.7430 s   nodes        4,681
+   7x8  Minimax         K=5   time    6.1569 s   nodes       37,449
+   7x8  Minimax         K=6   time   57.5806 s   nodes      299,592
+        (over 15.0s - skipping larger K)
+   7x8  Alpha-Beta      K=1   time    0.0013 s   nodes            9
+   7x8  Alpha-Beta      K=2   time    0.0059 s   nodes           42
+   7x8  Alpha-Beta      K=3   time    0.0685 s   nodes          384
+   7x8  Alpha-Beta      K=4   time    0.1567 s   nodes          986
+   7x8  Alpha-Beta      K=5   time    1.5759 s   nodes       10,043
+   7x8  Alpha-Beta      K=6   time    2.8420 s   nodes       20,230
+   7x8  Expectiminimax  K=1   time    0.0039 s   nodes           31
+   7x8  Expectiminimax  K=2   time    0.1105 s   nodes          691
+   7x8  Expectiminimax  K=3   time    2.3717 s   nodes       15,211
+   7x8  Expectiminimax  K=4   time   49.8903 s   nodes      334,651
+        (over 15.0s - skipping larger K)
+   8x9  Minimax         K=1   time    0.0025 s   nodes           10
+   8x9  Minimax         K=2   time    0.0181 s   nodes           91
+   8x9  Minimax         K=3   time    0.3226 s   nodes          820
+   8x9  Minimax         K=4   time    1.7906 s   nodes        7,381
+   8x9  Minimax         K=5   time   16.8754 s   nodes       66,430
+        (over 15.0s - skipping larger K)
+   8x9  Alpha-Beta      K=1   time    0.0020 s   nodes           10
+   8x9  Alpha-Beta      K=2   time    0.0103 s   nodes           56
+   8x9  Alpha-Beta      K=3   time    0.0949 s   nodes          468
+   8x9  Alpha-Beta      K=4   time    0.4908 s   nodes        2,192
+   8x9  Alpha-Beta      K=5   time    2.8140 s   nodes       13,916
+   8x9  Alpha-Beta      K=6   time   13.4957 s   nodes       72,910
+   8x9  Expectiminimax  K=1   time    0.0033 s   nodes           35
+   8x9  Expectiminimax  K=2   time    0.0912 s   nodes          885
+   8x9  Expectiminimax  K=3   time    2.5388 s   nodes       22,135
+   8x9  Expectiminimax  K=4   time   77.3332 s   nodes      553,385
+        (over 15.0s - skipping larger K)
+  9x10  Minimax         K=1   time    0.0035 s   nodes           11
+  9x10  Minimax         K=2   time    0.0286 s   nodes          111
+  9x10  Minimax         K=3   time    0.2985 s   nodes        1,111
+  9x10  Minimax         K=4   time    3.1212 s   nodes       11,111
+  9x10  Minimax         K=5   time   32.4929 s   nodes      111,111
+        (over 15.0s - skipping larger K)
+  9x10  Alpha-Beta      K=1   time    0.0039 s   nodes           11
+  9x10  Alpha-Beta      K=2   time    0.0207 s   nodes           73
+  9x10  Alpha-Beta      K=3   time    0.2072 s   nodes          699
+  9x10  Alpha-Beta      K=4   time    1.3139 s   nodes        4,003
+  9x10  Alpha-Beta      K=5   time    5.5970 s   nodes       24,377
+  9x10  Alpha-Beta      K=6   time   32.6873 s   nodes      140,528
+        (over 15.0s - skipping larger K)
+  9x10  Expectiminimax  K=1   time    0.0084 s   nodes           39
+  9x10  Expectiminimax  K=2   time    0.2917 s   nodes        1,103
+  9x10  Expectiminimax  K=3   time    7.4064 s   nodes       30,895
+  9x10  Expectiminimax  K=4   time  123.6791 s   nodes      865,071
+        (over 15.0s - skipping larger K)
+
+Saved results to C:\Users\NEXT STORE\Desktop\projects\Connect4_AI\results

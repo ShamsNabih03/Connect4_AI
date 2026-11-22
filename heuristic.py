@@ -1,5 +1,5 @@
 """
-heuristic.py - heuristic evaluation for the Connect 4 agent (Person B).
+heuristic.py - heuristic evaluation for the Connect 4 agent.
 
 the search is truncated after K levels and every
 leaf is scored by a heuristic that "returns bigger number when computer is
@@ -307,7 +307,7 @@ def explain(board, w=V2_MINIMAX):
 # Reference heuristics (opponents in heuristic_experiments.py)
 # ---------------------------------------------------------------------------
 def evaluate_score_diff(board):
-    """The placeholder from ai_interface.py: computer fours - human fours."""
+    """Baseline: computer fours minus human fours (the score difference)."""
     return _exact(board)
 
 

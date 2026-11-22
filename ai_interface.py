@@ -1,5 +1,5 @@
 """
-ai_interface.py - the contract between the GUI (Person A) and the AI agent.
+ai_interface.py - the contract between the GUI (gui.py) and the AI agent.
 
 The GUI calls exactly ONE function, on a background thread, every AI turn:
 
@@ -36,43 +36,34 @@ which must return the HEURISTIC value of `board` from the computer's point
 of view (bigger = computer closer to winning). The GUI shows it for the
 current board and for the board after a disc in each column.
 
----------------------------------------------------------------------------
-PLACEHOLDER BELOW - replace with the real agent.
-It exists only so the GUI and the tree viewer can be built and demonstrated
-before the real agent is ready: it uses the CURRENT SCORE DIFFERENCE as a
-stand-in heuristic and caps the depth at 3. To plug in the real agent:
-
-    from agent import choose_move, heuristic
-    def get_move(board, algorithm, k):
-        return choose_move(board, algorithm, k)
-    def evaluate(board):
-        return heuristic(board)
----------------------------------------------------------------------------
+The search itself is implemented below: _minimax (with optional alpha-beta
+pruning) and _expecti (Expectiminimax). The leaf value is the heuristic from
+heuristic.py; the tree is built as tree.TreeNode objects and printed by
+tree_printer.py.
 """
 
 import math
 import time
 
 from board import AI, HUMAN, opponent
-from heuristic import evaluate_v2, V2_MINIMAX, V2_EXPECTI      # Person B
-from tree_printer import print_tree                            # Person B
+from heuristic import evaluate_v2, V2_MINIMAX, V2_EXPECTI
+from tree_printer import print_tree
 from tree import TreeNode, MAX, MIN, CHANCE, LEAF, principal_path
 
 ALGORITHMS = ("minimax", "alphabeta", "expectiminimax")
-PLACEHOLDER_MAX_DEPTH = 3
 QUIET = False          # True -> agent must not print trees (experiments)
 PRINT_DEPTH = 3        # tree levels printed in full (best line always full)
 
 
 def evaluate(board):
-    """Heuristic value of `board` for the computer (Person B's heuristic v2)."""
+    """Heuristic value of `board` for the computer (heuristic v2 from heuristic.py)."""
     return evaluate_v2(board, V2_MINIMAX)
 
 
 def get_move(board, algorithm, k):
     if algorithm not in ALGORITHMS:
         raise ValueError(f"Unknown algorithm: {algorithm}")
-    depth = min(k, PLACEHOLDER_MAX_DEPTH)
+    depth = k
     global _weights
     _weights = V2_EXPECTI if algorithm == "expectiminimax" else V2_MINIMAX
     start = time.perf_counter()
@@ -98,7 +89,7 @@ _weights = V2_MINIMAX
 
 
 def _evaluate(board):
-    """Leaf value: Person B's heuristic with the weights for the algorithm."""
+    """Leaf value: heuristic.py with the weights for the algorithm."""
     return evaluate_v2(board, _weights)
 
 

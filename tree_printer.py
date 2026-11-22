@@ -1,5 +1,5 @@
 """
-tree_printer.py - prints the minimax tree to the console (Person B).
+tree_printer.py - prints the minimax tree to the console.
 
 Assignment Section 2.2: "it is required to show the minimax tree in each
 turn by printing it to the console in a readable form that we can trace".

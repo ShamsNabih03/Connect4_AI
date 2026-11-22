@@ -48,6 +48,7 @@ def save(app, name):
 def play_game(app, rows, cols, algo, k, first, seed, tag, snap_after=None,
               snap_slip=False, open_tree_at=None):
     rng = random.Random(seed)
+    random.seed(seed)          # the Expectiminimax slips use the global RNG -> reproducible
     s = app.settings
     s.rows, s.cols, s.algorithm, s.k, s.first = rows, cols, algo, k, first
     app.open_settings()
@@ -90,7 +91,7 @@ def main():
         ("run1_alphabeta", dict(rows=6, cols=7, algo="alphabeta", k=3, first=HUMAN,
                                 seed=7, snap_after=14, open_tree_at=3)),
         ("run2_expecti", dict(rows=7, cols=8, algo="expectiminimax", k=2, first=AI,
-                              seed=11, snap_slip=True)),
+                              seed=11, snap_slip=True, open_tree_at=3)),
     ]
     for tag, kw in runs:
         buf = io.StringIO()

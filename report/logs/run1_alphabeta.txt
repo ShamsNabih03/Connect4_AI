@@ -1,7 +1,7 @@
 
 === New game: 6x7, Alpha-Beta, K=3, deterministic ===
 Heuristic h(board) = 0
-h after your disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+h after your disc in each column -> c0:-0.07  c1:-0.09  c2:-0.11  c3:-0.15  c4:-0.11  c5:-0.09  c6:-0.07
 You aimed at column 2, landed in column 2
 . . . . . . .
 . . . . . . .
@@ -12,497 +12,3489 @@ You aimed at column 2, landed in column 2
 0 1 2 3 4 5 6
 Score  You 0 : 0 Computer
 
-Heuristic h(board) = 0
-h after a computer disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
-Computer aimed at column 0, landed in column 0
+Heuristic h(board) = -0.11
+h after a computer disc in each column -> c0:-0.04  c1:-0.02  c2:0.07  c3:0.04  c4:0  c5:-0.02  c6:-0.04
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 316   nodes expanded: 251   time: 0.023 s   chosen column: 2
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=0.06  (a=0.06, b=+inf)
++-- col 0 -> [MIN] value=-0.03  (a=-inf, b=-0.03)
+|   +-- col 0 -> [MAX] value=0.04  (a=0.04, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=-0.04
+|   |   +-- col 1 -> [LEAF] h=-0.06
+|   |   +-- col 2 -> [LEAF] h=0.04
+|   |   +-- col 3 -> [LEAF] h=0.00
+|   |   +-- col 4 -> [LEAF] h=-0.02
+|   |   +-- col 5 -> [LEAF] h=-0.04
+|   |   `-- col 6 -> [LEAF] h=-0.07
+|   +-- col 1 -> [MAX] value=0.04  (a=0.04, b=0.04)
+|   |   +-- col 0 -> [LEAF] h=-0.02
+|   |   +-- col 1 -> [LEAF] h=0.02
+|   |   +-- col 2 -> [LEAF] h=0.00
+|   |   +-- col 3 -> [LEAF] h=0.04
+|   |   +-- col 4 -> [LEAF] h=0.02
+|   |   +-- col 5 -> [LEAF] h=-0.08
+|   |   `-- col 6 -> [LEAF] h=-0.11
+|   +-- col 2 -> [MAX] value=0.10  (a=0.10, b=0.04)
+|   |   +-- col 0 -> [LEAF] h=-0.13
+|   |   +-- col 1 -> [LEAF] h=-0.21
+|   |   +-- col 2 -> [LEAF] h=0.10
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=-0.03  (a=-0.03, b=0.04)
+|   |   +-- col 0 -> [LEAF] h=-0.15
+|   |   +-- col 1 -> [LEAF] h=-0.15
+|   |   +-- col 2 -> [LEAF] h=-0.12
+|   |   +-- col 3 -> [LEAF] h=-0.08
+|   |   +-- col 4 -> [LEAF] h=-0.03
+|   |   +-- col 5 -> [LEAF] h=-0.13
+|   |   `-- col 6 -> [LEAF] h=-0.23
+|   +-- col 4 -> [MAX] value=0.02  (a=0.02, b=-0.03)
+|   |   +-- col 0 -> [LEAF] h=-0.13
+|   |   +-- col 1 -> [LEAF] h=-0.13
+|   |   +-- col 2 -> [LEAF] h=-0.10
+|   |   +-- col 3 -> [LEAF] h=0.02
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=-0.02  (a=-0.02, b=-0.03)
+|   |   +-- col 0 -> [LEAF] h=-0.04
+|   |   +-- col 1 -> [LEAF] h=-0.12
+|   |   +-- col 2 -> [LEAF] h=-0.02
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.04  (a=0.04, b=-0.03)
+|       +-- col 0 -> [LEAF] h=0.04
+|       +-- col 1 -> (pruned)
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=0.04  (a=-0.03, b=0.04)
+|   +-- col 0 -> [MAX] value=0.17  (a=0.17, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.02
+|   |   +-- col 1 -> [LEAF] h=0.12
+|   |   +-- col 2 -> [LEAF] h=0.17
+|   |   +-- col 3 -> [LEAF] h=0.05
+|   |   +-- col 4 -> [LEAF] h=0.02
+|   |   +-- col 5 -> [LEAF] h=0.02
+|   |   `-- col 6 -> [LEAF] h=-0.00
+|   +-- col 1 -> [MAX] value=0.08  (a=0.08, b=0.17)
+|   |   +-- col 0 -> [LEAF] h=-0.11
+|   |   +-- col 1 -> [LEAF] h=0.00
+|   |   +-- col 2 -> [LEAF] h=0.08
+|   |   +-- col 3 -> [LEAF] h=-0.04
+|   |   +-- col 4 -> [LEAF] h=-0.06
+|   |   +-- col 5 -> [LEAF] h=-0.07
+|   |   `-- col 6 -> [LEAF] h=-0.09
+|   +-- col 2 -> [MAX] value=0.06  (a=0.06, b=0.08)
+|   |   +-- col 0 -> [LEAF] h=-0.21
+|   |   +-- col 1 -> [LEAF] h=-0.07
+|   |   +-- col 2 -> [LEAF] h=0.06
+|   |   +-- col 3 -> [LEAF] h=-0.14
+|   |   +-- col 4 -> [LEAF] h=-0.17
+|   |   +-- col 5 -> [LEAF] h=-0.17
+|   |   `-- col 6 -> [LEAF] h=-0.19
+|   +-- col 3 -> [MAX] value=0.04  (a=0.04, b=0.06)
+|   |   +-- col 0 -> [LEAF] h=-0.15
+|   |   +-- col 1 -> [LEAF] h=-0.00
+|   |   +-- col 2 -> [LEAF] h=0.04
+|   |   +-- col 3 -> [LEAF] h=0.02
+|   |   +-- col 4 -> [LEAF] h=-0.03
+|   |   +-- col 5 -> [LEAF] h=-0.03
+|   |   `-- col 6 -> [LEAF] h=-0.13
+|   +-- col 4 -> [MAX] value=0.06  (a=0.06, b=0.04)
+|   |   +-- col 0 -> [LEAF] h=-0.13
+|   |   +-- col 1 -> [LEAF] h=0.02
+|   |   +-- col 2 -> [LEAF] h=0.06
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.07  (a=0.07, b=0.04)
+|   |   +-- col 0 -> [LEAF] h=-0.12
+|   |   +-- col 1 -> [LEAF] h=0.02
+|   |   +-- col 2 -> [LEAF] h=0.07
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.10  (a=0.10, b=0.04)
+|       +-- col 0 -> [LEAF] h=-0.04
+|       +-- col 1 -> [LEAF] h=0.10
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 2 -> [MIN] value=0.06  (a=0.04, b=0.06)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=0.23  (a=0.23, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.09
+|   |   +-- col 1 -> [LEAF] h=0.17
+|   |   +-- col 2 -> [LEAF] h=0.22
+|   |   +-- col 3 -> [LEAF] h=0.23
+|   |   +-- col 4 -> [LEAF] h=0.05
+|   |   +-- col 5 -> [LEAF] h=0.03
+|   |   `-- col 6 -> [LEAF] h=0.01
+|   +-- col 1 -> [MAX] value=0.23  (a=0.23, b=0.23)
+|   |   +-- col 0 -> [LEAF] h=0.00
+|   |   +-- col 1 -> [LEAF] h=0.11
+|   |   +-- col 2 -> [LEAF] h=0.14
+|   |   +-- col 3 -> [LEAF] h=0.23
+|   |   +-- col 4 -> [LEAF] h=0.05
+|   |   +-- col 5 -> [LEAF] h=-0.05
+|   |   `-- col 6 -> [LEAF] h=-0.08
+|   +-- col 2 -> [MAX] value=0.06  (a=0.06, b=0.23)  <== expected
+|   |   +-- col 0 -> [LEAF] h=-0.09
+|   |   +-- col 1 -> [LEAF] h=-0.01
+|   |   +-- col 2 -> [LEAF] h=0.05
+|   |   +-- col 3 -> [LEAF] h=0.06  <== expected
+|   |   +-- col 4 -> [LEAF] h=-0.05
+|   |   +-- col 5 -> [LEAF] h=-0.07
+|   |   `-- col 6 -> [LEAF] h=-0.09
+|   +-- col 3 -> [MAX] value=0.13  (a=0.13, b=0.06)
+|   |   +-- col 0 -> [LEAF] h=-0.12
+|   |   +-- col 1 -> [LEAF] h=0.04
+|   |   +-- col 2 -> [LEAF] h=0.01
+|   |   +-- col 3 -> [LEAF] h=0.13
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=0.06  (a=0.06, b=0.06)
+|   |   +-- col 0 -> [LEAF] h=-0.10
+|   |   +-- col 1 -> [LEAF] h=0.06
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.07  (a=0.07, b=0.06)
+|   |   +-- col 0 -> [LEAF] h=-0.02
+|   |   +-- col 1 -> [LEAF] h=0.07
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.07  (a=0.07, b=0.06)
+|       +-- col 0 -> [LEAF] h=0.07
+|       +-- col 1 -> (pruned)
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 3 -> [MIN] value=0.03  (a=0.06, b=0.03)
+|   +-- col 0 -> [MAX] value=0.28  (a=0.28, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.09
+|   |   +-- col 1 -> [LEAF] h=0.05
+|   |   +-- col 2 -> [LEAF] h=0.23
+|   |   +-- col 3 -> [LEAF] h=0.28
+|   |   +-- col 4 -> [LEAF] h=0.13
+|   |   +-- col 5 -> [LEAF] h=0.13
+|   |   `-- col 6 -> [LEAF] h=0.12
+|   +-- col 1 -> [MAX] value=0.28  (a=0.28, b=0.28)
+|   |   +-- col 0 -> [LEAF] h=0.04
+|   |   +-- col 1 -> [LEAF] h=0.13
+|   |   +-- col 2 -> [LEAF] h=0.23
+|   |   +-- col 3 -> [LEAF] h=0.28
+|   |   +-- col 4 -> [LEAF] h=0.13
+|   |   +-- col 5 -> [LEAF] h=0.12
+|   |   `-- col 6 -> [LEAF] h=0.12
+|   +-- col 2 -> [MAX] value=0.13  (a=0.13, b=0.28)
+|   |   +-- col 0 -> [LEAF] h=-0.15
+|   |   +-- col 1 -> [LEAF] h=-0.14
+|   |   +-- col 2 -> [LEAF] h=0.13
+|   |   +-- col 3 -> [LEAF] h=0.09
+|   |   +-- col 4 -> [LEAF] h=-0.06
+|   |   +-- col 5 -> [LEAF] h=-0.06
+|   |   `-- col 6 -> [LEAF] h=-0.07
+|   +-- col 3 -> [MAX] value=0.03  (a=0.06, b=0.13)
+|   |   +-- col 0 -> [LEAF] h=-0.19
+|   |   +-- col 1 -> [LEAF] h=-0.19
+|   |   +-- col 2 -> [LEAF] h=-0.00
+|   |   +-- col 3 -> [LEAF] h=0.03
+|   |   +-- col 4 -> [LEAF] h=-0.11
+|   |   +-- col 5 -> [LEAF] h=-0.11
+|   |   `-- col 6 -> [LEAF] h=-0.11
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=0.05  (a=0.06, b=0.05)
+|   +-- col 0 -> [MAX] value=0.13  (a=0.13, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=-0.04
+|   |   +-- col 1 -> [LEAF] h=0.02
+|   |   +-- col 2 -> [LEAF] h=0.05
+|   |   +-- col 3 -> [LEAF] h=0.13
+|   |   +-- col 4 -> [LEAF] h=0.11
+|   |   +-- col 5 -> [LEAF] h=0.00
+|   |   `-- col 6 -> [LEAF] h=0
+|   +-- col 1 -> [MAX] value=0.13  (a=0.13, b=0.13)
+|   |   +-- col 0 -> [LEAF] h=0.02
+|   |   +-- col 1 -> [LEAF] h=0.00
+|   |   +-- col 2 -> [LEAF] h=0.05
+|   |   +-- col 3 -> [LEAF] h=0.13
+|   |   +-- col 4 -> [LEAF] h=0.11
+|   |   +-- col 5 -> [LEAF] h=-0.00
+|   |   `-- col 6 -> [LEAF] h=-0.00
+|   +-- col 2 -> [MAX] value=0.15  (a=0.15, b=0.13)
+|   |   +-- col 0 -> [LEAF] h=-0.17
+|   |   +-- col 1 -> [LEAF] h=-0.17
+|   |   +-- col 2 -> [LEAF] h=0.15
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=0.11  (a=0.11, b=0.13)
+|   |   +-- col 0 -> [LEAF] h=-0.03
+|   |   +-- col 1 -> [LEAF] h=-0.03
+|   |   +-- col 2 -> [LEAF] h=0.00
+|   |   +-- col 3 -> [LEAF] h=0.11
+|   |   +-- col 4 -> [LEAF] h=0.06
+|   |   +-- col 5 -> [LEAF] h=-0.13
+|   |   `-- col 6 -> [LEAF] h=-0.13
+|   +-- col 4 -> [MAX] value=0.05  (a=0.06, b=0.11)
+|   |   +-- col 0 -> [LEAF] h=-0.11
+|   |   +-- col 1 -> [LEAF] h=-0.11
+|   |   +-- col 2 -> [LEAF] h=0
+|   |   +-- col 3 -> [LEAF] h=-0.00
+|   |   +-- col 4 -> [LEAF] h=0.05
+|   |   +-- col 5 -> [LEAF] h=-0.05
+|   |   `-- col 6 -> [LEAF] h=-0.05
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=-0.03  (a=0.06, b=-0.03)
+|   +-- col 0 -> [MAX] value=0.13  (a=0.13, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=-0.06
+|   |   +-- col 1 -> [LEAF] h=0.02
+|   |   +-- col 2 -> [LEAF] h=0.03
+|   |   +-- col 3 -> [LEAF] h=0.13
+|   |   +-- col 4 -> [LEAF] h=0.00
+|   |   +-- col 5 -> [LEAF] h=0.04
+|   |   `-- col 6 -> [LEAF] h=-0.02
+|   +-- col 1 -> [MAX] value=0.12  (a=0.12, b=0.13)
+|   |   +-- col 0 -> [LEAF] h=-0.08
+|   |   +-- col 1 -> [LEAF] h=-0.10
+|   |   +-- col 2 -> [LEAF] h=-0.05
+|   |   +-- col 3 -> [LEAF] h=0.12
+|   |   +-- col 4 -> [LEAF] h=-0.00
+|   |   +-- col 5 -> [LEAF] h=-0.04
+|   |   `-- col 6 -> [LEAF] h=-0.10
+|   +-- col 2 -> [MAX] value=0.06  (a=0.06, b=0.12)
+|   |   +-- col 0 -> [LEAF] h=-0.19
+|   |   +-- col 1 -> [LEAF] h=-0.17
+|   |   +-- col 2 -> [LEAF] h=0.06
+|   |   +-- col 3 -> [LEAF] h=-0.06
+|   |   +-- col 4 -> [LEAF] h=-0.11
+|   |   +-- col 5 -> [LEAF] h=-0.07
+|   |   `-- col 6 -> [LEAF] h=-0.13
+|   +-- col 3 -> [MAX] value=-0.03  (a=0.06, b=0.06)
+|   |   +-- col 0 -> [LEAF] h=-0.13
+|   |   +-- col 1 -> [LEAF] h=-0.03
+|   |   +-- col 2 -> [LEAF] h=-0.10
+|   |   +-- col 3 -> [LEAF] h=-0.06
+|   |   +-- col 4 -> [LEAF] h=-0.13
+|   |   +-- col 5 -> [LEAF] h=-0.08
+|   |   `-- col 6 -> [LEAF] h=-0.23
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=0.04  (a=0.06, b=0.04)
+    +-- col 0 -> [MAX] value=0.12  (a=0.12, b=+inf)
+    |   +-- col 0 -> [LEAF] h=-0.08
+    |   +-- col 1 -> [LEAF] h=-0.00
+    |   +-- col 2 -> [LEAF] h=0.01
+    |   +-- col 3 -> [LEAF] h=0.12
+    |   +-- col 4 -> [LEAF] h=0
+    |   +-- col 5 -> [LEAF] h=-0.02
+    |   `-- col 6 -> [LEAF] h=-0.02
+    +-- col 1 -> [MAX] value=0.12  (a=0.12, b=0.12)
+    |   +-- col 0 -> [LEAF] h=-0.11
+    |   +-- col 1 -> [LEAF] h=-0.12
+    |   +-- col 2 -> [LEAF] h=-0.08
+    |   +-- col 3 -> [LEAF] h=0.12
+    |   +-- col 4 -> [LEAF] h=-0.00
+    |   +-- col 5 -> [LEAF] h=-0.10
+    |   `-- col 6 -> [LEAF] h=-0.10
+    +-- col 2 -> [MAX] value=0.04  (a=0.06, b=0.12)
+    |   +-- col 0 -> [LEAF] h=-0.21
+    |   +-- col 1 -> [LEAF] h=-0.19
+    |   +-- col 2 -> [LEAF] h=0.04
+    |   +-- col 3 -> [LEAF] h=-0.07
+    |   +-- col 4 -> [LEAF] h=-0.11
+    |   +-- col 5 -> [LEAF] h=-0.13
+    |   `-- col 6 -> [LEAF] h=-0.13
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 2, landed in column 2
 . . . . . . .
 . . . . . . .
 . . . . . . .
 . . . . . . .
-. . . . . . .
-O . X . . . .
+. . O . . . .
+. . X . . . .
 0 1 2 3 4 5 6
 Score  You 0 : 0 Computer
 
-Heuristic h(board) = 0
-h after your disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+Heuristic h(board) = 0.07
+h after your disc in each column -> c0:-0.06  c1:-0.14  c2:-0.16  c3:-0.27  c4:-0.16  c5:-0.08  c6:-0.00
 You aimed at column 1, landed in column 1
 . . . . . . .
 . . . . . . .
 . . . . . . .
 . . . . . . .
-. . . . . . .
-O X X . . . .
+. . O . . . .
+. X X . . . .
 0 1 2 3 4 5 6
 Score  You 0 : 0 Computer
 
-Heuristic h(board) = 0
-h after a computer disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
-Computer aimed at column 0, landed in column 0
+Heuristic h(board) = -0.14
+h after a computer disc in each column -> c0:0.00  c1:0.11  c2:0.14  c3:0.23  c4:0.05  c5:-0.05  c6:-0.08
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 253   nodes expanded: 195   time: 0.014 s   chosen column: 3
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=0.26  (a=0.26, b=+inf)
++-- col 0 -> [MIN] value=0.06  (a=-inf, b=0.06)
+|   +-- col 0 -> [MAX] value=0.26  (a=0.26, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.01
+|   |   +-- col 1 -> [LEAF] h=0.15
+|   |   +-- col 2 -> [LEAF] h=0.26
+|   |   +-- col 3 -> [LEAF] h=0.19
+|   |   +-- col 4 -> [LEAF] h=0.11
+|   |   +-- col 5 -> [LEAF] h=0.00
+|   |   `-- col 6 -> [LEAF] h=-0.02
+|   +-- col 1 -> [MAX] value=0.13  (a=0.13, b=0.26)
+|   |   +-- col 0 -> [LEAF] h=-0.06
+|   |   +-- col 1 -> [LEAF] h=0.13
+|   |   +-- col 2 -> [LEAF] h=0.07
+|   |   +-- col 3 -> [LEAF] h=0.09
+|   |   +-- col 4 -> [LEAF] h=0.00
+|   |   +-- col 5 -> [LEAF] h=-0.10
+|   |   `-- col 6 -> [LEAF] h=-0.12
+|   +-- col 2 -> [MAX] value=0.06  (a=0.06, b=0.13)
+|   |   +-- col 0 -> [LEAF] h=-0.01
+|   |   +-- col 1 -> [LEAF] h=0.01
+|   |   +-- col 2 -> [LEAF] h=-0.02
+|   |   +-- col 3 -> [LEAF] h=0.06
+|   |   +-- col 4 -> [LEAF] h=-0.03
+|   |   +-- col 5 -> [LEAF] h=-0.13
+|   |   `-- col 6 -> [LEAF] h=-0.15
+|   +-- col 3 -> [MAX] value=0.10  (a=0.10, b=0.06)
+|   |   +-- col 0 -> [LEAF] h=-0.76
+|   |   +-- col 1 -> [LEAF] h=-0.66
+|   |   +-- col 2 -> [LEAF] h=-0.63
+|   |   +-- col 3 -> [LEAF] h=-0.57
+|   |   +-- col 4 -> [LEAF] h=0.10
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=0.21  (a=0.21, b=0.06)
+|   |   +-- col 0 -> [LEAF] h=-0.74
+|   |   +-- col 1 -> [LEAF] h=-0.63
+|   |   +-- col 2 -> [LEAF] h=-0.60
+|   |   +-- col 3 -> [LEAF] h=0.21
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.06  (a=0.06, b=0.06)
+|   |   +-- col 0 -> [LEAF] h=0.06
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.15  (a=0.15, b=0.06)
+|       +-- col 0 -> [LEAF] h=0.15
+|       +-- col 1 -> (pruned)
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=-0.12  (a=0.06, b=-0.12)
+|   +-- col 0 -> [MAX] value=0.44  (a=0.44, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=-0.17
+|   |   +-- col 1 -> [LEAF] h=-0.46
+|   |   +-- col 2 -> [LEAF] h=-0.41
+|   |   +-- col 3 -> [LEAF] h=0.44
+|   |   +-- col 4 -> [LEAF] h=-0.55
+|   |   +-- col 5 -> [LEAF] h=-0.65
+|   |   `-- col 6 -> [LEAF] h=-0.67
+|   +-- col 1 -> [MAX] value=0.36  (a=0.36, b=0.44)
+|   |   +-- col 0 -> [LEAF] h=0.16
+|   |   +-- col 1 -> [LEAF] h=0.09
+|   |   +-- col 2 -> [LEAF] h=0.36
+|   |   +-- col 3 -> [LEAF] h=0.25
+|   |   +-- col 4 -> [LEAF] h=0.14
+|   |   +-- col 5 -> [LEAF] h=0.04
+|   |   `-- col 6 -> [LEAF] h=0.02
+|   +-- col 2 -> [MAX] value=0.26  (a=0.26, b=0.36)
+|   |   +-- col 0 -> [LEAF] h=0.01
+|   |   +-- col 1 -> [LEAF] h=0.16
+|   |   +-- col 2 -> [LEAF] h=0.09
+|   |   +-- col 3 -> [LEAF] h=0.26
+|   |   +-- col 4 -> [LEAF] h=0.08
+|   |   +-- col 5 -> [LEAF] h=-0.02
+|   |   `-- col 6 -> [LEAF] h=-0.05
+|   +-- col 3 -> [MAX] value=-0.12  (a=0.06, b=0.26)
+|   |   +-- col 0 -> [LEAF] h=-0.66
+|   |   +-- col 1 -> [LEAF] h=-1.17
+|   |   +-- col 2 -> [LEAF] h=-0.96
+|   |   +-- col 3 -> [LEAF] h=-0.12
+|   |   +-- col 4 -> [LEAF] h=-0.59
+|   |   +-- col 5 -> [LEAF] h=-1.20
+|   |   `-- col 6 -> [LEAF] h=-1.30
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 2 -> [MIN] value=-0.50  (a=0.06, b=-0.50)
+|   +-- col 0 -> [MAX] value=0.47  (a=0.47, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=-0.56
+|   |   +-- col 1 -> [LEAF] h=-0.41
+|   |   +-- col 2 -> [LEAF] h=-0.34
+|   |   +-- col 3 -> [LEAF] h=0.47
+|   |   +-- col 4 -> [LEAF] h=-0.46
+|   |   +-- col 5 -> [LEAF] h=-0.62
+|   |   `-- col 6 -> [LEAF] h=-0.64
+|   +-- col 1 -> [MAX] value=0.38  (a=0.38, b=0.47)
+|   |   +-- col 0 -> [LEAF] h=0.07
+|   |   +-- col 1 -> [LEAF] h=0.38
+|   |   +-- col 2 -> [LEAF] h=0.31
+|   |   +-- col 3 -> [LEAF] h=0.32
+|   |   +-- col 4 -> [LEAF] h=0.20
+|   |   +-- col 5 -> [LEAF] h=0.04
+|   |   `-- col 6 -> [LEAF] h=0.01
+|   +-- col 2 -> [MAX] value=0.21  (a=0.21, b=0.38)
+|   |   +-- col 0 -> [LEAF] h=0.04
+|   |   +-- col 1 -> [LEAF] h=0.21
+|   |   +-- col 2 -> [LEAF] h=-0.03
+|   |   +-- col 3 -> [LEAF] h=0.21
+|   |   +-- col 4 -> [LEAF] h=0.09
+|   |   +-- col 5 -> [LEAF] h=-0.07
+|   |   `-- col 6 -> [LEAF] h=-0.10
+|   +-- col 3 -> [MAX] value=-0.50  (a=0.06, b=0.21)
+|   |   +-- col 0 -> [LEAF] h=-0.63
+|   |   +-- col 1 -> [LEAF] h=-0.96
+|   |   +-- col 2 -> [LEAF] h=-0.97
+|   |   +-- col 3 -> [LEAF] h=-0.81
+|   |   +-- col 4 -> [LEAF] h=-0.50
+|   |   +-- col 5 -> [LEAF] h=-1.17
+|   |   `-- col 6 -> [LEAF] h=-1.27
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 3 -> [MIN] value=0.26  (a=0.06, b=0.26)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=0.65  (a=0.65, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.33
+|   |   +-- col 1 -> [LEAF] h=0.44
+|   |   +-- col 2 -> [LEAF] h=0.47
+|   |   +-- col 3 -> [LEAF] h=0.65
+|   |   +-- col 4 -> [LEAF] h=0.32
+|   |   +-- col 5 -> [LEAF] h=0.31
+|   |   `-- col 6 -> [LEAF] h=0.31
+|   +-- col 1 -> [MAX] value=0.78  (a=0.78, b=0.65)
+|   |   +-- col 0 -> [LEAF] h=0.09
+|   |   +-- col 1 -> [LEAF] h=0.78
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=0.47  (a=0.47, b=0.65)
+|   |   +-- col 0 -> [LEAF] h=0.06
+|   |   +-- col 1 -> [LEAF] h=0.26
+|   |   +-- col 2 -> [LEAF] h=0.21
+|   |   +-- col 3 -> [LEAF] h=0.47
+|   |   +-- col 4 -> [LEAF] h=0.14
+|   |   +-- col 5 -> [LEAF] h=0.14
+|   |   `-- col 6 -> [LEAF] h=0.14
+|   +-- col 3 -> [MAX] value=0.26  (a=0.26, b=0.47)  <== expected
+|   |   +-- col 0 -> [LEAF] h=-0.00
+|   |   +-- col 1 -> [LEAF] h=0.04
+|   |   +-- col 2 -> [LEAF] h=0.23
+|   |   +-- col 3 -> [LEAF] h=0.26  <== expected
+|   |   +-- col 4 -> [LEAF] h=0.08
+|   |   +-- col 5 -> [LEAF] h=0.08
+|   |   `-- col 6 -> [LEAF] h=0.08
+|   +-- col 4 -> [MAX] value=0.41  (a=0.41, b=0.26)
+|   |   +-- col 0 -> [LEAF] h=0.21
+|   |   +-- col 1 -> [LEAF] h=0.41
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.42  (a=0.42, b=0.26)
+|   |   +-- col 0 -> [LEAF] h=0.21
+|   |   +-- col 1 -> [LEAF] h=0.42
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.42  (a=0.42, b=0.26)
+|       +-- col 0 -> [LEAF] h=0.21
+|       +-- col 1 -> [LEAF] h=0.42
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=0.20  (a=0.26, b=0.20)
+|   +-- col 0 -> [MAX] value=0.32  (a=0.32, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=-0.65
+|   |   +-- col 1 -> [LEAF] h=-0.55
+|   |   +-- col 2 -> [LEAF] h=-0.46
+|   |   +-- col 3 -> [LEAF] h=0.32
+|   |   +-- col 4 -> [LEAF] h=-0.44
+|   |   +-- col 5 -> [LEAF] h=-0.67
+|   |   `-- col 6 -> [LEAF] h=-0.67
+|   +-- col 1 -> [MAX] value=0.20  (a=0.26, b=0.32)
+|   |   +-- col 0 -> [LEAF] h=0.00
+|   |   +-- col 1 -> [LEAF] h=0.17
+|   |   +-- col 2 -> [LEAF] h=0.20
+|   |   +-- col 3 -> [LEAF] h=0.17
+|   |   +-- col 4 -> [LEAF] h=0.13
+|   |   +-- col 5 -> [LEAF] h=-0.02
+|   |   `-- col 6 -> [LEAF] h=-0.02
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=0.17  (a=0.26, b=0.17)
+|   +-- col 0 -> [MAX] value=0.31  (a=0.31, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=-0.75
+|   |   +-- col 1 -> [LEAF] h=-0.65
+|   |   +-- col 2 -> [LEAF] h=-0.62
+|   |   +-- col 3 -> [LEAF] h=0.31
+|   |   +-- col 4 -> [LEAF] h=-0.67
+|   |   +-- col 5 -> [LEAF] h=-0.65
+|   |   `-- col 6 -> [LEAF] h=-0.77
+|   +-- col 1 -> [MAX] value=0.17  (a=0.26, b=0.31)
+|   |   +-- col 0 -> [LEAF] h=-0.10
+|   |   +-- col 1 -> [LEAF] h=0.07
+|   |   +-- col 2 -> [LEAF] h=0.04
+|   |   +-- col 3 -> [LEAF] h=0.17
+|   |   +-- col 4 -> [LEAF] h=-0.02
+|   |   +-- col 5 -> [LEAF] h=0.01
+|   |   `-- col 6 -> [LEAF] h=-0.12
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=0.17  (a=0.26, b=0.17)
+    +-- col 0 -> [MAX] value=0.31  (a=0.31, b=+inf)
+    |   +-- col 0 -> [LEAF] h=-0.77
+    |   +-- col 1 -> [LEAF] h=-0.67
+    |   +-- col 2 -> [LEAF] h=-0.64
+    |   +-- col 3 -> [LEAF] h=0.31
+    |   +-- col 4 -> [LEAF] h=-0.67
+    |   +-- col 5 -> [LEAF] h=-0.77
+    |   `-- col 6 -> [LEAF] h=-0.77
+    +-- col 1 -> [MAX] value=0.17  (a=0.26, b=0.31)
+    |   +-- col 0 -> [LEAF] h=-0.12
+    |   +-- col 1 -> [LEAF] h=0.05
+    |   +-- col 2 -> [LEAF] h=0.01
+    |   +-- col 3 -> [LEAF] h=0.17
+    |   +-- col 4 -> [LEAF] h=-0.02
+    |   +-- col 5 -> [LEAF] h=-0.12
+    |   `-- col 6 -> [LEAF] h=-0.12
+    +-- col 2 -> (pruned)
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 3, landed in column 3
 . . . . . . .
 . . . . . . .
 . . . . . . .
 . . . . . . .
-O . . . . . .
-O X X . . . .
+. . O . . . .
+. X X O . . .
 0 1 2 3 4 5 6
 Score  You 0 : 0 Computer
 
-Heuristic h(board) = 0
-h after your disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
+Heuristic h(board) = 0.23
+h after your disc in each column -> c0:0.19  c1:0.04  c2:0.01  c3:-0.05  c4:0.16  c5:0.16  c6:0.17
 You aimed at column 3, landed in column 3
 . . . . . . .
 . . . . . . .
 . . . . . . .
 . . . . . . .
-O . . . . . .
-O X X X . . .
+. . O X . . .
+. X X O . . .
 0 1 2 3 4 5 6
 Score  You 0 : 0 Computer
 
-Heuristic h(board) = 0
-h after a computer disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
-Computer aimed at column 0, landed in column 0
+Heuristic h(board) = -0.05
+h after a computer disc in each column -> c0:-0.00  c1:0.04  c2:0.23  c3:0.26  c4:0.08  c5:0.08  c6:0.08
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 246   nodes expanded: 147   time: 0.012 s   chosen column: 2
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=0.42  (a=0.42, b=+inf)
++-- col 0 -> [MIN] value=-0.04  (a=-inf, b=-0.04)
+|   +-- col 0 -> [MAX] value=0.27  (a=0.27, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.02
+|   |   +-- col 1 -> [LEAF] h=0.08
+|   |   +-- col 2 -> [LEAF] h=0.27
+|   |   +-- col 3 -> [LEAF] h=0.24
+|   |   +-- col 4 -> [LEAF] h=0.06
+|   |   +-- col 5 -> [LEAF] h=0.06
+|   |   `-- col 6 -> [LEAF] h=0.06
+|   +-- col 1 -> [MAX] value=0.58  (a=0.58, b=0.27)
+|   |   +-- col 0 -> [LEAF] h=-0.03
+|   |   +-- col 1 -> [LEAF] h=0.58
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=-0.04  (a=-0.04, b=0.27)
+|   |   +-- col 0 -> [LEAF] h=-0.22
+|   |   +-- col 1 -> [LEAF] h=-0.27
+|   |   +-- col 2 -> [LEAF] h=-0.14
+|   |   +-- col 3 -> [LEAF] h=-0.04
+|   |   +-- col 4 -> [LEAF] h=-0.13
+|   |   +-- col 5 -> [LEAF] h=-0.22
+|   |   `-- col 6 -> [LEAF] h=-0.22
+|   +-- col 3 -> [MAX] value=0.03  (a=0.03, b=-0.04)
+|   |   +-- col 0 -> [LEAF] h=-0.18
+|   |   +-- col 1 -> [LEAF] h=-0.16
+|   |   +-- col 2 -> [LEAF] h=0.03
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=-0.00  (a=-0.00, b=-0.04)
+|   |   +-- col 0 -> [LEAF] h=-0.00
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.06  (a=0.06, b=-0.04)
+|   |   +-- col 0 -> [LEAF] h=0.06
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.06  (a=0.06, b=-0.04)
+|       +-- col 0 -> [LEAF] h=0.06
+|       +-- col 1 -> (pruned)
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=0.21  (a=-0.04, b=0.21)
+|   +-- col 0 -> [MAX] value=0.69  (a=0.69, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.07
+|   |   +-- col 1 -> [LEAF] h=0.69
+|   |   +-- col 2 -> [LEAF] h=0.32
+|   |   +-- col 3 -> [LEAF] h=0.30
+|   |   +-- col 4 -> [LEAF] h=0.13
+|   |   +-- col 5 -> [LEAF] h=0.13
+|   |   `-- col 6 -> [LEAF] h=0.12
+|   +-- col 1 -> [MAX] value=0.21  (a=0.21, b=0.69)
+|   |   +-- col 0 -> [LEAF] h=-0.09
+|   |   +-- col 1 -> [LEAF] h=-0.06
+|   |   +-- col 2 -> [LEAF] h=0.21
+|   |   +-- col 3 -> [LEAF] h=0.11
+|   |   +-- col 4 -> [LEAF] h=-0.06
+|   |   +-- col 5 -> [LEAF] h=-0.06
+|   |   `-- col 6 -> [LEAF] h=-0.07
+|   +-- col 2 -> [MAX] value=0.40  (a=0.40, b=0.21)
+|   |   +-- col 0 -> [LEAF] h=-0.27
+|   |   +-- col 1 -> [LEAF] h=0.40
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=0.43  (a=0.43, b=0.21)
+|   |   +-- col 0 -> [LEAF] h=-0.16
+|   |   +-- col 1 -> [LEAF] h=0.43
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=0.61  (a=0.61, b=0.21)
+|   |   +-- col 0 -> [LEAF] h=0.02
+|   |   +-- col 1 -> [LEAF] h=0.61
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.67  (a=0.67, b=0.21)
+|   |   +-- col 0 -> [LEAF] h=0.08
+|   |   +-- col 1 -> [LEAF] h=0.67
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.67  (a=0.67, b=0.21)
+|       +-- col 0 -> [LEAF] h=0.08
+|       +-- col 1 -> [LEAF] h=0.67
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 2 -> [MIN] value=0.42  (a=0.21, b=0.42)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=0.67  (a=0.67, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.26
+|   |   +-- col 1 -> [LEAF] h=0.32
+|   |   +-- col 2 -> [LEAF] h=0.55
+|   |   +-- col 3 -> [LEAF] h=0.67
+|   |   +-- col 4 -> [LEAF] h=0.30
+|   |   +-- col 5 -> [LEAF] h=0.32
+|   |   `-- col 6 -> [LEAF] h=0.31
+|   +-- col 1 -> [MAX] value=0.94  (a=0.94, b=0.67)
+|   |   +-- col 0 -> [LEAF] h=0.11
+|   |   +-- col 1 -> [LEAF] h=0.94
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=0.42  (a=0.42, b=0.67)  <== expected
+|   |   +-- col 0 -> [LEAF] h=0.04
+|   |   +-- col 1 -> [LEAF] h=0.14
+|   |   +-- col 2 -> [LEAF] h=0.07
+|   |   +-- col 3 -> [LEAF] h=0.42  <== expected
+|   |   +-- col 4 -> [LEAF] h=0.04
+|   |   +-- col 5 -> [LEAF] h=0.06
+|   |   `-- col 6 -> [LEAF] h=0.06
+|   +-- col 3 -> [MAX] value=0.45  (a=0.45, b=0.42)
+|   |   +-- col 0 -> [LEAF] h=0.03
+|   |   +-- col 1 -> [LEAF] h=0.14
+|   |   +-- col 2 -> [LEAF] h=0.29
+|   |   +-- col 3 -> [LEAF] h=0.45
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=0.55  (a=0.55, b=0.42)
+|   |   +-- col 0 -> [LEAF] h=0.29
+|   |   +-- col 1 -> [LEAF] h=0.40
+|   |   +-- col 2 -> [LEAF] h=0.55
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.53  (a=0.53, b=0.42)
+|   |   +-- col 0 -> [LEAF] h=0.27
+|   |   +-- col 1 -> [LEAF] h=0.38
+|   |   +-- col 2 -> [LEAF] h=0.53
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.53  (a=0.53, b=0.42)
+|       +-- col 0 -> [LEAF] h=0.27
+|       +-- col 1 -> [LEAF] h=0.38
+|       +-- col 2 -> [LEAF] h=0.53
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 3 -> [MIN] value=0.30  (a=0.42, b=0.30)
+|   +-- col 0 -> [MAX] value=0.67  (a=0.67, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.28
+|   |   +-- col 1 -> [LEAF] h=0.30
+|   |   +-- col 2 -> [LEAF] h=0.67
+|   |   +-- col 3 -> [LEAF] h=0.52
+|   |   +-- col 4 -> [LEAF] h=0.34
+|   |   +-- col 5 -> [LEAF] h=0.40
+|   |   `-- col 6 -> [LEAF] h=0.34
+|   +-- col 1 -> [MAX] value=0.96  (a=0.96, b=0.67)
+|   |   +-- col 0 -> [LEAF] h=0.15
+|   |   +-- col 1 -> [LEAF] h=0.96
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=0.30  (a=0.42, b=0.67)
+|   |   +-- col 0 -> [LEAF] h=-0.04
+|   |   +-- col 1 -> [LEAF] h=0.01
+|   |   +-- col 2 -> [LEAF] h=0.30
+|   |   +-- col 3 -> [LEAF] h=0.22
+|   |   +-- col 4 -> [LEAF] h=0.13
+|   |   +-- col 5 -> [LEAF] h=0.10
+|   |   `-- col 6 -> [LEAF] h=0.04
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=0.34  (a=0.42, b=0.34)
+|   +-- col 0 -> [MAX] value=0.34  (a=0.42, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.10
+|   |   +-- col 1 -> [LEAF] h=0.13
+|   |   +-- col 2 -> [LEAF] h=0.30
+|   |   +-- col 3 -> [LEAF] h=0.34
+|   |   +-- col 4 -> [LEAF] h=0.29
+|   |   +-- col 5 -> [LEAF] h=0.18
+|   |   `-- col 6 -> [LEAF] h=0.18
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=0.40  (a=0.42, b=0.40)
+|   +-- col 0 -> [MAX] value=0.40  (a=0.42, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.10
+|   |   +-- col 1 -> [LEAF] h=0.13
+|   |   +-- col 2 -> [LEAF] h=0.32
+|   |   +-- col 3 -> [LEAF] h=0.40
+|   |   +-- col 4 -> [LEAF] h=0.18
+|   |   +-- col 5 -> [LEAF] h=0.21
+|   |   `-- col 6 -> [LEAF] h=0.18
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=0.34  (a=0.42, b=0.34)
+    +-- col 0 -> [MAX] value=0.34  (a=0.42, b=+inf)
+    |   +-- col 0 -> [LEAF] h=0.10
+    |   +-- col 1 -> [LEAF] h=0.12
+    |   +-- col 2 -> [LEAF] h=0.31
+    |   +-- col 3 -> [LEAF] h=0.34
+    |   +-- col 4 -> [LEAF] h=0.18
+    |   +-- col 5 -> [LEAF] h=0.18
+    |   `-- col 6 -> [LEAF] h=0.18
+    +-- col 1 -> (pruned)
+    +-- col 2 -> (pruned)
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 2, landed in column 2
 . . . . . . .
 . . . . . . .
 . . . . . . .
-O . . . . . .
-O . . . . . .
-O X X X . . .
+. . O . . . .
+. . O X . . .
+. X X O . . .
 0 1 2 3 4 5 6
 Score  You 0 : 0 Computer
 
-Heuristic h(board) = 0
-h after your disc in each column -> c0:0  c1:0  c2:0  c3:0  c4:-1  c5:0  c6:0
+Heuristic h(board) = 0.23
+h after your disc in each column -> c0:0.19  c1:0.08  c2:-0.07  c3:-0.07  c4:0.18  c5:0.17  c6:0.17
 You aimed at column 5, landed in column 5
 . . . . . . .
 . . . . . . .
 . . . . . . .
-O . . . . . .
-O . . . . . .
-O X X X . X .
+. . O . . . .
+. . O X . . .
+. X X O . X .
 0 1 2 3 4 5 6
 Score  You 0 : 0 Computer
 
-Heuristic h(board) = 0
-h after a computer disc in each column -> c0:1  c1:0  c2:0  c3:0  c4:0  c5:0  c6:0
-Computer aimed at column 0, landed in column 0
+Heuristic h(board) = 0.17
+h after a computer disc in each column -> c0:0.27  c1:0.38  c2:0.53  c3:0.65  c4:0.20  c5:0.28  c6:0.21
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 274   nodes expanded: 169   time: 0.012 s   chosen column: 3
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=0.86  (a=0.86, b=+inf)
++-- col 0 -> [MIN] value=0.45  (a=-inf, b=0.45)
+|   +-- col 0 -> [MAX] value=0.84  (a=0.84, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.35
+|   |   +-- col 1 -> [LEAF] h=0.84
+|   |   +-- col 2 -> [LEAF] h=0.57
+|   |   +-- col 3 -> [LEAF] h=0.69
+|   |   +-- col 4 -> [LEAF] h=0.23
+|   |   +-- col 5 -> [LEAF] h=0.32
+|   |   `-- col 6 -> [LEAF] h=0.25
+|   +-- col 1 -> [MAX] value=0.90  (a=0.90, b=0.84)
+|   |   +-- col 0 -> [LEAF] h=0.17
+|   |   +-- col 1 -> [LEAF] h=0.90
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=0.54  (a=0.54, b=0.84)
+|   |   +-- col 0 -> [LEAF] h=0.04
+|   |   +-- col 1 -> [LEAF] h=0.54
+|   |   +-- col 2 -> [LEAF] h=0.05
+|   |   +-- col 3 -> [LEAF] h=0.48
+|   |   +-- col 4 -> [LEAF] h=-0.06
+|   |   +-- col 5 -> [LEAF] h=0.02
+|   |   `-- col 6 -> [LEAF] h=-0.04
+|   +-- col 3 -> [MAX] value=0.45  (a=0.45, b=0.54)
+|   |   +-- col 0 -> [LEAF] h=0.03
+|   |   +-- col 1 -> [LEAF] h=0.14
+|   |   +-- col 2 -> [LEAF] h=0.35
+|   |   +-- col 3 -> [LEAF] h=0.45
+|   |   +-- col 4 -> [LEAF] h=-0.06
+|   |   +-- col 5 -> [LEAF] h=0.02
+|   |   `-- col 6 -> [LEAF] h=-0.05
+|   +-- col 4 -> [MAX] value=0.87  (a=0.87, b=0.45)
+|   |   +-- col 0 -> [LEAF] h=0.37
+|   |   +-- col 1 -> [LEAF] h=0.87
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.67  (a=0.67, b=0.45)
+|   |   +-- col 0 -> [LEAF] h=0.17
+|   |   +-- col 1 -> [LEAF] h=0.67
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.86  (a=0.86, b=0.45)
+|       +-- col 0 -> [LEAF] h=0.35
+|       +-- col 1 -> [LEAF] h=0.86
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=0.67  (a=0.45, b=0.67)
+|   +-- col 0 -> [MAX] value=1.07  (a=1.07, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.32
+|   |   +-- col 1 -> [LEAF] h=1.07
+|   |   +-- col 2 -> [LEAF] h=0.61
+|   |   +-- col 3 -> [LEAF] h=0.74
+|   |   +-- col 4 -> [LEAF] h=0.28
+|   |   +-- col 5 -> [LEAF] h=0.36
+|   |   `-- col 6 -> [LEAF] h=0.30
+|   +-- col 1 -> [MAX] value=0.67  (a=0.67, b=1.07)
+|   |   +-- col 0 -> [LEAF] h=0.67
+|   |   +-- col 1 -> [LEAF] h=0.24
+|   |   +-- col 2 -> [LEAF] h=0.50
+|   |   +-- col 3 -> [LEAF] h=0.47
+|   |   +-- col 4 -> [LEAF] h=0.17
+|   |   +-- col 5 -> [LEAF] h=0.25
+|   |   `-- col 6 -> [LEAF] h=0.19
+|   +-- col 2 -> [MAX] value=0.83  (a=0.83, b=0.67)
+|   |   +-- col 0 -> [LEAF] h=0.54
+|   |   +-- col 1 -> [LEAF] h=0.83
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=0.67  (a=0.67, b=0.67)
+|   |   +-- col 0 -> [LEAF] h=0.14
+|   |   +-- col 1 -> [LEAF] h=0.67
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=0.87  (a=0.87, b=0.67)
+|   |   +-- col 0 -> [LEAF] h=0.87
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.67  (a=0.67, b=0.67)
+|   |   +-- col 0 -> [LEAF] h=0.67
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.86  (a=0.86, b=0.67)
+|       +-- col 0 -> [LEAF] h=0.86
+|       +-- col 1 -> (pruned)
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 2 -> [MIN] value=0.68  (a=0.67, b=0.68)
+|   +-- col 0 -> [MAX] value=1.52  (a=1.52, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.61
+|   |   +-- col 1 -> [LEAF] h=0.61
+|   |   +-- col 2 -> [LEAF] h=1.52
+|   |   +-- col 3 -> [LEAF] h=1.07
+|   |   +-- col 4 -> [LEAF] h=0.51
+|   |   +-- col 5 -> [LEAF] h=0.59
+|   |   `-- col 6 -> [LEAF] h=0.53
+|   +-- col 1 -> [MAX] value=1.41  (a=1.41, b=1.52)
+|   |   +-- col 0 -> [LEAF] h=0.40
+|   |   +-- col 1 -> [LEAF] h=1.35
+|   |   +-- col 2 -> [LEAF] h=1.41
+|   |   +-- col 3 -> [LEAF] h=0.96
+|   |   +-- col 4 -> [LEAF] h=0.41
+|   |   +-- col 5 -> [LEAF] h=0.49
+|   |   `-- col 6 -> [LEAF] h=0.42
+|   +-- col 2 -> [MAX] value=0.68  (a=0.68, b=1.41)
+|   |   +-- col 0 -> [LEAF] h=0.20
+|   |   +-- col 1 -> [LEAF] h=0.30
+|   |   +-- col 2 -> [LEAF] h=0.18
+|   |   +-- col 3 -> [LEAF] h=0.68
+|   |   +-- col 4 -> [LEAF] h=0.12
+|   |   +-- col 5 -> [LEAF] h=0.20
+|   |   `-- col 6 -> [LEAF] h=0.14
+|   +-- col 3 -> [MAX] value=1.28  (a=1.28, b=0.68)
+|   |   +-- col 0 -> [LEAF] h=0.35
+|   |   +-- col 1 -> [LEAF] h=0.45
+|   |   +-- col 2 -> [LEAF] h=1.28
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=0.71  (a=0.71, b=0.68)
+|   |   +-- col 0 -> [LEAF] h=0.60
+|   |   +-- col 1 -> [LEAF] h=0.71
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=1.33  (a=1.33, b=0.68)
+|   |   +-- col 0 -> [LEAF] h=0.40
+|   |   +-- col 1 -> [LEAF] h=0.51
+|   |   +-- col 2 -> [LEAF] h=1.33
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.69  (a=0.69, b=0.68)
+|       +-- col 0 -> [LEAF] h=0.59
+|       +-- col 1 -> [LEAF] h=0.69
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 3 -> [MIN] value=0.86  (a=0.68, b=0.86)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=1.07  (a=1.07, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.67
+|   |   +-- col 1 -> [LEAF] h=0.74
+|   |   +-- col 2 -> [LEAF] h=1.07
+|   |   +-- col 3 -> [LEAF] h=1.01
+|   |   +-- col 4 -> [LEAF] h=0.64
+|   |   +-- col 5 -> [LEAF] h=0.72
+|   |   `-- col 6 -> [LEAF] h=0.65
+|   +-- col 1 -> [MAX] value=1.50  (a=1.50, b=1.07)
+|   |   +-- col 0 -> [LEAF] h=0.53
+|   |   +-- col 1 -> [LEAF] h=1.50
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=0.86  (a=0.86, b=1.07)  <== expected
+|   |   +-- col 0 -> [LEAF] h=0.48
+|   |   +-- col 1 -> [LEAF] h=0.58
+|   |   +-- col 2 -> [LEAF] h=0.51
+|   |   +-- col 3 -> [LEAF] h=0.86  <== expected
+|   |   +-- col 4 -> [LEAF] h=0.40
+|   |   +-- col 5 -> [LEAF] h=0.48
+|   |   `-- col 6 -> [LEAF] h=0.42
+|   +-- col 3 -> [MAX] value=0.87  (a=0.87, b=0.86)
+|   |   +-- col 0 -> [LEAF] h=0.43
+|   |   +-- col 1 -> [LEAF] h=0.46
+|   |   +-- col 2 -> [LEAF] h=0.87
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=1.08  (a=1.08, b=0.86)
+|   |   +-- col 0 -> [LEAF] h=0.73
+|   |   +-- col 1 -> [LEAF] h=0.83
+|   |   +-- col 2 -> [LEAF] h=1.08
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.88  (a=0.88, b=0.86)
+|   |   +-- col 0 -> [LEAF] h=0.53
+|   |   +-- col 1 -> [LEAF] h=0.63
+|   |   +-- col 2 -> [LEAF] h=0.88
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=1.07  (a=1.07, b=0.86)
+|       +-- col 0 -> [LEAF] h=0.71
+|       +-- col 1 -> [LEAF] h=0.82
+|       +-- col 2 -> [LEAF] h=1.07
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=0.64  (a=0.86, b=0.64)
+|   +-- col 0 -> [MAX] value=0.64  (a=0.86, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.22
+|   |   +-- col 1 -> [LEAF] h=0.28
+|   |   +-- col 2 -> [LEAF] h=0.51
+|   |   +-- col 3 -> [LEAF] h=0.64
+|   |   +-- col 4 -> [LEAF] h=0.41
+|   |   +-- col 5 -> [LEAF] h=0.26
+|   |   `-- col 6 -> [LEAF] h=0.20
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=0.72  (a=0.86, b=0.72)
+|   +-- col 0 -> [MAX] value=0.72  (a=0.86, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.30
+|   |   +-- col 1 -> [LEAF] h=0.36
+|   |   +-- col 2 -> [LEAF] h=0.59
+|   |   +-- col 3 -> [LEAF] h=0.72
+|   |   +-- col 4 -> [LEAF] h=0.26
+|   |   +-- col 5 -> [LEAF] h=0.57
+|   |   `-- col 6 -> [LEAF] h=0.34
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=0.65  (a=0.86, b=0.65)
+    +-- col 0 -> [MAX] value=0.65  (a=0.86, b=+inf)
+    |   +-- col 0 -> [LEAF] h=0.23
+    |   +-- col 1 -> [LEAF] h=0.30
+    |   +-- col 2 -> [LEAF] h=0.53
+    |   +-- col 3 -> [LEAF] h=0.65
+    |   +-- col 4 -> [LEAF] h=0.20
+    |   +-- col 5 -> [LEAF] h=0.34
+    |   `-- col 6 -> [LEAF] h=0.31
+    +-- col 1 -> (pruned)
+    +-- col 2 -> (pruned)
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 3, landed in column 3
 . . . . . . .
 . . . . . . .
-O . . . . . .
-O . . . . . .
-O . . . . . .
-O X X X . X .
+. . . . . . .
+. . O O . . .
+. . O X . . .
+. X X O . X .
 0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
+Score  You 0 : 0 Computer
 
-Heuristic h(board) = 1
-h after your disc in each column -> c0:1  c1:1  c2:1  c3:1  c4:-1  c5:1  c6:1
+Heuristic h(board) = 0.65
+h after your disc in each column -> c0:0.61  c1:0.50  c2:0.37  c3:0.41  c4:0.62  c5:0.42  c6:0.61
 You aimed at column 0, landed in column 0
 . . . . . . .
-X . . . . . .
-O . . . . . .
-O . . . . . .
-O . . . . . .
-O X X X . X .
+. . . . . . .
+. . . . . . .
+. . O O . . .
+. . O X . . .
+X X X O . X .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 0.61
+h after a computer disc in each column -> c0:0.67  c1:0.74  c2:1.07  c3:1.01  c4:0.64  c5:0.72  c6:0.65
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 246   nodes expanded: 148   time: 0.013 s   chosen column: 2
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=1.22  (a=1.22, b=+inf)
++-- col 0 -> [MIN] value=0.80  (a=-inf, b=0.80)
+|   +-- col 0 -> [MAX] value=1.03  (a=1.03, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.70
+|   |   +-- col 1 -> [LEAF] h=0.64
+|   |   +-- col 2 -> [LEAF] h=1.03
+|   |   +-- col 3 -> [LEAF] h=0.91
+|   |   +-- col 4 -> [LEAF] h=0.53
+|   |   +-- col 5 -> [LEAF] h=0.62
+|   |   `-- col 6 -> [LEAF] h=0.55
+|   +-- col 1 -> [MAX] value=1.55  (a=1.55, b=1.03)
+|   |   +-- col 0 -> [LEAF] h=0.77
+|   |   +-- col 1 -> [LEAF] h=1.55
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=0.80  (a=0.80, b=1.03)
+|   |   +-- col 0 -> [LEAF] h=0.67
+|   |   +-- col 1 -> [LEAF] h=0.52
+|   |   +-- col 2 -> [LEAF] h=0.53
+|   |   +-- col 3 -> [LEAF] h=0.80
+|   |   +-- col 4 -> [LEAF] h=0.42
+|   |   +-- col 5 -> [LEAF] h=0.50
+|   |   `-- col 6 -> [LEAF] h=0.44
+|   +-- col 3 -> [MAX] value=0.97  (a=0.97, b=0.80)
+|   |   +-- col 0 -> [LEAF] h=0.73
+|   |   +-- col 1 -> [LEAF] h=0.50
+|   |   +-- col 2 -> [LEAF] h=0.97
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=0.92  (a=0.92, b=0.80)
+|   |   +-- col 0 -> [LEAF] h=0.92
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=0.96  (a=0.96, b=0.80)
+|   |   +-- col 0 -> [LEAF] h=0.72
+|   |   +-- col 1 -> [LEAF] h=0.57
+|   |   +-- col 2 -> [LEAF] h=0.96
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=0.91  (a=0.91, b=0.80)
+|       +-- col 0 -> [LEAF] h=0.91
+|       +-- col 1 -> (pruned)
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=0.82  (a=0.80, b=0.82)
+|   +-- col 0 -> [MAX] value=1.52  (a=1.52, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.88
+|   |   +-- col 1 -> [LEAF] h=1.52
+|   |   +-- col 2 -> [LEAF] h=1.07
+|   |   +-- col 3 -> [LEAF] h=1.09
+|   |   +-- col 4 -> [LEAF] h=0.64
+|   |   +-- col 5 -> [LEAF] h=0.72
+|   |   `-- col 6 -> [LEAF] h=0.66
+|   +-- col 1 -> [MAX] value=0.82  (a=0.82, b=1.52)
+|   |   +-- col 0 -> [LEAF] h=0.41
+|   |   +-- col 1 -> [LEAF] h=0.44
+|   |   +-- col 2 -> [LEAF] h=0.80
+|   |   +-- col 3 -> [LEAF] h=0.82
+|   |   +-- col 4 -> [LEAF] h=0.37
+|   |   +-- col 5 -> [LEAF] h=0.45
+|   |   `-- col 6 -> [LEAF] h=0.39
+|   +-- col 2 -> [MAX] value=1.41  (a=1.41, b=0.82)
+|   |   +-- col 0 -> [LEAF] h=0.52
+|   |   +-- col 1 -> [LEAF] h=1.41
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=1.39  (a=1.39, b=0.82)
+|   |   +-- col 0 -> [LEAF] h=0.50
+|   |   +-- col 1 -> [LEAF] h=1.39
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=1.66  (a=1.66, b=0.82)
+|   |   +-- col 0 -> [LEAF] h=0.78
+|   |   +-- col 1 -> [LEAF] h=1.66
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=1.46  (a=1.46, b=0.82)
+|   |   +-- col 0 -> [LEAF] h=0.57
+|   |   +-- col 1 -> [LEAF] h=1.46
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=1.65  (a=1.65, b=0.82)
+|       +-- col 0 -> [LEAF] h=0.76
+|       +-- col 1 -> [LEAF] h=1.65
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 2 -> [MIN] value=1.22  (a=0.82, b=1.22)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=1.98  (a=1.98, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=1.26
+|   |   +-- col 1 -> [LEAF] h=1.07
+|   |   +-- col 2 -> [LEAF] h=1.98
+|   |   +-- col 3 -> [LEAF] h=1.53
+|   |   +-- col 4 -> [LEAF] h=0.97
+|   |   +-- col 5 -> [LEAF] h=1.05
+|   |   `-- col 6 -> [LEAF] h=0.99
+|   +-- col 1 -> [MAX] value=2.05  (a=2.05, b=1.98)
+|   |   +-- col 0 -> [LEAF] h=1.06
+|   |   +-- col 1 -> [LEAF] h=2.05
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=1.22  (a=1.22, b=1.98)  <== expected
+|   |   +-- col 0 -> [LEAF] h=0.76
+|   |   +-- col 1 -> [LEAF] h=0.76
+|   |   +-- col 2 -> [LEAF] h=0.72
+|   |   +-- col 3 -> [LEAF] h=1.22  <== expected
+|   |   +-- col 4 -> [LEAF] h=0.66
+|   |   +-- col 5 -> [LEAF] h=0.74
+|   |   `-- col 6 -> [LEAF] h=0.68
+|   +-- col 3 -> [MAX] value=1.88  (a=1.88, b=1.22)
+|   |   +-- col 0 -> [LEAF] h=0.97
+|   |   +-- col 1 -> [LEAF] h=0.89
+|   |   +-- col 2 -> [LEAF] h=1.88
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=2.07  (a=2.07, b=1.22)
+|   |   +-- col 0 -> [LEAF] h=1.17
+|   |   +-- col 1 -> [LEAF] h=1.17
+|   |   +-- col 2 -> [LEAF] h=2.07
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=1.87  (a=1.87, b=1.22)
+|   |   +-- col 0 -> [LEAF] h=0.96
+|   |   +-- col 1 -> [LEAF] h=0.97
+|   |   +-- col 2 -> [LEAF] h=1.87
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=2.06  (a=2.06, b=1.22)
+|       +-- col 0 -> [LEAF] h=1.15
+|       +-- col 1 -> [LEAF] h=1.15
+|       +-- col 2 -> [LEAF] h=2.06
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 3 -> [MIN] value=1.01  (a=1.22, b=1.01)
+|   +-- col 0 -> [MAX] value=1.53  (a=1.53, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=1.20
+|   |   +-- col 1 -> [LEAF] h=1.09
+|   |   +-- col 2 -> [LEAF] h=1.53
+|   |   +-- col 3 -> [LEAF] h=1.16
+|   |   +-- col 4 -> [LEAF] h=0.91
+|   |   +-- col 5 -> [LEAF] h=1.12
+|   |   `-- col 6 -> [LEAF] h=0.99
+|   +-- col 1 -> [MAX] value=1.80  (a=1.80, b=1.53)
+|   |   +-- col 0 -> [LEAF] h=0.87
+|   |   +-- col 1 -> [LEAF] h=1.80
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=1.01  (a=1.22, b=1.53)
+|   |   +-- col 0 -> [LEAF] h=0.80
+|   |   +-- col 1 -> [LEAF] h=0.93
+|   |   +-- col 2 -> [LEAF] h=0.99
+|   |   +-- col 3 -> [LEAF] h=1.01
+|   |   +-- col 4 -> [LEAF] h=0.76
+|   |   +-- col 5 -> [LEAF] h=0.96
+|   |   `-- col 6 -> [LEAF] h=0.84
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=0.97  (a=1.22, b=0.97)
+|   +-- col 0 -> [MAX] value=0.97  (a=1.22, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.83
+|   |   +-- col 1 -> [LEAF] h=0.64
+|   |   +-- col 2 -> [LEAF] h=0.97
+|   |   +-- col 3 -> [LEAF] h=0.91
+|   |   +-- col 4 -> [LEAF] h=0.80
+|   |   +-- col 5 -> [LEAF] h=0.62
+|   |   `-- col 6 -> [LEAF] h=0.55
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=1.12  (a=1.22, b=1.12)
+|   +-- col 0 -> [MAX] value=1.12  (a=1.22, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=0.91
+|   |   +-- col 1 -> [LEAF] h=0.72
+|   |   +-- col 2 -> [LEAF] h=1.05
+|   |   +-- col 3 -> [LEAF] h=1.12
+|   |   +-- col 4 -> [LEAF] h=0.62
+|   |   +-- col 5 -> [LEAF] h=1.06
+|   |   `-- col 6 -> [LEAF] h=0.70
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=0.99  (a=1.22, b=0.99)
+    +-- col 0 -> [MAX] value=0.99  (a=1.22, b=+inf)
+    |   +-- col 0 -> [LEAF] h=0.84
+    |   +-- col 1 -> [LEAF] h=0.66
+    |   +-- col 2 -> [LEAF] h=0.99
+    |   +-- col 3 -> [LEAF] h=0.99
+    |   +-- col 4 -> [LEAF] h=0.55
+    |   +-- col 5 -> [LEAF] h=0.70
+    |   `-- col 6 -> [LEAF] h=0.67
+    +-- col 1 -> (pruned)
+    +-- col 2 -> (pruned)
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 2, landed in column 2
+. . . . . . .
+. . . . . . .
+. . O . . . .
+. . O O . . .
+. . O X . . .
+X X X O . X .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 1.07
+h after your disc in each column -> c0:1.64  c1:1.64  c2:0.63  c3:1.54  c4:1.74  c5:1.54  c6:1.72
+You aimed at column 0, landed in column 0
+. . . . . . .
+. . . . . . .
+. . O . . . .
+. . O O . . .
+X . O X . . .
+X X X O . X .
+0 1 2 3 4 5 6
+Score  You 0 : 0 Computer
+
+Heuristic h(board) = 1.64
+h after a computer disc in each column -> c0:1.26  c1:1.07  c2:1.98  c3:1.53  c4:0.97  c5:1.05  c6:0.99
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 231   nodes expanded: 128   time: 0.006 s   chosen column: 2
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=2.21  (a=2.21, b=+inf)
++-- col 0 -> [MIN] value=1.41  (a=-inf, b=1.41)
+|   +-- col 0 -> [MAX] value=2.21  (a=2.21, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=1.14
+|   |   +-- col 1 -> [LEAF] h=1.69
+|   |   +-- col 2 -> [LEAF] h=2.21
+|   |   +-- col 3 -> [LEAF] h=1.62
+|   |   +-- col 4 -> [LEAF] h=1.14
+|   |   +-- col 5 -> [LEAF] h=1.22
+|   |   `-- col 6 -> [LEAF] h=1.16
+|   +-- col 1 -> [MAX] value=2.86  (a=2.86, b=2.21)
+|   |   +-- col 0 -> [LEAF] h=1.85
+|   |   +-- col 1 -> [LEAF] h=2.86
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=1.41  (a=1.41, b=2.21)
+|   |   +-- col 0 -> [LEAF] h=1.14
+|   |   +-- col 1 -> [LEAF] h=0.91
+|   |   +-- col 2 -> [LEAF] h=0.91
+|   |   +-- col 3 -> [LEAF] h=1.41
+|   |   +-- col 4 -> [LEAF] h=0.85
+|   |   +-- col 5 -> [LEAF] h=0.94
+|   |   `-- col 6 -> [LEAF] h=0.87
+|   +-- col 3 -> [MAX] value=1.54  (a=1.54, b=1.41)
+|   |   +-- col 0 -> [LEAF] h=1.27
+|   |   +-- col 1 -> [LEAF] h=1.54
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=1.55  (a=1.55, b=1.41)
+|   |   +-- col 0 -> [LEAF] h=1.55
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=1.61  (a=1.61, b=1.41)
+|   |   +-- col 0 -> [LEAF] h=1.35
+|   |   +-- col 1 -> [LEAF] h=1.61
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=1.53  (a=1.53, b=1.41)
+|       +-- col 0 -> [LEAF] h=1.53
+|       +-- col 1 -> (pruned)
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=1.58  (a=1.41, b=1.58)
+|   +-- col 0 -> [MAX] value=1.75  (a=1.75, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=1.75
+|   |   +-- col 1 -> [LEAF] h=0.99
+|   |   +-- col 2 -> [LEAF] h=1.08
+|   |   +-- col 3 -> [LEAF] h=0.70
+|   |   +-- col 4 -> [LEAF] h=0.07
+|   |   +-- col 5 -> [LEAF] h=0.15
+|   |   `-- col 6 -> [LEAF] h=0.09
+|   +-- col 1 -> [MAX] value=1.73  (a=1.73, b=1.75)
+|   |   +-- col 0 -> [LEAF] h=0.87
+|   |   +-- col 1 -> [LEAF] h=0.91
+|   |   +-- col 2 -> [LEAF] h=1.73
+|   |   +-- col 3 -> [LEAF] h=1.35
+|   |   +-- col 4 -> [LEAF] h=0.73
+|   |   +-- col 5 -> [LEAF] h=0.81
+|   |   `-- col 6 -> [LEAF] h=0.74
+|   +-- col 2 -> [MAX] value=1.58  (a=1.58, b=1.73)
+|   |   +-- col 0 -> [LEAF] h=0.91
+|   |   +-- col 1 -> [LEAF] h=1.58
+|   |   +-- col 2 -> [LEAF] h=0.73
+|   |   +-- col 3 -> [LEAF] h=1.29
+|   |   +-- col 4 -> [LEAF] h=0.67
+|   |   +-- col 5 -> [LEAF] h=0.75
+|   |   `-- col 6 -> [LEAF] h=0.68
+|   +-- col 3 -> [MAX] value=2.21  (a=2.21, b=1.58)
+|   |   +-- col 0 -> [LEAF] h=1.54
+|   |   +-- col 1 -> [LEAF] h=2.21
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=1.81  (a=1.81, b=1.58)
+|   |   +-- col 0 -> [LEAF] h=1.81
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=1.61  (a=1.61, b=1.58)
+|   |   +-- col 0 -> [LEAF] h=1.61
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=1.80  (a=1.80, b=1.58)
+|       +-- col 0 -> [LEAF] h=1.80
+|       +-- col 1 -> (pruned)
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 2 -> [MIN] value=2.21  (a=1.58, b=2.21)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=2.21  (a=2.21, b=+inf)  <== expected
+|   |   +-- col 0 -> [LEAF] h=2.21  <== expected
+|   |   +-- col 1 -> [LEAF] h=1.08
+|   |   +-- col 2 -> [LEAF] h=1.84
+|   |   +-- col 3 -> [LEAF] h=1.65
+|   |   +-- col 4 -> [LEAF] h=0.98
+|   |   +-- col 5 -> [LEAF] h=1.12
+|   |   `-- col 6 -> [LEAF] h=0.99
+|   +-- col 1 -> [MAX] value=2.67  (a=2.67, b=2.21)
+|   |   +-- col 0 -> [LEAF] h=2.67
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=2.39  (a=2.39, b=2.21)
+|   |   +-- col 0 -> [LEAF] h=2.07
+|   |   +-- col 1 -> [LEAF] h=1.82
+|   |   +-- col 3 -> [LEAF] h=2.39
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=2.64  (a=2.64, b=2.21)
+|   |   +-- col 0 -> [LEAF] h=2.13
+|   |   +-- col 1 -> [LEAF] h=1.80
+|   |   +-- col 2 -> [LEAF] h=2.64
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=2.33  (a=2.33, b=2.21)
+|   |   +-- col 0 -> [LEAF] h=2.33
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=2.63  (a=2.63, b=2.21)
+|   |   +-- col 0 -> [LEAF] h=2.12
+|   |   +-- col 1 -> [LEAF] h=1.88
+|   |   +-- col 2 -> [LEAF] h=2.63
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=2.31  (a=2.31, b=2.21)
+|       +-- col 0 -> [LEAF] h=2.31
+|       +-- col 1 -> (pruned)
+|       +-- col 2 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 3 -> [MIN] value=2.18  (a=2.21, b=2.18)
+|   +-- col 0 -> [MAX] value=2.18  (a=2.21, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.18
+|   |   +-- col 1 -> [LEAF] h=0.70
+|   |   +-- col 2 -> [LEAF] h=1.65
+|   |   +-- col 3 -> [LEAF] h=1.32
+|   |   +-- col 4 -> [LEAF] h=0.53
+|   |   +-- col 5 -> [LEAF] h=0.73
+|   |   `-- col 6 -> [LEAF] h=0.60
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=1.20  (a=2.21, b=1.20)
+|   +-- col 0 -> [MAX] value=1.20  (a=2.21, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=1.20
+|   |   +-- col 1 -> [LEAF] h=0.07
+|   |   +-- col 2 -> [LEAF] h=0.98
+|   |   +-- col 3 -> [LEAF] h=0.53
+|   |   +-- col 4 -> [LEAF] h=0.31
+|   |   +-- col 5 -> [LEAF] h=0.05
+|   |   `-- col 6 -> [LEAF] h=-0.01
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=1.28  (a=2.21, b=1.28)
+|   +-- col 0 -> [MAX] value=1.28  (a=2.21, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=1.28
+|   |   +-- col 1 -> [LEAF] h=0.15
+|   |   +-- col 2 -> [LEAF] h=1.12
+|   |   +-- col 3 -> [LEAF] h=0.73
+|   |   +-- col 4 -> [LEAF] h=0.05
+|   |   +-- col 5 -> [LEAF] h=0.49
+|   |   `-- col 6 -> [LEAF] h=0.13
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=1.22  (a=2.21, b=1.22)
+    +-- col 0 -> [MAX] value=1.22  (a=2.21, b=+inf)
+    |   +-- col 0 -> [LEAF] h=1.22
+    |   +-- col 1 -> [LEAF] h=0.09
+    |   +-- col 2 -> [LEAF] h=0.99
+    |   +-- col 3 -> [LEAF] h=0.60
+    |   +-- col 4 -> [LEAF] h=-0.01
+    |   +-- col 5 -> [LEAF] h=0.13
+    |   `-- col 6 -> [LEAF] h=0.10
+    +-- col 1 -> (pruned)
+    +-- col 2 -> (pruned)
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 2, landed in column 2
+. . . . . . .
+. . O . . . .
+. . O . . . .
+. . O O . . .
+X . O X . . .
+X X X O . X .
 0 1 2 3 4 5 6
 Score  You 0 : 1 Computer
 
-Heuristic h(board) = 1
-h after a computer disc in each column -> c0:1  c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+Heuristic h(board) = 1.98
+h after your disc in each column -> c0:2.35  c1:2.54  c2:1.69  c3:2.45  c4:2.65  c5:2.44  c6:2.63
+You aimed at column 6, landed in column 6
+. . . . . . .
+. . O . . . .
+. . O . . . .
+. . O O . . .
+X . O X . . .
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 1 Computer
+
+Heuristic h(board) = 2.63
+h after a computer disc in each column -> c0:2.31  c1:2.06  c2:2.82  c3:2.64  c4:1.96  c5:2.10  c6:2.02
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 195   nodes expanded: 126   time: 0.005 s   chosen column: 2
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=2.99  (a=2.99, b=+inf)
++-- col 0 -> [MIN] value=2.73  (a=-inf, b=2.73)
+|   +-- col 0 -> [MAX] value=3.05  (a=3.05, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.25
+|   |   +-- col 1 -> [LEAF] h=2.74
+|   |   +-- col 2 -> [LEAF] h=3.05
+|   |   +-- col 3 -> [LEAF] h=2.79
+|   |   +-- col 4 -> [LEAF] h=2.19
+|   |   +-- col 5 -> [LEAF] h=2.33
+|   |   `-- col 6 -> [LEAF] h=2.25
+|   +-- col 1 -> [MAX] value=3.91  (a=3.91, b=3.05)
+|   |   +-- col 0 -> [LEAF] h=2.90
+|   |   +-- col 1 -> [LEAF] h=3.91
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=2.73  (a=2.73, b=3.05)
+|   |   +-- col 0 -> [LEAF] h=2.34
+|   |   +-- col 1 -> [LEAF] h=2.10
+|   |   +-- col 3 -> [LEAF] h=2.73
+|   |   +-- col 4 -> [LEAF] h=2.05
+|   |   +-- col 5 -> [LEAF] h=2.19
+|   |   `-- col 6 -> [LEAF] h=2.11
+|   +-- col 3 -> [MAX] value=2.91  (a=2.91, b=2.73)
+|   |   +-- col 0 -> [LEAF] h=2.26
+|   |   +-- col 1 -> [LEAF] h=2.53
+|   |   +-- col 2 -> [LEAF] h=2.91
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=2.86  (a=2.86, b=2.73)
+|   |   +-- col 0 -> [LEAF] h=2.60
+|   |   +-- col 1 -> [LEAF] h=2.86
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=2.91  (a=2.91, b=2.73)
+|   |   +-- col 0 -> [LEAF] h=2.34
+|   |   +-- col 1 -> [LEAF] h=2.60
+|   |   +-- col 2 -> [LEAF] h=2.91
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=2.99  (a=2.99, b=2.73)
+|       +-- col 0 -> [LEAF] h=2.42
+|       +-- col 1 -> [LEAF] h=2.68
+|       +-- col 2 -> [LEAF] h=2.99
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=2.58  (a=2.73, b=2.58)
+|   +-- col 0 -> [MAX] value=2.74  (a=2.74, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.74
+|   |   +-- col 1 -> [LEAF] h=1.98
+|   |   +-- col 2 -> [LEAF] h=1.92
+|   |   +-- col 3 -> [LEAF] h=1.81
+|   |   +-- col 4 -> [LEAF] h=1.06
+|   |   +-- col 5 -> [LEAF] h=1.20
+|   |   `-- col 6 -> [LEAF] h=1.12
+|   +-- col 1 -> [MAX] value=2.58  (a=2.73, b=2.74)
+|   |   +-- col 0 -> [LEAF] h=1.92
+|   |   +-- col 1 -> [LEAF] h=1.96
+|   |   +-- col 2 -> [LEAF] h=2.58
+|   |   +-- col 3 -> [LEAF] h=2.46
+|   |   +-- col 4 -> [LEAF] h=1.72
+|   |   +-- col 5 -> [LEAF] h=1.86
+|   |   `-- col 6 -> [LEAF] h=1.77
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 2 -> [MIN] value=2.99  (a=2.73, b=2.99)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=3.05  (a=3.05, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=3.05
+|   |   +-- col 1 -> [LEAF] h=1.92
+|   |   +-- col 3 -> [LEAF] h=2.50
+|   |   +-- col 4 -> [LEAF] h=1.82
+|   |   +-- col 5 -> [LEAF] h=1.96
+|   |   `-- col 6 -> [LEAF] h=1.88
+|   +-- col 1 -> [MAX] value=3.67  (a=3.67, b=3.05)
+|   |   +-- col 0 -> [LEAF] h=3.02
+|   |   +-- col 1 -> [LEAF] h=3.67
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=2.99  (a=2.99, b=3.05)  <== expected
+|   |   +-- col 0 -> [LEAF] h=2.91
+|   |   +-- col 1 -> [LEAF] h=2.59
+|   |   +-- col 3 -> [LEAF] h=2.99  <== expected
+|   |   +-- col 4 -> [LEAF] h=2.56
+|   |   +-- col 5 -> [LEAF] h=2.71
+|   |   `-- col 6 -> [LEAF] h=2.62
+|   +-- col 4 -> [MAX] value=3.17  (a=3.17, b=2.99)
+|   |   +-- col 0 -> [LEAF] h=3.17
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=3.23  (a=3.23, b=2.99)
+|   |   +-- col 0 -> [LEAF] h=2.91
+|   |   +-- col 1 -> [LEAF] h=2.66
+|   |   +-- col 3 -> [LEAF] h=3.23
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=3.32  (a=3.32, b=2.99)
+|       +-- col 0 -> [LEAF] h=2.99
+|       +-- col 1 -> [LEAF] h=2.74
+|       +-- col 3 -> [LEAF] h=3.32
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 3 -> [MIN] value=2.85  (a=2.99, b=2.85)
+|   +-- col 0 -> [MAX] value=3.29  (a=3.29, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=3.29
+|   |   +-- col 1 -> [LEAF] h=1.81
+|   |   +-- col 2 -> [LEAF] h=2.50
+|   |   +-- col 3 -> [LEAF] h=2.61
+|   |   +-- col 4 -> [LEAF] h=1.64
+|   |   +-- col 5 -> [LEAF] h=1.83
+|   |   `-- col 6 -> [LEAF] h=1.69
+|   +-- col 1 -> [MAX] value=3.91  (a=3.91, b=3.29)
+|   |   +-- col 0 -> [LEAF] h=3.25
+|   |   +-- col 1 -> [LEAF] h=3.91
+|   |   +-- col 2 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 2 -> [MAX] value=2.85  (a=2.99, b=3.29)
+|   |   +-- col 0 -> [LEAF] h=2.73
+|   |   +-- col 1 -> [LEAF] h=2.55
+|   |   +-- col 3 -> [LEAF] h=2.85
+|   |   +-- col 4 -> [LEAF] h=2.38
+|   |   +-- col 5 -> [LEAF] h=2.57
+|   |   `-- col 6 -> [LEAF] h=2.43
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=2.19  (a=2.99, b=2.19)
+|   +-- col 0 -> [MAX] value=2.19  (a=2.99, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.19
+|   |   +-- col 1 -> [LEAF] h=1.06
+|   |   +-- col 2 -> [LEAF] h=1.82
+|   |   +-- col 3 -> [LEAF] h=1.64
+|   |   +-- col 4 -> [LEAF] h=1.30
+|   |   +-- col 5 -> [LEAF] h=1.10
+|   |   `-- col 6 -> [LEAF] h=1.02
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=2.33  (a=2.99, b=2.33)
+|   +-- col 0 -> [MAX] value=2.33  (a=2.99, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.33
+|   |   +-- col 1 -> [LEAF] h=1.20
+|   |   +-- col 2 -> [LEAF] h=1.96
+|   |   +-- col 3 -> [LEAF] h=1.83
+|   |   +-- col 4 -> [LEAF] h=1.10
+|   |   +-- col 5 -> [LEAF] h=1.54
+|   |   `-- col 6 -> [LEAF] h=1.14
+|   +-- col 1 -> (pruned)
+|   +-- col 2 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=2.25  (a=2.99, b=2.25)
+    +-- col 0 -> [MAX] value=2.25  (a=2.99, b=+inf)
+    |   +-- col 0 -> [LEAF] h=2.25
+    |   +-- col 1 -> [LEAF] h=1.12
+    |   +-- col 2 -> [LEAF] h=1.88
+    |   +-- col 3 -> [LEAF] h=1.69
+    |   +-- col 4 -> [LEAF] h=1.02
+    |   +-- col 5 -> [LEAF] h=1.14
+    |   `-- col 6 -> [LEAF] h=1.20
+    +-- col 1 -> (pruned)
+    +-- col 2 -> (pruned)
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 2, landed in column 2
+. . O . . . .
+. . O . . . .
+. . O . . . .
+. . O O . . .
+X . O X . . .
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 2.82
+h after your disc in each column -> c0:2.49  c1:2.69  c3:2.53  c4:2.79  c5:2.53  c6:2.61
+You aimed at column 5, landed in column 5
+. . O . . . .
+. . O . . . .
+. . O . . . .
+. . O O . . .
+X . O X . X .
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 2.53
+h after a computer disc in each column -> c0:2.91  c1:2.66  c3:3.23  c4:2.56  c5:3.09  c6:2.70
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 169   nodes expanded: 113   time: 0.012 s   chosen column: 3
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=3.46  (a=3.46, b=+inf)
++-- col 0 -> [MIN] value=2.79  (a=-inf, b=2.79)
+|   +-- col 0 -> [MAX] value=3.38  (a=3.38, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.85
+|   |   +-- col 1 -> [LEAF] h=2.84
+|   |   +-- col 3 -> [LEAF] h=3.38
+|   |   +-- col 4 -> [LEAF] h=2.79
+|   |   +-- col 5 -> [LEAF] h=3.32
+|   |   `-- col 6 -> [LEAF] h=2.93
+|   +-- col 1 -> [MAX] value=4.01  (a=4.01, b=3.38)
+|   |   +-- col 0 -> [LEAF] h=3.00
+|   |   +-- col 1 -> [LEAF] h=4.01
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=2.79  (a=2.79, b=3.38)
+|   |   +-- col 0 -> [LEAF] h=2.46
+|   |   +-- col 1 -> [LEAF] h=2.22
+|   |   +-- col 3 -> [LEAF] h=2.68
+|   |   +-- col 4 -> [LEAF] h=2.25
+|   |   +-- col 5 -> [LEAF] h=2.79
+|   |   `-- col 6 -> [LEAF] h=2.39
+|   +-- col 4 -> [MAX] value=3.20  (a=3.20, b=2.79)
+|   |   +-- col 0 -> [LEAF] h=3.20
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=3.09  (a=3.09, b=2.79)
+|   |   +-- col 0 -> [LEAF] h=2.13
+|   |   +-- col 1 -> [LEAF] h=1.89
+|   |   +-- col 3 -> [LEAF] h=2.52
+|   |   +-- col 4 -> [LEAF] h=1.84
+|   |   +-- col 5 -> [LEAF] h=3.09
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=2.95  (a=2.95, b=2.79)
+|       +-- col 0 -> [LEAF] h=2.95
+|       +-- col 1 -> (pruned)
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=2.84  (a=2.79, b=2.84)
+|   +-- col 0 -> [MAX] value=2.84  (a=2.84, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.84
+|   |   +-- col 1 -> [LEAF] h=2.08
+|   |   +-- col 3 -> [LEAF] h=2.41
+|   |   +-- col 4 -> [LEAF] h=1.66
+|   |   +-- col 5 -> [LEAF] h=2.20
+|   |   `-- col 6 -> [LEAF] h=1.80
+|   +-- col 1 -> [MAX] value=3.06  (a=3.06, b=2.84)
+|   |   +-- col 0 -> [LEAF] h=2.51
+|   |   +-- col 1 -> [LEAF] h=2.56
+|   |   +-- col 3 -> [LEAF] h=3.06
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=2.84  (a=2.84, b=2.84)
+|   |   +-- col 0 -> [LEAF] h=2.22
+|   |   +-- col 1 -> [LEAF] h=2.84
+|   |   +-- col 3 -> [LEAF] h=2.35
+|   |   +-- col 4 -> [LEAF] h=1.92
+|   |   +-- col 5 -> [LEAF] h=2.46
+|   |   `-- col 6 -> [LEAF] h=2.06
+|   +-- col 4 -> [MAX] value=2.96  (a=2.96, b=2.84)
+|   |   +-- col 0 -> [LEAF] h=2.96
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=2.84  (a=2.84, b=2.84)
+|   |   +-- col 0 -> [LEAF] h=1.89
+|   |   +-- col 1 -> [LEAF] h=2.51
+|   |   +-- col 3 -> [LEAF] h=2.34
+|   |   +-- col 4 -> [LEAF] h=1.59
+|   |   +-- col 5 -> [LEAF] h=2.84
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=3.33  (a=3.33, b=2.84)
+|       +-- col 0 -> [LEAF] h=2.71
+|       +-- col 1 -> [LEAF] h=3.33
+|       +-- col 3 -> (pruned)
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 3 -> [MIN] value=3.46  (a=2.84, b=3.46)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=3.88  (a=3.88, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=3.88
+|   |   +-- col 1 -> [LEAF] h=2.41
+|   |   +-- col 3 -> [LEAF] h=2.76
+|   |   +-- col 4 -> [LEAF] h=2.23
+|   |   +-- col 5 -> [LEAF] h=2.77
+|   |   `-- col 6 -> [LEAF] h=2.37
+|   +-- col 1 -> [MAX] value=4.01  (a=4.01, b=3.88)
+|   |   +-- col 0 -> [LEAF] h=3.35
+|   |   +-- col 1 -> [LEAF] h=4.01
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=3.46  (a=3.46, b=3.88)  <== expected
+|   |   +-- col 0 -> [LEAF] h=3.35
+|   |   +-- col 1 -> [LEAF] h=3.18
+|   |   +-- col 3 -> [LEAF] h=3.35
+|   |   +-- col 4 -> [LEAF] h=3.00
+|   |   +-- col 5 -> [LEAF] h=3.46  <== expected
+|   |   `-- col 6 -> [LEAF] h=3.14
+|   +-- col 4 -> [MAX] value=3.58  (a=3.58, b=3.46)
+|   |   +-- col 0 -> [LEAF] h=3.58
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=3.89  (a=3.89, b=3.46)
+|   |   +-- col 0 -> [LEAF] h=2.52
+|   |   +-- col 1 -> [LEAF] h=2.34
+|   |   +-- col 3 -> [LEAF] h=2.62
+|   |   +-- col 4 -> [LEAF] h=2.17
+|   |   +-- col 5 -> [LEAF] h=3.89
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=3.52  (a=3.52, b=3.46)
+|       +-- col 0 -> [LEAF] h=3.34
+|       +-- col 1 -> [LEAF] h=3.16
+|       +-- col 3 -> [LEAF] h=3.52
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=2.79  (a=3.46, b=2.79)
+|   +-- col 0 -> [MAX] value=2.79  (a=3.46, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.79
+|   |   +-- col 1 -> [LEAF] h=1.66
+|   |   +-- col 3 -> [LEAF] h=2.23
+|   |   +-- col 4 -> [LEAF] h=1.97
+|   |   +-- col 5 -> [LEAF] h=2.09
+|   |   `-- col 6 -> [LEAF] h=1.70
+|   +-- col 1 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=3.32  (a=3.46, b=3.32)
+|   +-- col 0 -> [MAX] value=3.32  (a=3.46, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=3.32
+|   |   +-- col 1 -> [LEAF] h=2.20
+|   |   +-- col 3 -> [LEAF] h=2.77
+|   |   +-- col 4 -> [LEAF] h=2.09
+|   |   +-- col 5 -> [LEAF] h=2.40
+|   |   `-- col 6 -> [LEAF] h=2.29
+|   +-- col 1 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=2.93  (a=3.46, b=2.93)
+    +-- col 0 -> [MAX] value=2.93  (a=3.46, b=+inf)
+    |   +-- col 0 -> [LEAF] h=2.93
+    |   +-- col 1 -> [LEAF] h=1.80
+    |   +-- col 3 -> [LEAF] h=2.37
+    |   +-- col 4 -> [LEAF] h=1.70
+    |   +-- col 5 -> [LEAF] h=2.29
+    |   `-- col 6 -> [LEAF] h=1.88
+    +-- col 1 -> (pruned)
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 3, landed in column 3
+. . O . . . .
+. . O . . . .
+. . O O . . .
+. . O O . . .
+X . O X . X .
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 3.23
+h after your disc in each column -> c0:2.90  c1:3.02  c3:2.97  c4:3.20  c5:2.84  c6:2.96
+You aimed at column 0, landed in column 0
+. . O . . . .
+. . O . . . .
+. . O O . . .
+X . O O . . .
+X . O X . X .
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 2.90
+h after a computer disc in each column -> c0:3.88  c1:2.41  c3:2.76  c4:2.23  c5:2.77  c6:2.37
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 109   nodes expanded: 74   time: 0.003 s   chosen column: 0
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=4.11  (a=4.11, b=+inf)
++-- col 0 -> [MIN] value=4.11  (a=-inf, b=4.11)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=4.42  (a=4.42, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=4.09
+|   |   +-- col 1 -> [LEAF] h=4.01
+|   |   +-- col 3 -> [LEAF] h=4.34
+|   |   +-- col 4 -> [LEAF] h=3.89
+|   |   +-- col 5 -> [LEAF] h=4.42
+|   |   `-- col 6 -> [LEAF] h=4.02
+|   +-- col 1 -> [MAX] value=4.68  (a=4.68, b=4.42)
+|   |   +-- col 0 -> [LEAF] h=3.71
+|   |   +-- col 1 -> [LEAF] h=4.41
+|   |   +-- col 3 -> [LEAF] h=4.68
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=4.11  (a=4.11, b=4.42)  <== expected
+|   |   +-- col 0 -> [LEAF] h=3.63
+|   |   +-- col 1 -> [LEAF] h=3.78
+|   |   +-- col 3 -> [LEAF] h=3.92
+|   |   +-- col 4 -> [LEAF] h=3.65
+|   |   +-- col 5 -> [LEAF] h=4.11  <== expected
+|   |   `-- col 6 -> [LEAF] h=3.79
+|   +-- col 4 -> [MAX] value=4.41  (a=4.41, b=4.11)
+|   |   +-- col 0 -> [LEAF] h=3.94
+|   |   +-- col 1 -> [LEAF] h=4.01
+|   |   +-- col 3 -> [LEAF] h=4.41
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=4.54  (a=4.54, b=4.11)
+|   |   +-- col 0 -> [LEAF] h=2.88
+|   |   +-- col 1 -> [LEAF] h=2.94
+|   |   +-- col 3 -> [LEAF] h=3.27
+|   |   +-- col 4 -> [LEAF] h=2.82
+|   |   +-- col 5 -> [LEAF] h=4.54
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=4.17  (a=4.17, b=4.11)
+|       +-- col 0 -> [LEAF] h=3.69
+|       +-- col 1 -> [LEAF] h=3.76
+|       +-- col 3 -> [LEAF] h=4.17
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=2.30  (a=4.11, b=2.30)
+|   +-- col 0 -> [MAX] value=2.30  (a=4.11, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.30
+|   |   +-- col 1 -> [LEAF] h=1.56
+|   |   +-- col 3 -> [LEAF] h=1.78
+|   |   +-- col 4 -> [LEAF] h=1.25
+|   |   +-- col 5 -> [LEAF] h=1.78
+|   |   `-- col 6 -> [LEAF] h=1.38
+|   +-- col 1 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 3 -> [MIN] value=2.73  (a=4.11, b=2.73)
+|   +-- col 0 -> [MAX] value=2.73  (a=4.11, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.73
+|   |   +-- col 1 -> [LEAF] h=1.78
+|   |   +-- col 3 -> [LEAF] h=2.67
+|   |   +-- col 4 -> [LEAF] h=1.60
+|   |   +-- col 5 -> [LEAF] h=2.62
+|   |   `-- col 6 -> [LEAF] h=1.80
+|   +-- col 1 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=2.13  (a=4.11, b=2.13)
+|   +-- col 0 -> [MAX] value=2.13  (a=4.11, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.13
+|   |   +-- col 1 -> [LEAF] h=1.25
+|   |   +-- col 3 -> [LEAF] h=1.60
+|   |   +-- col 4 -> [LEAF] h=1.49
+|   |   +-- col 5 -> [LEAF] h=1.61
+|   |   `-- col 6 -> [LEAF] h=1.21
+|   +-- col 1 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=2.67  (a=4.11, b=2.67)
+|   +-- col 0 -> [MAX] value=2.67  (a=4.11, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=2.67
+|   |   +-- col 1 -> [LEAF] h=1.78
+|   |   +-- col 3 -> [LEAF] h=2.62
+|   |   +-- col 4 -> [LEAF] h=1.61
+|   |   +-- col 5 -> [LEAF] h=2.40
+|   |   `-- col 6 -> [LEAF] h=1.81
+|   +-- col 1 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=2.27  (a=4.11, b=2.27)
+    +-- col 0 -> [MAX] value=2.27  (a=4.11, b=+inf)
+    |   +-- col 0 -> [LEAF] h=2.27
+    |   +-- col 1 -> [LEAF] h=1.38
+    |   +-- col 3 -> [LEAF] h=1.80
+    |   +-- col 4 -> [LEAF] h=1.21
+    |   +-- col 5 -> [LEAF] h=1.81
+    |   `-- col 6 -> [LEAF] h=1.39
+    +-- col 1 -> (pruned)
+    +-- col 3 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 0, landed in column 0
+. . O . . . .
+. . O . . . .
+O . O O . . .
+X . O O . . .
+X . O X . X .
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 3.88
+h after your disc in each column -> c0:3.86  c1:4.32  c3:3.62  c4:3.85  c5:3.49  c6:3.61
+You aimed at column 3, landed in column 3
+. . O . . . .
+. . O X . . .
+O . O O . . .
+X . O O . . .
+X . O X . X .
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 3.62
+h after a computer disc in each column -> c0:3.63  c1:3.78  c3:3.92  c4:3.65  c5:4.11  c6:3.79
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 206   nodes expanded: 178   time: 0.013 s   chosen column: 3
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=4.08  (a=4.08, b=+inf)
++-- col 0 -> [MIN] value=3.81  (a=-inf, b=3.81)
+|   +-- col 0 -> [MAX] value=3.95  (a=3.95, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=3.63
+|   |   +-- col 3 -> [LEAF] h=3.68
+|   |   +-- col 4 -> [LEAF] h=3.50
+|   |   +-- col 5 -> [LEAF] h=3.95
+|   |   `-- col 6 -> [LEAF] h=3.63
+|   +-- col 1 -> [MAX] value=4.05  (a=4.05, b=3.95)
+|   |   +-- col 0 -> [LEAF] h=3.58
+|   |   +-- col 1 -> [LEAF] h=4.05
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 3 -> [MAX] value=3.96  (a=3.96, b=3.95)
+|   |   +-- col 0 -> [LEAF] h=3.65
+|   |   +-- col 1 -> [LEAF] h=3.64
+|   |   +-- col 4 -> [LEAF] h=3.51
+|   |   +-- col 5 -> [LEAF] h=3.96
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=4.04  (a=4.04, b=3.95)
+|   |   +-- col 0 -> [LEAF] h=3.80
+|   |   +-- col 1 -> [LEAF] h=3.72
+|   |   +-- col 3 -> [LEAF] h=3.85
+|   |   +-- col 4 -> [LEAF] h=3.95
+|   |   +-- col 5 -> [LEAF] h=4.04
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=4.21  (a=4.21, b=3.95)
+|   |   +-- col 0 -> [LEAF] h=2.71
+|   |   +-- col 1 -> [LEAF] h=2.62
+|   |   +-- col 3 -> [LEAF] h=2.75
+|   |   +-- col 4 -> [LEAF] h=2.50
+|   |   +-- col 5 -> [LEAF] h=4.21
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=3.81  (a=3.81, b=3.95)
+|       +-- col 0 -> [LEAF] h=3.50
+|       +-- col 1 -> [LEAF] h=3.42
+|       +-- col 3 -> [LEAF] h=3.54
+|       +-- col 4 -> [LEAF] h=2.64
+|       +-- col 5 -> [LEAF] h=3.81
+|       `-- col 6 -> [LEAF] h=3.50
++-- col 1 -> [MIN] value=4.07  (a=3.81, b=4.07)
+|   +-- col 0 -> [MAX] value=4.40  (a=4.40, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=3.97
+|   |   +-- col 1 -> [LEAF] h=4.40
+|   |   +-- col 3 -> [LEAF] h=4.01
+|   |   +-- col 4 -> [LEAF] h=3.76
+|   |   +-- col 5 -> [LEAF] h=4.21
+|   |   `-- col 6 -> [LEAF] h=3.89
+|   +-- col 1 -> [MAX] value=4.33  (a=4.33, b=4.40)
+|   |   +-- col 0 -> [LEAF] h=3.00
+|   |   +-- col 1 -> [LEAF] h=4.33
+|   |   +-- col 3 -> [LEAF] h=3.27
+|   |   +-- col 4 -> [LEAF] h=3.02
+|   |   +-- col 5 -> [LEAF] h=3.47
+|   |   `-- col 6 -> [LEAF] h=3.15
+|   +-- col 3 -> [MAX] value=4.30  (a=4.30, b=4.33)
+|   |   +-- col 0 -> [LEAF] h=3.64
+|   |   +-- col 1 -> [LEAF] h=4.30
+|   |   +-- col 4 -> [LEAF] h=3.66
+|   |   +-- col 5 -> [LEAF] h=4.11
+|   |   `-- col 6 -> [LEAF] h=3.79
+|   +-- col 4 -> [MAX] value=4.38  (a=4.38, b=4.30)
+|   |   +-- col 0 -> [LEAF] h=3.72
+|   |   +-- col 1 -> [LEAF] h=4.38
+|   |   +-- col 3 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=4.36  (a=4.36, b=4.30)
+|   |   +-- col 0 -> [LEAF] h=2.62
+|   |   +-- col 1 -> [LEAF] h=3.28
+|   |   +-- col 3 -> [LEAF] h=2.90
+|   |   +-- col 4 -> [LEAF] h=2.65
+|   |   +-- col 5 -> [LEAF] h=4.36
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=4.07  (a=4.07, b=4.30)
+|       +-- col 0 -> [LEAF] h=3.42
+|       +-- col 1 -> [LEAF] h=4.07
+|       +-- col 3 -> [LEAF] h=3.69
+|       +-- col 4 -> [LEAF] h=2.79
+|       +-- col 5 -> [LEAF] h=3.96
+|       `-- col 6 -> [LEAF] h=3.65
++-- col 3 -> [MIN] value=4.08  (a=4.07, b=4.08)  <== BEST MOVE
+|   +-- col 0 -> [MAX] value=4.52  (a=4.52, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=4.52
+|   |   +-- col 1 -> [LEAF] h=4.01
+|   |   +-- col 4 -> [LEAF] h=3.89
+|   |   +-- col 5 -> [LEAF] h=4.33
+|   |   `-- col 6 -> [LEAF] h=4.02
+|   +-- col 1 -> [MAX] value=4.32  (a=4.32, b=4.52)
+|   |   +-- col 0 -> [LEAF] h=3.62
+|   |   +-- col 1 -> [LEAF] h=4.32
+|   |   +-- col 4 -> [LEAF] h=3.64
+|   |   +-- col 5 -> [LEAF] h=4.09
+|   |   `-- col 6 -> [LEAF] h=3.78
+|   +-- col 4 -> [MAX] value=4.31  (a=4.31, b=4.32)
+|   |   +-- col 0 -> [LEAF] h=3.85
+|   |   +-- col 1 -> [LEAF] h=3.99
+|   |   +-- col 4 -> [LEAF] h=4.22
+|   |   +-- col 5 -> [LEAF] h=4.31
+|   |   `-- col 6 -> [LEAF] h=4.00
+|   +-- col 5 -> [MAX] value=4.54  (a=4.54, b=4.31)
+|   |   +-- col 0 -> [LEAF] h=2.75
+|   |   +-- col 1 -> [LEAF] h=2.90
+|   |   +-- col 4 -> [LEAF] h=2.77
+|   |   +-- col 5 -> [LEAF] h=4.54
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=4.08  (a=4.08, b=4.31)  <== expected
+|       +-- col 0 -> [LEAF] h=3.54
+|       +-- col 1 -> [LEAF] h=3.69
+|       +-- col 4 -> [LEAF] h=2.91
+|       +-- col 5 -> [LEAF] h=4.08  <== expected
+|       `-- col 6 -> [LEAF] h=3.83
++-- col 4 -> [MIN] value=4.08  (a=4.08, b=4.08)
+|   +-- col 0 -> [MAX] value=4.08  (a=4.08, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=3.84
+|   |   +-- col 1 -> [LEAF] h=3.76
+|   |   +-- col 3 -> [LEAF] h=3.89
+|   |   +-- col 4 -> [LEAF] h=4.04
+|   |   +-- col 5 -> [LEAF] h=4.08
+|   |   `-- col 6 -> [LEAF] h=3.77
+|   +-- col 1 -> (pruned)
+|   +-- col 3 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=3.92  (a=4.08, b=3.92)
+|   +-- col 0 -> [MAX] value=4.86  (a=4.86, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=4.29
+|   |   +-- col 1 -> [LEAF] h=4.21
+|   |   +-- col 3 -> [LEAF] h=4.33
+|   |   +-- col 4 -> [LEAF] h=4.08
+|   |   +-- col 5 -> [LEAF] h=4.86
+|   |   `-- col 6 -> [LEAF] h=4.20
+|   +-- col 1 -> [MAX] value=4.62  (a=4.62, b=4.86)
+|   |   +-- col 0 -> [LEAF] h=3.82
+|   |   +-- col 1 -> [LEAF] h=4.51
+|   |   +-- col 3 -> [LEAF] h=4.09
+|   |   +-- col 4 -> [LEAF] h=3.84
+|   |   +-- col 5 -> [LEAF] h=4.62
+|   |   `-- col 6 -> [LEAF] h=3.95
+|   +-- col 3 -> [MAX] value=4.76  (a=4.76, b=4.62)
+|   |   +-- col 0 -> [LEAF] h=3.96
+|   |   +-- col 1 -> [LEAF] h=4.11
+|   |   +-- col 4 -> [LEAF] h=3.98
+|   |   +-- col 5 -> [LEAF] h=4.76
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=4.79  (a=4.79, b=4.62)
+|   |   +-- col 0 -> [LEAF] h=4.04
+|   |   +-- col 1 -> [LEAF] h=4.19
+|   |   +-- col 3 -> [LEAF] h=4.31
+|   |   +-- col 4 -> [LEAF] h=4.79
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=3.92  (a=4.08, b=4.62)
+|   |   +-- col 0 -> [LEAF] h=3.32
+|   |   +-- col 1 -> [LEAF] h=3.47
+|   |   +-- col 3 -> [LEAF] h=3.59
+|   |   +-- col 4 -> [LEAF] h=3.34
+|   |   +-- col 5 -> [LEAF] h=3.92
+|   |   `-- col 6 -> [LEAF] h=3.45
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=4.04  (a=4.08, b=4.04)
+    +-- col 0 -> [MAX] value=4.20  (a=4.20, b=+inf)
+    |   +-- col 0 -> [LEAF] h=3.98
+    |   +-- col 1 -> [LEAF] h=3.89
+    |   +-- col 3 -> [LEAF] h=4.02
+    |   +-- col 4 -> [LEAF] h=3.77
+    |   +-- col 5 -> [LEAF] h=4.20
+    |   `-- col 6 -> [LEAF] h=3.94
+    +-- col 1 -> [MAX] value=4.20  (a=4.20, b=4.20)
+    |   +-- col 0 -> [LEAF] h=3.50
+    |   +-- col 1 -> [LEAF] h=4.20
+    |   +-- col 3 -> (pruned)
+    |   +-- col 4 -> (pruned)
+    |   +-- col 5 -> (pruned)
+    |   `-- col 6 -> (pruned)
+    +-- col 3 -> [MAX] value=4.09  (a=4.09, b=4.20)
+    |   +-- col 0 -> [LEAF] h=3.65
+    |   +-- col 1 -> [LEAF] h=3.79
+    |   +-- col 4 -> [LEAF] h=3.67
+    |   +-- col 5 -> [LEAF] h=4.09
+    |   `-- col 6 -> [LEAF] h=3.84
+    +-- col 4 -> [MAX] value=4.17  (a=4.17, b=4.09)
+    |   +-- col 0 -> [LEAF] h=3.73
+    |   +-- col 1 -> [LEAF] h=3.87
+    |   +-- col 3 -> [LEAF] h=4.00
+    |   +-- col 4 -> [LEAF] h=4.00
+    |   +-- col 5 -> [LEAF] h=4.17
+    |   `-- col 6 -> (pruned)
+    +-- col 5 -> [MAX] value=4.44  (a=4.44, b=4.09)
+    |   +-- col 0 -> [LEAF] h=2.71
+    |   +-- col 1 -> [LEAF] h=2.85
+    |   +-- col 3 -> [LEAF] h=2.98
+    |   +-- col 4 -> [LEAF] h=2.73
+    |   +-- col 5 -> [LEAF] h=4.44
+    |   `-- col 6 -> (pruned)
+    `-- col 6 -> [MAX] value=4.04  (a=4.08, b=4.09)
+        +-- col 0 -> [LEAF] h=3.67
+        +-- col 1 -> [LEAF] h=3.82
+        +-- col 3 -> [LEAF] h=3.94
+        +-- col 4 -> [LEAF] h=3.69
+        +-- col 5 -> [LEAF] h=4.04
+        `-- col 6 -> [LEAF] h=3.84
+========================================================================
+Computer aimed at column 3, landed in column 3
+. . O O . . .
+. . O X . . .
+O . O O . . .
+X . O O . . .
+X . O X . X .
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 3.92
+h after your disc in each column -> c0:3.91  c1:4.36  c4:3.89  c5:3.48  c6:3.58
+You aimed at column 6, landed in column 6
+. . O O . . .
+. . O X . . .
+O . O O . . .
+X . O O . . .
+X . O X . X X
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 3.58
+h after a computer disc in each column -> c0:3.54  c1:3.69  c4:2.91  c5:4.08  c6:3.83
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 145   nodes expanded: 129   time: 0.005 s   chosen column: 6
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=4.17  (a=4.17, b=+inf)
++-- col 0 -> [MIN] value=3.65  (a=-inf, b=3.65)
+|   +-- col 0 -> [MAX] value=3.79  (a=3.79, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=3.43
+|   |   +-- col 4 -> [LEAF] h=2.65
+|   |   +-- col 5 -> [LEAF] h=3.79
+|   |   `-- col 6 -> [LEAF] h=3.54
+|   +-- col 1 -> [MAX] value=3.90  (a=3.90, b=3.79)
+|   |   +-- col 0 -> [LEAF] h=3.90
+|   |   +-- col 1 -> (pruned)
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 4 -> [MAX] value=3.95  (a=3.95, b=3.79)
+|   |   +-- col 0 -> [LEAF] h=3.45
+|   |   +-- col 1 -> [LEAF] h=2.93
+|   |   +-- col 4 -> [LEAF] h=3.95
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=4.02  (a=4.02, b=3.79)
+|   |   +-- col 0 -> [LEAF] h=2.93
+|   |   +-- col 1 -> [LEAF] h=2.41
+|   |   +-- col 4 -> [LEAF] h=1.92
+|   |   +-- col 5 -> [LEAF] h=4.02
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=3.65  (a=3.65, b=3.79)
+|       +-- col 0 -> [LEAF] h=3.19
+|       +-- col 1 -> [LEAF] h=2.66
+|       +-- col 4 -> [LEAF] h=2.18
+|       +-- col 5 -> [LEAF] h=2.96
+|       `-- col 6 -> [LEAF] h=3.65
++-- col 1 -> [MIN] value=3.80  (a=3.65, b=3.80)
+|   +-- col 0 -> [MAX] value=4.28  (a=4.28, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=4.28
+|   |   +-- col 1 -> [LEAF] h=4.26
+|   |   +-- col 4 -> [LEAF] h=2.97
+|   |   +-- col 5 -> [LEAF] h=4.11
+|   |   `-- col 6 -> [LEAF] h=3.86
+|   +-- col 1 -> [MAX] value=4.21  (a=4.21, b=4.28)
+|   |   +-- col 0 -> [LEAF] h=2.87
+|   |   +-- col 1 -> [LEAF] h=4.21
+|   |   +-- col 4 -> [LEAF] h=2.24
+|   |   +-- col 5 -> [LEAF] h=3.39
+|   |   `-- col 6 -> [LEAF] h=3.13
+|   +-- col 4 -> [MAX] value=4.10  (a=4.10, b=4.21)
+|   |   +-- col 0 -> [LEAF] h=2.93
+|   |   +-- col 1 -> [LEAF] h=3.59
+|   |   +-- col 4 -> [LEAF] h=4.10
+|   |   +-- col 5 -> [LEAF] h=3.44
+|   |   `-- col 6 -> [LEAF] h=3.19
+|   +-- col 5 -> [MAX] value=4.17  (a=4.17, b=4.10)
+|   |   +-- col 0 -> [LEAF] h=2.41
+|   |   +-- col 1 -> [LEAF] h=3.06
+|   |   +-- col 4 -> [LEAF] h=2.08
+|   |   +-- col 5 -> [LEAF] h=4.17
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=3.80  (a=3.80, b=4.10)
+|       +-- col 0 -> [LEAF] h=2.66
+|       +-- col 1 -> [LEAF] h=3.32
+|       +-- col 4 -> [LEAF] h=2.33
+|       +-- col 5 -> [LEAF] h=3.11
+|       `-- col 6 -> [LEAF] h=3.80
++-- col 4 -> [MIN] value=3.58  (a=3.80, b=3.58)
+|   +-- col 0 -> [MAX] value=4.04  (a=4.04, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=3.49
+|   |   +-- col 1 -> [LEAF] h=2.97
+|   |   +-- col 4 -> [LEAF] h=4.04
+|   |   +-- col 5 -> [LEAF] h=3.33
+|   |   `-- col 6 -> [LEAF] h=3.07
+|   +-- col 1 -> [MAX] value=3.82  (a=3.82, b=4.04)
+|   |   +-- col 0 -> [LEAF] h=2.59
+|   |   +-- col 1 -> [LEAF] h=3.28
+|   |   +-- col 4 -> [LEAF] h=3.82
+|   |   +-- col 5 -> [LEAF] h=3.10
+|   |   `-- col 6 -> [LEAF] h=2.85
+|   +-- col 4 -> [MAX] value=3.58  (a=3.80, b=3.82)
+|   |   +-- col 0 -> [LEAF] h=2.57
+|   |   +-- col 1 -> [LEAF] h=2.72
+|   |   +-- col 4 -> [LEAF] h=3.58
+|   |   +-- col 5 -> [LEAF] h=2.97
+|   |   `-- col 6 -> [LEAF] h=2.83
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=3.84  (a=3.80, b=3.84)
+|   +-- col 0 -> [MAX] value=4.79  (a=4.79, b=+inf)
+|   |   +-- col 0 -> [LEAF] h=4.64
+|   |   +-- col 1 -> [LEAF] h=4.11
+|   |   +-- col 4 -> [LEAF] h=3.33
+|   |   +-- col 5 -> [LEAF] h=4.79
+|   |   `-- col 6 -> [LEAF] h=4.32
+|   +-- col 1 -> [MAX] value=4.57  (a=4.57, b=4.79)
+|   |   +-- col 0 -> [LEAF] h=3.74
+|   |   +-- col 1 -> [LEAF] h=4.43
+|   |   +-- col 4 -> [LEAF] h=3.10
+|   |   +-- col 5 -> [LEAF] h=4.57
+|   |   `-- col 6 -> [LEAF] h=4.09
+|   +-- col 4 -> [MAX] value=4.86  (a=4.86, b=4.57)
+|   |   +-- col 0 -> [LEAF] h=3.29
+|   |   +-- col 1 -> [LEAF] h=3.44
+|   |   +-- col 4 -> [LEAF] h=4.86
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=3.84  (a=3.84, b=4.57)
+|   |   +-- col 0 -> [LEAF] h=3.23
+|   |   +-- col 1 -> [LEAF] h=3.39
+|   |   +-- col 4 -> [LEAF] h=2.60
+|   |   +-- col 5 -> [LEAF] h=3.84
+|   |   `-- col 6 -> [LEAF] h=3.52
+|   `-- col 6 -> [MAX] value=4.54  (a=4.54, b=3.84)
+|       +-- col 0 -> [LEAF] h=2.96
+|       +-- col 1 -> [LEAF] h=3.11
+|       +-- col 4 -> [LEAF] h=2.63
+|       +-- col 5 -> [LEAF] h=3.72
+|       `-- col 6 -> [LEAF] h=4.54
+`-- col 6 -> [MIN] value=4.17  (a=3.84, b=4.17)  <== BEST MOVE
+    +-- col 0 -> [MAX] value=4.38  (a=4.38, b=+inf)
+    |   +-- col 0 -> [LEAF] h=4.38
+    |   +-- col 1 -> [LEAF] h=3.86
+    |   +-- col 4 -> [LEAF] h=3.07
+    |   +-- col 5 -> [LEAF] h=4.32
+    |   `-- col 6 -> [LEAF] h=3.91
+    +-- col 1 -> [MAX] value=4.17  (a=4.17, b=4.38)  <== expected
+    |   +-- col 0 -> [LEAF] h=3.48
+    |   +-- col 1 -> [LEAF] h=4.17  <== expected
+    |   +-- col 4 -> [LEAF] h=2.85
+    |   +-- col 5 -> [LEAF] h=4.09
+    |   `-- col 6 -> [LEAF] h=3.69
+    +-- col 4 -> [MAX] value=4.21  (a=4.21, b=4.17)
+    |   +-- col 0 -> [LEAF] h=3.04
+    |   +-- col 1 -> [LEAF] h=3.19
+    |   +-- col 4 -> [LEAF] h=4.21
+    |   +-- col 5 -> (pruned)
+    |   `-- col 6 -> (pruned)
+    +-- col 5 -> [MAX] value=4.31  (a=4.31, b=4.17)
+    |   +-- col 0 -> [LEAF] h=2.45
+    |   +-- col 1 -> [LEAF] h=2.60
+    |   +-- col 4 -> [LEAF] h=2.11
+    |   +-- col 5 -> [LEAF] h=4.31
+    |   `-- col 6 -> (pruned)
+    `-- col 6 -> [MAX] value=4.19  (a=4.19, b=4.17)
+        +-- col 0 -> [LEAF] h=3.65
+        +-- col 1 -> [LEAF] h=3.80
+        +-- col 4 -> [LEAF] h=3.02
+        +-- col 5 -> [LEAF] h=4.19
+        `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 6, landed in column 6
+. . O O . . .
+. . O X . . .
+O . O O . . .
+X . O O . . O
+X . O X . X X
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 3.83
+h after your disc in each column -> c0:3.76  c1:4.23  c4:3.79  c5:3.19  c6:3.70
+You aimed at column 0, landed in column 0
+. . O O . . .
+X . O X . . .
+O . O O . . .
+X . O O . . O
+X . O X . X X
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 3.76
+h after a computer disc in each column -> c0:4.38  c1:3.86  c4:3.07  c5:4.32  c6:3.91
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 77   nodes expanded: 58   time: 0.002 s   chosen column: 0
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=4.76  (a=4.76, b=+inf)
++-- col 0 -> [MIN] value=4.76  (a=-inf, b=4.76)  <== BEST MOVE
+|   +-- col 1 -> [MAX] value=4.76  (a=4.76, b=+inf)  <== expected
+|   |   +-- col 1 -> [LEAF] h=4.76  <== expected
+|   |   +-- col 4 -> [LEAF] h=3.44
+|   |   +-- col 5 -> [LEAF] h=4.67
+|   |   `-- col 6 -> [LEAF] h=4.26
+|   +-- col 4 -> [MAX] value=4.78  (a=4.78, b=4.76)
+|   |   +-- col 1 -> [LEAF] h=3.77
+|   |   +-- col 4 -> [LEAF] h=4.78
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=4.88  (a=4.88, b=4.76)
+|   |   +-- col 1 -> [LEAF] h=3.19
+|   |   +-- col 4 -> [LEAF] h=2.70
+|   |   +-- col 5 -> [LEAF] h=4.88
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=4.77  (a=4.77, b=4.76)
+|       +-- col 1 -> [LEAF] h=4.39
+|       +-- col 4 -> [LEAF] h=3.60
+|       +-- col 5 -> [LEAF] h=4.77
+|       `-- col 6 -> (pruned)
++-- col 1 -> [MIN] value=4.25  (a=4.76, b=4.25)
+|   +-- col 0 -> [MAX] value=4.25  (a=4.76, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=4.25
+|   |   +-- col 4 -> [LEAF] h=2.96
+|   |   +-- col 5 -> [LEAF] h=4.19
+|   |   `-- col 6 -> [LEAF] h=3.77
+|   +-- col 1 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=4.02  (a=4.76, b=4.02)
+|   +-- col 0 -> [MAX] value=4.02  (a=4.76, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=2.96
+|   |   +-- col 4 -> [LEAF] h=4.02
+|   |   +-- col 5 -> [LEAF] h=3.40
+|   |   `-- col 6 -> [LEAF] h=2.98
+|   +-- col 1 -> (pruned)
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=4.10  (a=4.76, b=4.10)
+|   +-- col 0 -> [MAX] value=4.95  (a=4.95, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=4.19
+|   |   +-- col 4 -> [LEAF] h=3.40
+|   |   +-- col 5 -> [LEAF] h=4.95
+|   |   `-- col 6 -> [LEAF] h=4.68
+|   +-- col 1 -> [MAX] value=4.89  (a=4.89, b=4.95)
+|   |   +-- col 0 -> [LEAF] h=4.67
+|   |   +-- col 1 -> [LEAF] h=4.66
+|   |   +-- col 4 -> [LEAF] h=3.34
+|   |   +-- col 5 -> [LEAF] h=4.89
+|   |   `-- col 6 -> [LEAF] h=4.62
+|   +-- col 4 -> [MAX] value=5.15  (a=5.15, b=4.89)
+|   |   +-- col 0 -> [LEAF] h=4.21
+|   |   +-- col 1 -> [LEAF] h=3.67
+|   |   +-- col 4 -> [LEAF] h=5.15
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=4.10  (a=4.76, b=4.89)
+|   |   +-- col 0 -> [LEAF] h=4.10
+|   |   +-- col 1 -> [LEAF] h=3.56
+|   |   +-- col 4 -> [LEAF] h=2.77
+|   |   +-- col 5 -> [LEAF] h=4.01
+|   |   `-- col 6 -> [LEAF] h=3.99
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=4.68  (a=4.76, b=4.68)
+    +-- col 0 -> [MAX] value=4.68  (a=4.76, b=+inf)
+    |   +-- col 1 -> [LEAF] h=3.77
+    |   +-- col 4 -> [LEAF] h=2.98
+    |   +-- col 5 -> [LEAF] h=4.68
+    |   `-- col 6 -> [LEAF] h=3.77
+    +-- col 1 -> (pruned)
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 0, landed in column 0
+O . O O . . .
+X . O X . . .
+O . O O . . .
+X . O O . . O
+X . O X . X X
+X X X O . X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 4.38
+h after your disc in each column -> c1:4.81  c4:4.36  c5:3.77  c6:4.27
+You aimed at column 4, landed in column 4
+O . O O . . .
+X . O X . . .
+O . O O . . .
+X . O O . . O
+X . O X . X X
+X X X O X X X
+0 1 2 3 4 5 6
+Score  You 0 : 2 Computer
+
+Heuristic h(board) = 4.36
+h after a computer disc in each column -> c1:3.77  c4:4.78  c5:4.21  c6:3.80
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 73   nodes expanded: 60   time: 0.002 s   chosen column: 4
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=5.23  (a=5.23, b=+inf)
++-- col 1 -> [MIN] value=4.27  (a=-inf, b=4.27)
+|   +-- col 1 -> [MAX] value=4.28  (a=4.28, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=4.28
+|   |   +-- col 4 -> [LEAF] h=4.14
+|   |   +-- col 5 -> [LEAF] h=3.56
+|   |   `-- col 6 -> [LEAF] h=3.14
+|   +-- col 4 -> [MAX] value=4.53  (a=4.53, b=4.28)
+|   |   +-- col 1 -> [LEAF] h=4.53
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=4.27  (a=4.27, b=4.28)
+|   |   +-- col 1 -> [LEAF] h=3.39
+|   |   +-- col 4 -> [LEAF] h=3.55
+|   |   +-- col 5 -> [LEAF] h=4.27
+|   |   `-- col 6 -> [LEAF] h=2.85
+|   `-- col 6 -> [MAX] value=4.29  (a=4.29, b=4.27)
+|       +-- col 1 -> [LEAF] h=4.29
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=5.23  (a=4.27, b=5.23)  <== BEST MOVE
+|   +-- col 1 -> [MAX] value=6.58  (a=6.58, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=5.63
+|   |   +-- col 4 -> [LEAF] h=6.58
+|   |   +-- col 5 -> [LEAF] h=6.06
+|   |   `-- col 6 -> [LEAF] h=5.23
+|   +-- col 4 -> [MAX] value=5.59  (a=5.59, b=6.58)
+|   |   +-- col 1 -> [LEAF] h=4.30
+|   |   +-- col 4 -> [LEAF] h=5.59
+|   |   +-- col 5 -> [LEAF] h=3.79
+|   |   `-- col 6 -> [LEAF] h=4.38
+|   +-- col 5 -> [MAX] value=5.23  (a=5.23, b=5.59)  <== expected
+|   |   +-- col 1 -> [LEAF] h=3.55
+|   |   +-- col 4 -> [LEAF] h=3.91
+|   |   +-- col 5 -> [LEAF] h=5.23  <== expected
+|   |   `-- col 6 -> [LEAF] h=3.50
+|   `-- col 6 -> [MAX] value=5.72  (a=5.72, b=5.23)
+|       +-- col 1 -> [LEAF] h=4.75
+|       +-- col 4 -> [LEAF] h=5.72
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=4.69  (a=5.23, b=4.69)
+|   +-- col 1 -> [MAX] value=6.06  (a=6.06, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=4.59
+|   |   +-- col 4 -> [LEAF] h=6.06
+|   |   +-- col 5 -> [LEAF] h=4.82
+|   |   `-- col 6 -> [LEAF] h=4.65
+|   +-- col 4 -> [MAX] value=6.19  (a=6.19, b=6.06)
+|   |   +-- col 1 -> [LEAF] h=4.35
+|   |   +-- col 4 -> [LEAF] h=6.19
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=4.69  (a=5.23, b=6.06)
+|   |   +-- col 1 -> [LEAF] h=3.51
+|   |   +-- col 4 -> [LEAF] h=4.69
+|   |   +-- col 5 -> [LEAF] h=3.95
+|   |   `-- col 6 -> [LEAF] h=3.53
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=4.53  (a=5.23, b=4.53)
+    +-- col 1 -> [MAX] value=5.23  (a=5.23, b=+inf)
+    |   +-- col 1 -> [LEAF] h=4.17
+    |   +-- col 4 -> [LEAF] h=5.23
+    |   +-- col 5 -> [LEAF] h=4.65
+    |   `-- col 6 -> [LEAF] h=4.15
+    +-- col 4 -> [MAX] value=4.53  (a=5.23, b=5.23)
+    |   +-- col 1 -> [LEAF] h=3.53
+    |   +-- col 4 -> [LEAF] h=4.53
+    |   +-- col 5 -> [LEAF] h=3.80
+    |   `-- col 6 -> [LEAF] h=3.53
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
 Computer aimed at column 4, landed in column 4
-. . . . . . .
-X . . . . . .
-O . . . . . .
-O . . . . . .
-O . . . . . .
-O X X X O X .
+O . O O . . .
+X . O X . . .
+O . O O . . .
+X . O O . . O
+X . O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
+Score  You 0 : 2 Computer
 
-Heuristic h(board) = 1
-h after your disc in each column -> c0:1  c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
-You aimed at column 0, landed in column 0
-X . . . . . .
-X . . . . . .
-O . . . . . .
-O . . . . . .
-O . . . . . .
-O X X X O X .
-0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
-
-Heuristic h(board) = 1
-h after a computer disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
-Computer aimed at column 1, landed in column 1
-X . . . . . .
-X . . . . . .
-O . . . . . .
-O . . . . . .
-O O . . . . .
-O X X X O X .
-0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
-
-Heuristic h(board) = 1
-h after your disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
-You aimed at column 5, landed in column 5
-X . . . . . .
-X . . . . . .
-O . . . . . .
-O . . . . . .
-O O . . . X .
-O X X X O X .
-0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
-
-Heuristic h(board) = 1
-h after a computer disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
-Computer aimed at column 1, landed in column 1
-X . . . . . .
-X . . . . . .
-O . . . . . .
-O O . . . . .
-O O . . . X .
-O X X X O X .
-0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
-
-Heuristic h(board) = 1
-h after your disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
+Heuristic h(board) = 4.78
+h after your disc in each column -> c1:5.23  c4:4.17  c5:4.13  c6:4.62
 You aimed at column 1, landed in column 1
-X . . . . . .
-X . . . . . .
-O X . . . . .
-O O . . . . .
-O O . . . X .
-O X X X O X .
+O . O O . . .
+X . O X . . .
+O . O O . . .
+X . O O . . O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
+Score  You 0 : 2 Computer
 
-Heuristic h(board) = 1
-h after a computer disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
-Computer aimed at column 1, landed in column 1
-X . . . . . .
-X O . . . . .
-O X . . . . .
-O O . . . . .
-O O . . . X .
-O X X X O X .
+Heuristic h(board) = 5.23
+h after a computer disc in each column -> c1:5.63  c4:6.58  c5:6.06  c6:5.23
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 65   nodes expanded: 52   time: 0.002 s   chosen column: 4
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=6.38  (a=6.38, b=+inf)
++-- col 1 -> [MIN] value=5.79  (a=-inf, b=5.79)
+|   +-- col 1 -> [MAX] value=7.43  (a=7.43, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=6.37
+|   |   +-- col 4 -> [LEAF] h=7.43
+|   |   +-- col 5 -> [LEAF] h=6.73
+|   |   `-- col 6 -> [LEAF] h=5.90
+|   +-- col 4 -> [MAX] value=5.79  (a=5.79, b=7.43)
+|   |   +-- col 1 -> [LEAF] h=5.79
+|   |   +-- col 4 -> [LEAF] h=5.44
+|   |   +-- col 5 -> [LEAF] h=4.53
+|   |   `-- col 6 -> [LEAF] h=5.13
+|   +-- col 5 -> [MAX] value=6.09  (a=6.09, b=5.79)
+|   |   +-- col 1 -> [LEAF] h=5.56
+|   |   +-- col 4 -> [LEAF] h=4.89
+|   |   +-- col 5 -> [LEAF] h=6.09
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=6.75  (a=6.75, b=5.79)
+|       +-- col 1 -> [LEAF] h=6.75
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=6.38  (a=5.79, b=6.38)  <== BEST MOVE
+|   +-- col 1 -> [MAX] value=7.13  (a=7.13, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=7.13
+|   |   +-- col 4 -> [LEAF] h=6.53
+|   |   +-- col 5 -> [LEAF] h=6.19
+|   |   `-- col 6 -> [LEAF] h=4.54
+|   +-- col 4 -> [MAX] value=7.63  (a=7.63, b=7.13)
+|   |   +-- col 1 -> [LEAF] h=6.18
+|   |   +-- col 4 -> [LEAF] h=6.50
+|   |   +-- col 5 -> [LEAF] h=7.63
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=6.38  (a=6.38, b=7.13)  <== expected
+|   |   +-- col 1 -> [LEAF] h=4.89
+|   |   +-- col 4 -> [LEAF] h=6.38  <== expected
+|   |   +-- col 5 -> [LEAF] h=5.16
+|   |   `-- col 6 -> [LEAF] h=3.70
+|   `-- col 6 -> [MAX] value=7.22  (a=7.22, b=6.38)
+|       +-- col 1 -> [LEAF] h=7.22
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=5.93  (a=6.38, b=5.93)
+|   +-- col 1 -> [MAX] value=7.13  (a=7.13, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=7.13
+|   |   +-- col 4 -> [LEAF] h=6.19
+|   |   +-- col 5 -> [LEAF] h=5.32
+|   |   `-- col 6 -> [LEAF] h=4.81
+|   +-- col 4 -> [MAX] value=5.93  (a=6.38, b=7.13)
+|   |   +-- col 1 -> [LEAF] h=4.53
+|   |   +-- col 4 -> [LEAF] h=5.53
+|   |   +-- col 5 -> [LEAF] h=5.93
+|   |   `-- col 6 -> [LEAF] h=4.44
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=5.80  (a=6.38, b=5.80)
+    +-- col 1 -> [MAX] value=5.80  (a=6.38, b=+inf)
+    |   +-- col 1 -> [LEAF] h=5.80
+    |   +-- col 4 -> [LEAF] h=4.54
+    |   +-- col 5 -> [LEAF] h=4.81
+    |   `-- col 6 -> [LEAF] h=4.25
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 4, landed in column 4
+O . O O . . .
+X . O X . . .
+O . O O . . .
+X . O O O . O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
+Score  You 0 : 2 Computer
 
-Heuristic h(board) = 1
-h after your disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
-You aimed at column 3, landed in column 3
-X . . . . . .
-X O . . . . .
-O X . . . . .
-O O . . . . .
-O O . X . X .
-O X X X O X .
+Heuristic h(board) = 6.58
+h after your disc in each column -> c1:6.34  c4:7.31  c5:5.64  c6:7.66
+You aimed at column 1, landed in column 1
+O . O O . . .
+X . O X . . .
+O . O O . . .
+X X O O O . O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
+Score  You 0 : 2 Computer
 
-Heuristic h(board) = 1
-h after a computer disc in each column -> c1:1  c2:1  c3:1  c4:1  c5:1  c6:1
-Computer aimed at column 1, landed in column 1
-X O . . . . .
-X O . . . . .
-O X . . . . .
-O O . . . . .
-O O . X . X .
-O X X X O X .
+Heuristic h(board) = 6.34
+h after a computer disc in each column -> c1:7.13  c4:6.53  c5:6.19  c6:4.54
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 61   nodes expanded: 45   time: 0.002 s   chosen column: 4
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=7.05  (a=7.05, b=+inf)
++-- col 1 -> [MIN] value=6.68  (a=-inf, b=6.68)
+|   +-- col 1 -> [MAX] value=7.73  (a=7.73, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=7.00
+|   |   +-- col 4 -> [LEAF] h=7.73
+|   |   +-- col 5 -> [LEAF] h=7.22
+|   |   `-- col 6 -> [LEAF] h=6.08
+|   +-- col 4 -> [MAX] value=7.55  (a=7.55, b=7.73)
+|   |   +-- col 1 -> [LEAF] h=6.13
+|   |   +-- col 4 -> [LEAF] h=6.44
+|   |   +-- col 5 -> [LEAF] h=7.55
+|   |   `-- col 6 -> [LEAF] h=5.52
+|   +-- col 5 -> [MAX] value=6.68  (a=6.68, b=7.55)
+|   |   +-- col 1 -> [LEAF] h=4.95
+|   |   +-- col 4 -> [LEAF] h=6.68
+|   |   +-- col 5 -> [LEAF] h=5.70
+|   |   `-- col 6 -> [LEAF] h=4.23
+|   `-- col 6 -> [MAX] value=7.79  (a=7.79, b=6.68)
+|       +-- col 1 -> [LEAF] h=7.79
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=7.05  (a=6.68, b=7.05)  <== BEST MOVE
+|   +-- col 1 -> [MAX] value=7.05  (a=7.05, b=+inf)  <== expected
+|   |   +-- col 1 -> [LEAF] h=6.72
+|   |   +-- col 4 -> [LEAF] h=7.05  <== expected
+|   |   +-- col 5 -> [LEAF] h=6.40
+|   |   `-- col 6 -> [LEAF] h=5.72
+|   +-- col 4 -> [MAX] value=8.05  (a=8.05, b=7.05)
+|   |   +-- col 1 -> [LEAF] h=8.05
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=7.23  (a=7.23, b=7.05)
+|   |   +-- col 1 -> [LEAF] h=6.68
+|   |   +-- col 4 -> [LEAF] h=6.69
+|   |   +-- col 5 -> [LEAF] h=7.23
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=8.82  (a=8.82, b=7.05)
+|       +-- col 1 -> [LEAF] h=8.82
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=6.52  (a=7.05, b=6.52)
+|   +-- col 1 -> [MAX] value=6.52  (a=7.05, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=6.52
+|   |   +-- col 4 -> [LEAF] h=6.40
+|   |   +-- col 5 -> [LEAF] h=5.70
+|   |   `-- col 6 -> [LEAF] h=5.15
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=5.72  (a=7.05, b=5.72)
+    +-- col 1 -> [MAX] value=5.72  (a=7.05, b=+inf)
+    |   +-- col 1 -> [LEAF] h=5.38
+    |   +-- col 4 -> [LEAF] h=5.72
+    |   +-- col 5 -> [LEAF] h=5.15
+    |   `-- col 6 -> [LEAF] h=4.29
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 4, landed in column 4
+O . O O . . .
+X . O X . . .
+O . O O O . .
+X X O O O . O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
+Score  You 0 : 2 Computer
 
-Heuristic h(board) = 1
-h after your disc in each column -> c2:1  c3:1  c4:1  c5:1  c6:1
+Heuristic h(board) = 6.53
+h after your disc in each column -> c1:6.80  c4:7.49  c5:6.34  c6:8.18
 You aimed at column 6, landed in column 6
-X O . . . . .
-X O . . . . .
-O X . . . . .
-O O . . . . .
-O O . X . X .
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
-
-Heuristic h(board) = 1
-h after a computer disc in each column -> c2:1  c3:1  c4:1  c5:1  c6:1
-Computer aimed at column 3, landed in column 3
-X O . . . . .
-X O . . . . .
-O X . . . . .
-O O . O . . .
-O O . X . X .
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
-
-Heuristic h(board) = 1
-h after your disc in each column -> c2:1  c3:1  c4:1  c5:1  c6:1
-You aimed at column 2, landed in column 2
-X O . . . . .
-X O . . . . .
-O X . . . . .
-O O . O . . .
-O O X X . X .
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 1 Computer
-
-Heuristic h(board) = 1
-h after a computer disc in each column -> c2:2  c3:1  c4:1  c5:1  c6:1
-Computer aimed at column 2, landed in column 2
-X O . . . . .
-X O . . . . .
-O X . . . . .
-O O O O . . .
-O O X X . X .
-O X X X O X X
+O . O O . . .
+X . O X . . .
+O . O O O . X
+X X O O O . O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
 Score  You 0 : 2 Computer
 
-Heuristic h(board) = 2
-h after your disc in each column -> c2:2  c3:2  c4:1  c5:2  c6:2
-You aimed at column 6, landed in column 6
-X O . . . . .
-X O . . . . .
-O X . . . . .
-O O O O . . .
-O O X X . X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 2 Computer
-
-Heuristic h(board) = 2
-h after a computer disc in each column -> c2:2  c3:3  c4:2  c5:2  c6:2
-Computer aimed at column 4, landed in column 4
-X O . . . . .
-X O . . . . .
-O X . . . . .
-O O O O . . .
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 2 Computer
-
-Heuristic h(board) = 2
-h after your disc in each column -> c2:2  c3:2  c4:2  c5:2  c6:2
-You aimed at column 3, landed in column 3
-X O . . . . .
-X O . . . . .
-O X . X . . .
-O O O O . . .
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 2 Computer
-
-Heuristic h(board) = 2
-h after a computer disc in each column -> c2:3  c3:2  c4:3  c5:2  c6:2
-Computer aimed at column 4, landed in column 4
-X O . . . . .
-X O . . . . .
-O X . X . . .
-O O O O O . .
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 3 Computer
-
-Heuristic h(board) = 3
-h after your disc in each column -> c2:3  c3:3  c4:3  c5:3  c6:3
-You aimed at column 2, landed in column 2
-X O . . . . .
-X O . . . . .
-O X X X . . .
-O O O O O . .
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 3 Computer
-
-Heuristic h(board) = 3
-h after a computer disc in each column -> c2:3  c3:3  c4:4  c5:4  c6:3
-Computer aimed at column 4, landed in column 4
-X O . . . . .
-X O . . . . .
-O X X X O . .
-O O O O O . .
-O O X X O X X
-O X X X O X X
+Heuristic h(board) = 8.18
+h after a computer disc in each column -> c1:8.82  c4:8.43  c5:7.13  c6:6.37
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 49   nodes expanded: 37   time: 0.001 s   chosen column: 1
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=8.93  (a=8.93, b=+inf)
++-- col 1 -> [MIN] value=8.93  (a=-inf, b=8.93)  <== BEST MOVE
+|   +-- col 1 -> [MAX] value=9.66  (a=9.66, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=8.73
+|   |   +-- col 4 -> [LEAF] h=9.66
+|   |   +-- col 5 -> [LEAF] h=8.32
+|   |   `-- col 6 -> [LEAF] h=7.58
+|   +-- col 4 -> [MAX] value=9.08  (a=9.08, b=9.66)
+|   |   +-- col 1 -> [LEAF] h=8.72
+|   |   +-- col 4 -> [LEAF] h=9.08
+|   |   +-- col 5 -> [LEAF] h=8.68
+|   |   `-- col 6 -> [LEAF] h=7.96
+|   +-- col 5 -> [MAX] value=8.93  (a=8.93, b=9.08)  <== expected
+|   |   +-- col 1 -> [LEAF] h=7.37
+|   |   +-- col 4 -> [LEAF] h=8.76
+|   |   +-- col 5 -> [LEAF] h=8.93  <== expected
+|   |   `-- col 6 -> [LEAF] h=6.57
+|   `-- col 6 -> [MAX] value=9.54  (a=9.54, b=8.93)
+|       +-- col 1 -> [LEAF] h=9.54
+|       +-- col 4 -> (pruned)
+|       +-- col 5 -> (pruned)
+|       `-- col 6 -> (pruned)
++-- col 4 -> [MIN] value=8.66  (a=8.93, b=8.66)
+|   +-- col 1 -> [MAX] value=8.66  (a=8.93, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=8.66
+|   |   +-- col 4 -> [LEAF] h=8.38
+|   |   +-- col 5 -> [LEAF] h=7.78
+|   |   `-- col 6 -> [LEAF] h=6.92
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=7.78  (a=8.93, b=7.78)
+|   +-- col 1 -> [MAX] value=7.78  (a=8.93, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=7.32
+|   |   +-- col 4 -> [LEAF] h=7.78
+|   |   +-- col 5 -> [LEAF] h=7.03
+|   |   `-- col 6 -> [LEAF] h=5.59
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=6.92  (a=8.93, b=6.92)
+    +-- col 1 -> [MAX] value=6.92  (a=8.93, b=+inf)
+    |   +-- col 1 -> [LEAF] h=6.57
+    |   +-- col 4 -> [LEAF] h=6.92
+    |   +-- col 5 -> [LEAF] h=5.59
+    |   `-- col 6 -> [LEAF] h=5.07
+    +-- col 4 -> (pruned)
+    +-- col 5 -> (pruned)
+    `-- col 6 -> (pruned)
+========================================================================
+Computer aimed at column 1, landed in column 1
+O . O O . . .
+X . O X . . .
+O O O O O . X
+X X O O O . O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
 Score  You 0 : 4 Computer
 
-Heuristic h(board) = 4
-h after your disc in each column -> c2:4  c3:4  c4:4  c5:4  c6:4
-You aimed at column 2, landed in column 2
-X O . . . . .
-X O X . . . .
-O X X X O . .
-O O O O O . .
-O O X X O X X
-O X X X O X X
+Heuristic h(board) = 8.82
+h after your disc in each column -> c1:8.69  c4:9.13  c5:8.49  c6:9.86
+You aimed at column 6, landed in column 6
+O . O O . . .
+X . O X . . X
+O O O O O . X
+X X O O O . O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
 Score  You 0 : 4 Computer
 
-Heuristic h(board) = 4
-h after a computer disc in each column -> c2:4  c3:4  c4:5  c5:5  c6:4
+Heuristic h(board) = 9.86
+h after a computer disc in each column -> c1:9.54  c4:10.87  c5:9.50  c6:8.98
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 55   nodes expanded: 43   time: 0.001 s   chosen column: 4
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=10.72  (a=10.72, b=+inf)
++-- col 1 -> [MIN] value=9.40  (a=-inf, b=9.40)
+|   +-- col 1 -> [MAX] value=10.21  (a=10.21, b=+inf)
+|   |   +-- col 4 -> [LEAF] h=10.21
+|   |   +-- col 5 -> [LEAF] h=9.31
+|   |   `-- col 6 -> [LEAF] h=8.31
+|   +-- col 4 -> [MAX] value=9.40  (a=9.40, b=10.21)
+|   |   +-- col 1 -> [LEAF] h=9.40
+|   |   +-- col 4 -> [LEAF] h=8.90
+|   |   +-- col 5 -> [LEAF] h=8.88
+|   |   `-- col 6 -> [LEAF] h=8.38
+|   +-- col 5 -> [MAX] value=9.54  (a=9.54, b=9.40)
+|   |   +-- col 1 -> [LEAF] h=8.96
+|   |   +-- col 4 -> [LEAF] h=9.54
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=10.63  (a=10.63, b=9.40)
+|       +-- col 1 -> [LEAF] h=10.63
+|       +-- col 4 -> (pruned)
+|       `-- col 5 -> (pruned)
++-- col 4 -> [MIN] value=10.72  (a=9.40, b=10.72)  <== BEST MOVE
+|   +-- col 1 -> [MAX] value=10.91  (a=10.91, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=10.91
+|   |   +-- col 4 -> [LEAF] h=10.70
+|   |   +-- col 5 -> [LEAF] h=10.48
+|   |   `-- col 6 -> [LEAF] h=9.88
+|   +-- col 4 -> [MAX] value=10.92  (a=10.92, b=10.91)
+|   |   +-- col 1 -> [LEAF] h=10.87
+|   |   +-- col 5 -> [LEAF] h=10.92
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=10.72  (a=10.72, b=10.91)  <== expected
+|   |   +-- col 1 -> [LEAF] h=9.54
+|   |   +-- col 4 -> [LEAF] h=10.20
+|   |   +-- col 5 -> [LEAF] h=10.72  <== expected
+|   |   `-- col 6 -> [LEAF] h=8.98
+|   `-- col 6 -> [MAX] value=11.60  (a=11.60, b=10.72)
+|       +-- col 1 -> [LEAF] h=11.60
+|       +-- col 4 -> (pruned)
+|       `-- col 5 -> (pruned)
++-- col 5 -> [MIN] value=10.48  (a=10.72, b=10.48)
+|   +-- col 1 -> [MAX] value=10.48  (a=10.72, b=+inf)
+|   |   +-- col 1 -> [LEAF] h=9.90
+|   |   +-- col 4 -> [LEAF] h=10.48
+|   |   +-- col 5 -> [LEAF] h=9.68
+|   |   `-- col 6 -> [LEAF] h=8.48
+|   +-- col 4 -> (pruned)
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
+`-- col 6 -> [MIN] value=9.88  (a=10.72, b=9.88)
+    +-- col 1 -> [MAX] value=9.88  (a=10.72, b=+inf)
+    |   +-- col 1 -> [LEAF] h=8.91
+    |   +-- col 4 -> [LEAF] h=9.88
+    |   `-- col 5 -> [LEAF] h=8.48
+    +-- col 4 -> (pruned)
+    `-- col 5 -> (pruned)
+========================================================================
 Computer aimed at column 4, landed in column 4
-X O . . . . .
-X O X . O . .
-O X X X O . .
-O O O O O . .
-O O X X O X X
-O X X X O X X
+O . O O . . .
+X . O X O . X
+O O O O O . X
+X X O O O . O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
 Score  You 0 : 5 Computer
 
-Heuristic h(board) = 5
-h after your disc in each column -> c2:5  c3:5  c4:5  c5:5  c6:5
-You aimed at column 5, landed in column 5
-X O . . . . .
-X O X . O . .
-O X X X O . .
-O O O O O X .
-O O X X O X X
-O X X X O X X
+Heuristic h(board) = 10.87
+h after your disc in each column -> c1:10.75  c4:11.27  c5:10.55  c6:11.91
+You aimed at column 1, landed in column 1
+O . O O . . .
+X X O X O . X
+O O O O O . X
+X X O O O . O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
 Score  You 0 : 5 Computer
 
-Heuristic h(board) = 5
-h after a computer disc in each column -> c2:5  c3:5  c4:6  c5:5  c6:5
-Computer aimed at column 2, landed in column 2
-X O O . . . .
-X O X . O . .
-O X X X O . .
-O O O O O X .
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 5 Computer
-
-Heuristic h(board) = 5
-h after your disc in each column -> c3:5  c4:5  c5:4  c6:5
-You aimed at column 6, landed in column 6
-X O O . . . .
-X O X . O . .
-O X X X O . .
-O O O O O X X
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 5 Computer
-
-Heuristic h(board) = 5
-h after a computer disc in each column -> c3:5  c4:6  c5:5  c6:5
-Computer aimed at column 3, landed in column 3
-X O O . . . .
-X O X O O . .
-O X X X O . .
-O O O O O X X
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 5 Computer
-
-Heuristic h(board) = 5
-h after your disc in each column -> c3:5  c4:5  c5:4  c6:4
-You aimed at column 3, landed in column 3
-X O O X . . .
-X O X O O . .
-O X X X O . .
-O O O O O X X
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 5 Computer
-
-Heuristic h(board) = 5
-h after a computer disc in each column -> c4:6  c5:5  c6:5
-Computer aimed at column 4, landed in column 4
-X O O X O . .
-X O X O O . .
-O X X X O . .
-O O O O O X X
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 0 : 6 Computer
-
-Heuristic h(board) = 6
-h after your disc in each column -> c5:5  c6:5
-You aimed at column 5, landed in column 5
-X O O X O . .
-X O X O O . .
-O X X X O X .
-O O O O O X X
-O O X X O X X
-O X X X O X X
-0 1 2 3 4 5 6
-Score  You 1 : 6 Computer
-
-Heuristic h(board) = 5
-h after a computer disc in each column -> c5:5  c6:5
+Heuristic h(board) = 10.75
+h after a computer disc in each column -> c1:10.91  c4:10.70  c5:10.48  c6:9.88
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 42   nodes expanded: 30   time: 0.001 s   chosen column: 5
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=10.58  (a=10.58, b=+inf)
++-- col 1 -> [MIN] value=10.29  (a=-inf, b=10.29)
+|   +-- col 4 -> [MAX] value=10.29  (a=10.29, b=+inf)
+|   |   +-- col 5 -> [LEAF] h=10.29
+|   |   `-- col 6 -> [LEAF] h=9.70
+|   +-- col 5 -> [MAX] value=10.76  (a=10.76, b=10.29)
+|   |   +-- col 4 -> [LEAF] h=9.98
+|   |   +-- col 5 -> [LEAF] h=10.76
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=12.05  (a=12.05, b=10.29)
+|       +-- col 4 -> [LEAF] h=12.05
+|       `-- col 5 -> (pruned)
++-- col 4 -> [MIN] value=9.91  (a=10.29, b=9.91)
+|   +-- col 1 -> [MAX] value=9.91  (a=10.29, b=+inf)
+|   |   +-- col 5 -> [LEAF] h=9.91
+|   |   `-- col 6 -> [LEAF] h=9.90
+|   +-- col 5 -> (pruned)
+|   `-- col 6 -> (pruned)
++-- col 5 -> [MIN] value=10.58  (a=10.29, b=10.58)  <== BEST MOVE
+|   +-- col 1 -> [MAX] value=10.58  (a=10.58, b=+inf)  <== expected
+|   |   +-- col 4 -> [LEAF] h=9.91
+|   |   +-- col 5 -> [LEAF] h=10.58  <== expected
+|   |   `-- col 6 -> [LEAF] h=9.26
+|   +-- col 4 -> [MAX] value=10.76  (a=10.76, b=10.58)
+|   |   +-- col 1 -> [LEAF] h=10.29
+|   |   +-- col 5 -> [LEAF] h=10.76
+|   |   `-- col 6 -> (pruned)
+|   +-- col 5 -> [MAX] value=10.76  (a=10.76, b=10.58)
+|   |   +-- col 1 -> [LEAF] h=10.76
+|   |   +-- col 4 -> (pruned)
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=11.69  (a=11.69, b=10.58)
+|       +-- col 1 -> [LEAF] h=11.69
+|       +-- col 4 -> (pruned)
+|       `-- col 5 -> (pruned)
+`-- col 6 -> [MIN] value=9.90  (a=10.58, b=9.90)
+    +-- col 1 -> [MAX] value=9.90  (a=10.58, b=+inf)
+    |   +-- col 4 -> [LEAF] h=9.90
+    |   `-- col 5 -> [LEAF] h=9.26
+    +-- col 4 -> (pruned)
+    `-- col 5 -> (pruned)
+========================================================================
 Computer aimed at column 5, landed in column 5
-X O O X O . .
-X O X O O O .
-O X X X O X .
-O O O O O X X
-O O X X O X X
-O X X X O X X
+O . O O . . .
+X X O X O . X
+O O O O O . X
+X X O O O O O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 1 : 6 Computer
+Score  You 0 : 7 Computer
 
-Heuristic h(board) = 5
-h after your disc in each column -> c5:5  c6:4
-You aimed at column 5, landed in column 5
-X O O X O X .
-X O X O O O .
-O X X X O X .
-O O O O O X X
-O O X X O X X
-O X X X O X X
+Heuristic h(board) = 10.48
+h after your disc in each column -> c1:10.33  c4:10.90  c5:10.70  c6:11.53
+You aimed at column 4, landed in column 4
+O . O O X . .
+X X O X O . X
+O O O O O . X
+X X O O O O O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 1 : 6 Computer
+Score  You 0 : 7 Computer
 
-Heuristic h(board) = 5
-h after a computer disc in each column -> c6:5
-Computer aimed at column 6, landed in column 6
-X O O X O X .
-X O X O O O .
-O X X X O X O
-O O O O O X X
-O O X X O X X
-O X X X O X X
+Heuristic h(board) = 10.90
+h after a computer disc in each column -> c1:10.29  c5:10.76  c6:9.92
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 22   nodes expanded: 18   time: 0.000 s   chosen column: 5
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=11.11  (a=11.11, b=+inf)
++-- col 1 -> [MIN] value=10.91  (a=-inf, b=10.91)
+|   +-- col 5 -> [MAX] value=10.91  (a=10.91, b=+inf)
+|   |   +-- col 5 -> [LEAF] h=10.91
+|   |   `-- col 6 -> [LEAF] h=10.01
+|   `-- col 6 -> [MAX] value=11.82  (a=11.82, b=10.91)
+|       `-- col 5 -> [LEAF] h=11.82
++-- col 5 -> [MIN] value=11.11  (a=10.91, b=11.11)  <== BEST MOVE
+|   +-- col 1 -> [MAX] value=11.11  (a=11.11, b=+inf)  <== expected
+|   |   +-- col 5 -> [LEAF] h=11.11  <== expected
+|   |   `-- col 6 -> [LEAF] h=10.02
+|   +-- col 5 -> [MAX] value=11.21  (a=11.21, b=11.11)
+|   |   +-- col 1 -> [LEAF] h=11.21
+|   |   +-- col 5 -> (pruned)
+|   |   `-- col 6 -> (pruned)
+|   `-- col 6 -> [MAX] value=11.82  (a=11.82, b=11.11)
+|       +-- col 1 -> [LEAF] h=11.82
+|       `-- col 5 -> (pruned)
+`-- col 6 -> [MIN] value=10.02  (a=11.11, b=10.02)
+    +-- col 1 -> [MAX] value=10.02  (a=11.11, b=+inf)
+    |   `-- col 5 -> [LEAF] h=10.02
+    `-- col 5 -> (pruned)
+========================================================================
+Computer aimed at column 5, landed in column 5
+O . O O X . .
+X X O X O . X
+O O O O O O X
+X X O O O O O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 1 : 6 Computer
+Score  You 0 : 9 Computer
 
-Heuristic h(board) = 5
-h after your disc in each column -> c6:5
+Heuristic h(board) = 10.76
+h after your disc in each column -> c1:10.54  c5:11.41  c6:12.03
+You aimed at column 1, landed in column 1
+O X O O X . .
+X X O X O . X
+O O O O O O X
+X X O O O O O
+X X O X O X X
+X X X O X X X
+0 1 2 3 4 5 6
+Score  You 0 : 9 Computer
+
+Heuristic h(board) = 10.54
+h after a computer disc in each column -> c5:11.11  c6:10.02
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 9   nodes expanded: 9   time: 0.000 s   chosen column: 5
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=11  (a=11, b=+inf)
++-- col 5 -> [MIN] value=11  (a=-inf, b=11)  <== BEST MOVE
+|   +-- col 5 -> [MAX] value=11  (a=11, b=+inf)  <== expected
+|   |   `-- col 6 -> [LEAF] h=11  <== expected
+|   `-- col 6 -> [MAX] value=12  (a=12, b=11)
+|       `-- col 5 -> [LEAF] h=12
+`-- col 6 -> [MIN] value=10  (a=11, b=10)
+    `-- col 5 -> [MAX] value=10  (a=11, b=+inf)
+        `-- col 5 -> [LEAF] h=10
+========================================================================
+Computer aimed at column 5, landed in column 5
+O X O O X . .
+X X O X O O X
+O O O O O O X
+X X O O O O O
+X X O X O X X
+X X X O X X X
+0 1 2 3 4 5 6
+Score  You 0 : 10 Computer
+
+Heuristic h(board) = 11.11
+h after your disc in each column -> c5:10.91  c6:11.81
 You aimed at column 6, landed in column 6
-X O O X O X .
-X O X O O O X
-O X X X O X O
-O O O O O X X
-O O X X O X X
-O X X X O X X
+O X O O X . X
+X X O X O O X
+O O O O O O X
+X X O O O O O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 1 : 6 Computer
+Score  You 0 : 10 Computer
 
-Heuristic h(board) = 5
-h after a computer disc in each column -> c6:6
-Computer aimed at column 6, landed in column 6
-X O O X O X O
-X O X O O O X
-O X X X O X O
-O O O O O X X
-O O X X O X X
-O X X X O X X
+Heuristic h(board) = 11.81
+h after a computer disc in each column -> c5:12
+========================================================================
+MINIMAX TREE - Alpha-Beta, K=3
+nodes in tree: 2   nodes expanded: 2   time: 0.000 s   chosen column: 5
+values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
+(levels below depth 3 are summarised; the best line is shown down to its leaf)
+========================================================================
+[MAX] value=12  (a=12, b=+inf)
+`-- col 5 -> [LEAF] h=12  <== BEST MOVE
+========================================================================
+Computer aimed at column 5, landed in column 5
+O X O O X O X
+X X O X O O X
+O O O O O O X
+X X O O O O O
+X X O X O X X
+X X X O X X X
 0 1 2 3 4 5 6
-Score  You 1 : 7 Computer
+Score  You 0 : 12 Computer
 
 GAME OVER - Computer wins
-Heuristic h(board) = 6
+Heuristic h(board) = 12

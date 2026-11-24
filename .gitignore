@@ -1,1 +1,4 @@
 __pycache__/
+
+# per-turn search trees written while playing
+trees/

@@ -13,12 +13,14 @@ the player with more connected-fours wins.
 
 Choose board size (>= 6x7), depth K, algorithm and first player, then play.
 The agent prints its search tree and heuristic values to the console on every
-turn (`PRINT_DEPTH` in `ai_interface.py` sets how many levels are printed in full); the "Search tree" button opens the GUI tree viewer.
+turn: the whole tree if it has at most 3,000 nodes, otherwise a summary (top `PRINT_DEPTH`
+levels plus the best line). Every turn's tree is also saved to `trees/turn_NN.txt` (complete up to
+100,000 nodes; limits are constants at the top of `ai_interface.py`). The "Search tree" button opens the GUI tree viewer.
 Expectiminimax is slow above K = 3 on a 6x7 board.
 
 ## Tests and experiments
 
-    python -m unittest test_board test_heuristic     # 40 tests
+    python -m unittest test_board test_heuristic test_tree_output     # 46 tests
     python experiment.py --k 1 2 3 4 5 6 --positions 3 --max-seconds 15
                                                      # exact command behind the report's tables (several minutes;
                                                      # writes results/board_size.*; defaults are 5 positions, 20 s)

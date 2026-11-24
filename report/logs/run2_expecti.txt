@@ -4,9 +4,8 @@ Heuristic h(board) = 0
 h after a computer disc in each column -> c0:0.07  c1:0.09  c2:0.11  c3:0.15  c4:0.15  c5:0.11  c6:0.09  c7:0.07
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.068 s   chosen column: 3
+nodes in tree: 691   nodes expanded: 691   time: 0.237 s   chosen column: 3
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=-0.03
 +-- aim 0 -> [CHANCE] E=-0.07
@@ -700,6 +699,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=0.02
             `-- lands 6 (p=0.4) -> [LEAF] h=-0.04
 ========================================================================
+Full tree saved to trees\turn_00.txt
 Computer aimed at column 3, landed in column 3
 . . . . . . . .
 . . . . . . . .
@@ -728,9 +728,8 @@ Heuristic h(board) = 0.09
 h after a computer disc in each column -> c0:0.21  c1:0.30  c2:0.38  c3:0.37  c4:0.42  c5:0.32  c6:0.24  c7:0.18
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.069 s   chosen column: 4
+nodes in tree: 691   nodes expanded: 691   time: 0.434 s   chosen column: 4
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=0.14
 +-- aim 0 -> [CHANCE] E=0.02
@@ -1424,6 +1423,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=0.09
             `-- lands 6 (p=0.4) -> [LEAF] h=0.04
 ========================================================================
+Full tree saved to trees\turn_02.txt
 Computer aimed at column 4, landed in column 5
 . . . . . . . .
 . . . . . . . .
@@ -1452,9 +1452,8 @@ Heuristic h(board) = 0.17
 h after a computer disc in each column -> c0:0.30  c1:0.38  c2:0.48  c3:0.45  c4:1.02  c5:0.41  c6:0.32  c7:0.36
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.070 s   chosen column: 4
+nodes in tree: 691   nodes expanded: 691   time: 0.248 s   chosen column: 4
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=0.49
 +-- aim 0 -> [CHANCE] E=0.02
@@ -2148,6 +2147,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=0.32
             `-- lands 6 (p=0.4) -> [LEAF] h=0.47
 ========================================================================
+Full tree saved to trees\turn_04.txt
 Computer aimed at column 4, landed in column 4
 . . . . . . . .
 . . . . . . . .
@@ -2176,9 +2176,8 @@ Heuristic h(board) = 1.37
 h after a computer disc in each column -> c0:0.20  c1:0.30  c2:1.10  c3:0.41  c4:0.47  c5:0.37  c6:0.42  c7:1.25
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.083 s   chosen column: 7
+nodes in tree: 691   nodes expanded: 691   time: 0.227 s   chosen column: 7
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=0.83
 +-- aim 0 -> [CHANCE] E=0.29
@@ -2872,6 +2871,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=0.30  <== expected
             `-- lands 6 (p=0.4) -> [LEAF] h=1.12  <== expected
 ========================================================================
+Full tree saved to trees\turn_06.txt
 Computer aimed at column 7, landed in column 7
 . . . . . . . .
 . . . . . . . .
@@ -2900,9 +2900,8 @@ Heuristic h(board) = 1.63
 h after a computer disc in each column -> c0:1.15  c1:1.26  c2:2.06  c3:1.35  c4:1.43  c5:1.74  c6:1.38  c7:1.16
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.078 s   chosen column: 2
+nodes in tree: 691   nodes expanded: 691   time: 0.340 s   chosen column: 2
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=1.46
 +-- aim 0 -> [CHANCE] E=0.83
@@ -3596,6 +3595,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=1.71
             `-- lands 6 (p=0.4) -> [LEAF] h=1.46
 ========================================================================
+Full tree saved to trees\turn_08.txt
 Computer aimed at column 2, landed in column 1
 . . . . . . . .
 . . . . . . . .
@@ -3624,9 +3624,8 @@ Heuristic h(board) = 2.30
 h after a computer disc in each column -> c0:1.15  c1:1.22  c2:2.75  c3:1.39  c4:1.48  c5:1.72  c6:1.35  c7:1.13
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.077 s   chosen column: 2
+nodes in tree: 691   nodes expanded: 691   time: 0.331 s   chosen column: 2
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=1.82
 +-- aim 0 -> [CHANCE] E=0.94
@@ -4320,6 +4319,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=2.08
             `-- lands 6 (p=0.4) -> [LEAF] h=1.84
 ========================================================================
+Full tree saved to trees\turn_10.txt
 Computer aimed at column 2, landed in column 2
 . . . . . . . .
 . . . . . . . .
@@ -4348,9 +4348,8 @@ Heuristic h(board) = 3.28
 h after a computer disc in each column -> c0:3.03  c1:2.90  c2:3.20  c3:3.07  c4:3.16  c5:3.40  c6:3.03  c7:2.73
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.069 s   chosen column: 5
+nodes in tree: 691   nodes expanded: 691   time: 0.319 s   chosen column: 5
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=2.90
 +-- aim 0 -> [CHANCE] E=2.64
@@ -5044,6 +5043,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=3.38
             `-- lands 6 (p=0.4) -> [LEAF] h=3.12
 ========================================================================
+Full tree saved to trees\turn_12.txt
 Computer aimed at column 5, landed in column 5
 . . . . . . . .
 . . . . . . . .
@@ -5072,9 +5072,8 @@ Heuristic h(board) = 3.67
 h after a computer disc in each column -> c0:3.42  c1:3.29  c2:3.49  c3:3.61  c4:3.41  c5:4.02  c6:3.48  c7:3.12
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.082 s   chosen column: 5
+nodes in tree: 691   nodes expanded: 691   time: 0.267 s   chosen column: 5
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=3.01
 +-- aim 0 -> [CHANCE] E=2.81
@@ -5768,6 +5767,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=3.68
             `-- lands 6 (p=0.4) -> [LEAF] h=3.63
 ========================================================================
+Full tree saved to trees\turn_14.txt
 Computer aimed at column 5, landed in column 4
 . . . . . . . .
 . . . . . . . .
@@ -5796,9 +5796,8 @@ Heuristic h(board) = 3.68
 h after a computer disc in each column -> c0:3.42  c1:3.34  c2:3.31  c3:3.61  c4:4.18  c5:4.07  c6:3.49  c7:3.13
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.082 s   chosen column: 5
+nodes in tree: 691   nodes expanded: 691   time: 0.232 s   chosen column: 5
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=3.13
 +-- aim 0 -> [CHANCE] E=2.84
@@ -6492,6 +6491,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=3.69
             `-- lands 6 (p=0.4) -> [LEAF] h=3.63
 ========================================================================
+Full tree saved to trees\turn_16.txt
 Computer aimed at column 5, landed in column 6
 . . . . . . . .
 . . . . . . . .
@@ -6520,9 +6520,8 @@ Heuristic h(board) = 4.03
 h after a computer disc in each column -> c0:3.78  c1:3.69  c2:3.67  c3:4.49  c4:5.06  c5:4.51  c6:3.87  c7:3.48
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.074 s   chosen column: 5
+nodes in tree: 691   nodes expanded: 691   time: 0.188 s   chosen column: 5
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=3.70
 +-- aim 0 -> [CHANCE] E=3.14
@@ -7216,6 +7215,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=4.22
             `-- lands 6 (p=0.4) -> [LEAF] h=3.97
 ========================================================================
+Full tree saved to trees\turn_18.txt
 Computer aimed at column 5, landed in column 4
 . . . . . . . .
 . . . . . . . .
@@ -7244,9 +7244,8 @@ Heuristic h(board) = 4.21
 h after a computer disc in each column -> c0:3.43  c1:3.27  c2:3.24  c3:4.25  c4:4.40  c5:4.02  c6:3.40  c7:3.12
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.090 s   chosen column: 4
+nodes in tree: 691   nodes expanded: 691   time: 0.194 s   chosen column: 4
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=3.61
 +-- aim 0 -> [CHANCE] E=2.57
@@ -7940,6 +7939,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=4.11
             `-- lands 6 (p=0.4) -> [LEAF] h=3.79
 ========================================================================
+Full tree saved to trees\turn_20.txt
 Computer aimed at column 4, landed in column 4
 . . . . . . . .
 . . . . . . . .
@@ -7968,9 +7968,8 @@ Heuristic h(board) = 5.04
 h after a computer disc in each column -> c0:4.27  c1:4.08  c2:4.25  c3:5.19  c4:5.13  c5:4.80  c6:4.24  c7:3.95
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.103 s   chosen column: 4
+nodes in tree: 691   nodes expanded: 691   time: 0.232 s   chosen column: 4
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=4.48
 +-- aim 0 -> [CHANCE] E=3.60
@@ -8664,6 +8663,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=5.09
             `-- lands 6 (p=0.4) -> [LEAF] h=4.78
 ========================================================================
+Full tree saved to trees\turn_22.txt
 Computer aimed at column 4, landed in column 4
 . . . . . . . .
 . . . . . . . .
@@ -8692,9 +8692,8 @@ Heuristic h(board) = 5.41
 h after a computer disc in each column -> c0:4.74  c1:5.19  c2:4.67  c3:5.54  c4:5.39  c5:5.26  c6:4.75  c7:4.42
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 691   nodes expanded: 691   time: 0.078 s   chosen column: 4
+nodes in tree: 691   nodes expanded: 691   time: 0.198 s   chosen column: 4
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=4.89
 +-- aim 0 -> [CHANCE] E=4.52
@@ -9388,6 +9387,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=5.60
             `-- lands 6 (p=0.4) -> [LEAF] h=5.29
 ========================================================================
+Full tree saved to trees\turn_24.txt
 Computer aimed at column 4, landed in column 4
 . . . . . . . .
 . . . . O . . .
@@ -9416,9 +9416,8 @@ Heuristic h(board) = 5.16
 h after a computer disc in each column -> c0:4.83  c1:5.04  c2:5.03  c3:5.43  c4:4.66  c5:5.12  c6:4.60  c7:4.33
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 673   nodes expanded: 673   time: 0.076 s   chosen column: 3
+nodes in tree: 673   nodes expanded: 673   time: 0.199 s   chosen column: 3
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=4.96
 +-- aim 0 -> [CHANCE] E=4.51
@@ -10094,6 +10093,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=5.50
             `-- lands 6 (p=0.4) -> [LEAF] h=5.27
 ========================================================================
+Full tree saved to trees\turn_26.txt
 Computer aimed at column 3, landed in column 3
 . . . . . . . .
 . . . . O . . .
@@ -10122,9 +10122,8 @@ Heuristic h(board) = 5.79
 h after a computer disc in each column -> c0:5.22  c1:5.93  c2:5.43  c3:4.96  c4:5.56  c5:6.05  c6:5.56  c7:4.74
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 673   nodes expanded: 673   time: 0.077 s   chosen column: 1
+nodes in tree: 673   nodes expanded: 673   time: 0.191 s   chosen column: 1
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=5.75
 +-- aim 0 -> [CHANCE] E=5.50
@@ -10800,6 +10799,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=6.30
             `-- lands 6 (p=0.4) -> [LEAF] h=6.18
 ========================================================================
+Full tree saved to trees\turn_28.txt
 Computer aimed at column 1, landed in column 1
 . . . . . . . .
 . . . . O . . .
@@ -10828,9 +10828,8 @@ Heuristic h(board) = 6.28
 h after a computer disc in each column -> c0:5.71  c1:5.18  c2:5.90  c3:5.42  c4:6.04  c5:5.95  c6:6.44  c7:5.22
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 673   nodes expanded: 673   time: 0.078 s   chosen column: 6
+nodes in tree: 673   nodes expanded: 673   time: 0.267 s   chosen column: 6
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=6.06
 +-- aim 0 -> [CHANCE] E=5.51
@@ -11506,6 +11505,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=6.96
             `-- lands 6 (p=0.4) -> [LEAF] h=7.01
 ========================================================================
+Full tree saved to trees\turn_30.txt
 Computer aimed at column 6, landed in column 6
 . . . . . . . .
 . . . . O . . .
@@ -11534,9 +11534,8 @@ Heuristic h(board) = 7.61
 h after a computer disc in each column -> c0:6.93  c1:6.50  c2:7.10  c3:6.55  c4:7.35  c5:7.18  c6:6.50  c7:6.53
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 655   nodes expanded: 655   time: 0.069 s   chosen column: 4
+nodes in tree: 655   nodes expanded: 655   time: 0.187 s   chosen column: 4
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=6.92
 +-- aim 0 -> [CHANCE] E=6.65
@@ -12194,6 +12193,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 7 (p=0.6) -> [LEAF] h=6.96
             `-- lands 6 (p=0.4) -> [LEAF] h=7.08
 ========================================================================
+Full tree saved to trees\turn_32.txt
 Computer aimed at column 4, landed in column 4
 . . . . O . . .
 . X . . O . . .
@@ -12222,9 +12222,8 @@ Heuristic h(board) = 7.88
 h after a computer disc in each column -> c0:7.90  c1:7.52  c2:8.06  c3:7.43  c5:7.65  c6:7.39  c7:7.44
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 397   nodes expanded: 397   time: 0.037 s   chosen column: 2
+nodes in tree: 397   nodes expanded: 397   time: 0.148 s   chosen column: 2
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=7.58
 +-- aim 0 -> [CHANCE] E=7.32
@@ -12624,6 +12623,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 7 -> [CHANCE] E=7.59
             `-- lands 7 (p=1) -> [LEAF] h=7.59
 ========================================================================
+Full tree saved to trees\turn_34.txt
 Computer aimed at column 2, landed in column 2
 . . . . O . . .
 . X . . O . X .
@@ -12652,9 +12652,8 @@ Heuristic h(board) = 7.86
 h after a computer disc in each column -> c0:7.95  c1:8.09  c2:8.12  c3:7.99  c5:8.23  c6:7.95  c7:8.02
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 397   nodes expanded: 397   time: 0.036 s   chosen column: 5
+nodes in tree: 397   nodes expanded: 397   time: 0.123 s   chosen column: 5
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=7.77
 +-- aim 0 -> [CHANCE] E=7.45
@@ -13054,6 +13053,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 7 -> [CHANCE] E=7.61
             `-- lands 7 (p=1) -> [LEAF] h=7.61
 ========================================================================
+Full tree saved to trees\turn_36.txt
 Computer aimed at column 5, landed in column 6
 . . . . O . O .
 . X . . O . X .
@@ -13082,9 +13082,8 @@ Heuristic h(board) = 7.76
 h after a computer disc in each column -> c0:7.84  c1:7.99  c2:8.02  c3:7.87  c5:8.07  c7:7.88
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 217   nodes expanded: 217   time: 0.023 s   chosen column: 5
+nodes in tree: 217   nodes expanded: 217   time: 0.055 s   chosen column: 5
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=7.64
 +-- aim 0 -> [CHANCE] E=7.35
@@ -13304,6 +13303,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 7 -> [CHANCE] E=7.96
             `-- lands 7 (p=1) -> [LEAF] h=7.96
 ========================================================================
+Full tree saved to trees\turn_38.txt
 Computer aimed at column 5, landed in column 5
 . . . . O . O .
 . X . . O . X .
@@ -13332,9 +13332,8 @@ Heuristic h(board) = 8.56
 h after a computer disc in each column -> c0:8.04  c2:8.72  c3:8.57  c5:9.30  c7:8.25
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 97   nodes expanded: 97   time: 0.005 s   chosen column: 5
+nodes in tree: 97   nodes expanded: 97   time: 0.065 s   chosen column: 5
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=8.62
 +-- aim 0 -> [CHANCE] E=7.62
@@ -13434,6 +13433,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 7 -> [CHANCE] E=8.49
             `-- lands 7 (p=1) -> [LEAF] h=8.49
 ========================================================================
+Full tree saved to trees\turn_40.txt
 Computer aimed at column 5, landed in column 5
 . X . . O . O .
 . X . . O . X .
@@ -13462,9 +13462,8 @@ Heuristic h(board) = 9.64
 h after a computer disc in each column -> c0:9.39  c2:8.69  c3:8.99  c5:9.33  c7:8.64
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 97   nodes expanded: 97   time: 0.003 s   chosen column: 0
+nodes in tree: 97   nodes expanded: 97   time: 0.014 s   chosen column: 0
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=8.71
 +-- aim 0 -> [CHANCE] E=8.71  <== BEST MOVE
@@ -13564,6 +13563,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 7 -> [CHANCE] E=9.23
             `-- lands 7 (p=1) -> [LEAF] h=9.23
 ========================================================================
+Full tree saved to trees\turn_42.txt
 Computer aimed at column 0, landed in column 0
 . X . . O . O .
 . X . . O . X .
@@ -13592,9 +13592,8 @@ Heuristic h(board) = 9.91
 h after a computer disc in each column -> c0:9.30  c2:9.60  c3:9.94  c5:10.29  c7:9.60
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 97   nodes expanded: 97   time: 0.003 s   chosen column: 5
+nodes in tree: 97   nodes expanded: 97   time: 0.011 s   chosen column: 5
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=9.56
 +-- aim 0 -> [CHANCE] E=8.64
@@ -13694,6 +13693,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 7 -> [CHANCE] E=9.64
             `-- lands 7 (p=1) -> [LEAF] h=9.64
 ========================================================================
+Full tree saved to trees\turn_44.txt
 Computer aimed at column 5, landed in column 5
 . X . . O . O .
 . X . . O O X .
@@ -13722,9 +13722,8 @@ Heuristic h(board) = 11.11
 h after a computer disc in each column -> c0:9.91  c2:11.08  c3:10.73  c5:11.37  c7:10.21
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 95   nodes expanded: 95   time: 0.003 s   chosen column: 2
+nodes in tree: 95   nodes expanded: 95   time: 0.005 s   chosen column: 2
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=10.52
 +-- aim 0 -> [CHANCE] E=8.93
@@ -13822,6 +13821,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 7 -> [CHANCE] E=10.76
             `-- lands 7 (p=1) -> [LEAF] h=10.76
 ========================================================================
+Full tree saved to trees\turn_46.txt
 Computer aimed at column 2, landed in column 3
 . X . . O . O .
 . X . O O O X .
@@ -13850,9 +13850,8 @@ Heuristic h(board) = 10.52
 h after a computer disc in each column -> c0:9.37  c2:11.12  c3:10.89  c5:11.59  c7:10.32
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 87   nodes expanded: 87   time: 0.003 s   chosen column: 5
+nodes in tree: 87   nodes expanded: 87   time: 0.004 s   chosen column: 5
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=10.52
 +-- aim 0 -> [CHANCE] E=9.09
@@ -13942,6 +13941,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 7 -> [CHANCE] E=10.28
             `-- lands 7 (p=1) -> [LEAF] h=10.28
 ========================================================================
+Full tree saved to trees\turn_48.txt
 Computer aimed at column 5, landed in column 5
 . X . . O O O .
 . X . O O O X .
@@ -13970,9 +13970,8 @@ Heuristic h(board) = 12.13
 h after a computer disc in each column -> c0:11.83  c2:11.53  c3:12.00  c7:11.33
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 61   nodes expanded: 61   time: 0.002 s   chosen column: 2
+nodes in tree: 61   nodes expanded: 61   time: 0.012 s   chosen column: 2
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=11.34
 +-- aim 0 -> [CHANCE] E=10.83
@@ -14036,6 +14035,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 7 -> [CHANCE] E=11.22
             `-- lands 7 (p=1) -> [LEAF] h=11.22
 ========================================================================
+Full tree saved to trees\turn_50.txt
 Computer aimed at column 2, landed in column 2
 . X . . O O O .
 X X O O O O X .
@@ -14064,9 +14064,8 @@ Heuristic h(board) = 12.82
 h after a computer disc in each column -> c0:11.82  c2:11.41  c3:12.21  c7:11.22
 ========================================================================
 MINIMAX TREE - Expectiminimax, K=2
-nodes in tree: 51   nodes expanded: 51   time: 0.001 s   chosen column: 3
+nodes in tree: 51   nodes expanded: 51   time: 0.011 s   chosen column: 3
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=11.85
 +-- aim 0 -> [CHANCE] E=11.34
@@ -14120,6 +14119,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
             +-- lands 3 (p=0.6) -> [LEAF] h=11.25
             `-- lands 2 (p=0.4) -> [LEAF] h=11.85
 ========================================================================
+Full tree saved to trees\turn_52.txt
 Computer aimed at column 3, landed in column 2
 . X O . O O O .
 X X O O O O X X
@@ -14150,7 +14150,6 @@ h after a computer disc in each column -> c0:11.20  c7:11.10
 MINIMAX TREE - Expectiminimax, K=2
 nodes in tree: 9   nodes expanded: 9   time: 0.000 s   chosen column: 0
 values = heuristic h(board) at leaves, backed-up minimax/expected values above; computer's point of view (bigger = better for computer)
-(levels below depth 3 are summarised; the best line is shown down to its leaf)
 ========================================================================
 [MAX] value=11
 +-- aim 0 -> [CHANCE] E=11  <== BEST MOVE
@@ -14162,6 +14161,7 @@ values = heuristic h(board) at leaves, backed-up minimax/expected values above; 
         `-- aim 0 -> [CHANCE] E=11
             `-- lands 0 (p=1) -> [LEAF] h=11
 ========================================================================
+Full tree saved to trees\turn_54.txt
 Computer aimed at column 0, landed in column 0
 O X O X O O O .
 X X O O O O X X

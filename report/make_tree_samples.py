@@ -56,6 +56,8 @@ def main():
 
     ai_interface.QUIET = False
     ai_interface.PRINT_DEPTH = a.depth
+    ai_interface.FULL_PRINT_LIMIT = 0      # always the short version: --depth levels, best line to the leaf
+    ai_interface.SAVE_TREES = False
     for algo in ("minimax", "alphabeta", "expectiminimax"):
         buf = io.StringIO()
         with contextlib.redirect_stdout(buf):

@@ -42,17 +42,32 @@ heuristic.py; the tree is built as tree.TreeNode objects and printed by
 tree_printer.py.
 """
 
+import glob
 import math
+import os
 import time
 
 from board import AI, HUMAN, opponent
 from heuristic import evaluate_v2, V2_MINIMAX, V2_EXPECTI
 from tree_printer import print_tree
-from tree import TreeNode, MAX, MIN, CHANCE, LEAF, principal_path
+from tree import TreeNode, MAX, MIN, CHANCE, LEAF, principal_path, subtree_size
 
 ALGORITHMS = ("minimax", "alphabeta", "expectiminimax")
 QUIET = False          # True -> agent must not print trees (experiments)
-PRINT_DEPTH = 3        # tree levels printed in full (best line always full)
+PRINT_DEPTH = 3        # levels printed on the console for BIG trees (best line always full)
+
+# Tree output (assignment 2.2: "show the minimax tree in each turn"):
+#  * console: the WHOLE tree when it has at most FULL_PRINT_LIMIT nodes
+#    (e.g. Alpha-Beta or Minimax at K = 4); a bigger tree is summarised below
+#    PRINT_DEPTH levels, with the best line always shown down to its leaf.
+#  * file: every turn the tree is also written to TREE_DIR/turn_NN.txt (NN =
+#    number of discs on the board). It holds the COMPLETE tree when it has at
+#    most SAVE_LIMIT nodes; above that the file holds the summarised tree and
+#    says so (a 3-million-node tree would be gigabytes of text).
+FULL_PRINT_LIMIT = 3000
+SAVE_TREES = True
+SAVE_LIMIT = 100_000
+TREE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "trees")
 
 
 def evaluate(board):
@@ -76,13 +91,55 @@ def get_move(board, algorithm, k):
     else:
         _minimax(board, depth, AI, root, counter)
     best = principal_path(root)[1]
+    elapsed = time.perf_counter() - start
     if not QUIET:
-        names = {"minimax": "Minimax", "alphabeta": "Alpha-Beta",
-                 "expectiminimax": "Expectiminimax"}
-        print_tree(root, PRINT_DEPTH, title=f"{names[algorithm]}, K={depth}",
-                   stats={"nodes": counter[0], "column": best.column(),
-                          "time": time.perf_counter() - start})
+        _show_tree(root, board, algorithm, depth,
+                   {"nodes": counter[0], "column": best.column(), "time": elapsed})
     return best.column(), {"nodes": counter[0], "value": root.value, "tree": root}
+
+
+NAMES = {"minimax": "Minimax", "alphabeta": "Alpha-Beta",
+         "expectiminimax": "Expectiminimax"}
+
+
+def _save_tree(root, board, title, stats, total):
+    """Write this turn's tree to TREE_DIR/turn_NN.txt. Returns the path, or
+    None if it could not be written (the game must never crash because of it)."""
+    try:
+        os.makedirs(TREE_DIR, exist_ok=True)
+        turn = board.move_count
+        if turn <= 1:                                  # a new game started:
+            for old in glob.glob(os.path.join(TREE_DIR, "turn_*.txt")):
+                os.remove(old)                         # drop the previous game's files
+        path = os.path.join(TREE_DIR, f"turn_{turn:02d}.txt")
+        complete = total <= SAVE_LIMIT
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(f"Computer's move after {turn} discs on the board - {title}\n")
+            f.write("Position the search started from:\n")
+            f.write(str(board) + "\n\n")
+            if not complete:
+                f.write(f"NOTE: the tree has {total:,} nodes (more than SAVE_LIMIT = "
+                        f"{SAVE_LIMIT:,}); only the top {PRINT_DEPTH} levels and the best "
+                        "line are saved.\n\n")
+            print_tree(root, None if complete else PRINT_DEPTH, title=title,
+                       stats=stats, file=f)
+        return path, complete
+    except OSError as e:
+        print(f"(could not save the tree: {e})")
+        return None, False
+
+
+def _show_tree(root, board, algorithm, depth, stats):
+    """Console output (whole tree if small, else summary) + the file copy."""
+    title = f"{NAMES[algorithm]}, K={depth}"
+    total = subtree_size(root)
+    saved, complete = (_save_tree(root, board, title, stats, total)
+                       if SAVE_TREES else (None, False))
+    print_tree(root, None if total <= FULL_PRINT_LIMIT else PRINT_DEPTH,
+               title=title, stats=stats)
+    if saved:
+        what = "Full tree" if complete else "Summarised tree (too big to save in full)"
+        print(f"{what} saved to {os.path.relpath(saved)}")
 
 
 _weights = V2_MINIMAX
